@@ -1,0 +1,150 @@
+.button-black {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 0;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--black);
+  border-radius: 12px;
+}
+
+.button-black:hover {
+  background-color: var(--font-color);
+}
+
+.button-black:active {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.button-black:active path {
+  fill: var(--black);
+}
+
+.button-white {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 0;
+  color: var(--black);
+  text-transform: uppercase;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 12px;
+}
+
+.button-white:hover {
+  color: var(--white);
+  background-color: var(--font-color);
+  border: 1px solid var(--font-color);
+}
+
+.button-white:active {
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.button__SeeMore-black {
+  max-width: 240px;
+  font-weight: 700;
+}
+
+.button__AllCategories {
+  max-width: 200px;
+  font-size: 14px;
+  border: 1px solid var(--white);
+}
+
+.button__SeeMore-white {
+  max-width: 200px;
+  padding: 12px 48px;
+  font-size: 14px;
+}
+
+.button__submit {
+  font-size: 14px;
+}
+
+.button__search {
+  align-self: stretch;
+  max-width: 84px;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 0 12px 12px 0;
+}
+
+.button__card__color {
+  width: 100%;
+  max-width: 10px;
+  max-height: 10px;
+  border-radius: 1px;
+}
+
+.button__Check {
+  max-width: 328px;
+}
+
+.button__addToCard {
+  gap: 12px;
+  padding: 8px 32px;
+}
+
+.button__addToCard:hover path {
+  fill: var(--white);
+}
+
+.button__submitFilter-white {
+  max-width: 100px;
+  padding: 8px 24px;
+  font-size: 14px;
+}
+
+.button__cleanFilter-white {
+  max-width: 100px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.button__cleanFilters-black {
+  position: relative;
+  gap: 4px;
+  max-width: 100px;
+  padding: 8px 0px;
+  color: var(--inactive);
+  font-size: 10px;
+
+  @media (width>=1024px) {
+    font-size: 12px;
+    max-width: 130px;
+  }
+}
+
+.button__google {
+  gap: 8px;
+  max-width: 170px;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-transform: none;
+  border: 1px solid var(--inactive);
+}
+
+.button__apple {
+  gap: 8px;
+  max-width: 160px;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-transform: none;
+  border: 1px solid var(--inactive);
+}
+
+.button__apple:hover path {
+  fill: var(--white);
+}

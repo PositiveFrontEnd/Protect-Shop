@@ -1,0 +1,417 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  ModalDeleteProduct > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal__wrapper"
+      >
+        <div
+          class="modal"
+        >
+          <div
+            class="modal__header"
+          >
+            <div
+              class="header__title"
+            >
+              <p
+                class="title__text"
+              >
+                Worning!
+              </p>
+            </div>
+            <button
+              class="header__button"
+              type="button"
+            >
+              <svg
+                fill="black"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal__container"
+          >
+            <div
+              class="modal__content modal__content-form"
+            >
+              <p
+                class="modal__body-title title__logOut"
+              >
+                Are you sure you want to delete product?
+              </p>
+              <div
+                class="footer__email"
+              >
+                <button
+                  class="button-white modal__button"
+                  type="button"
+                >
+                  Yes
+                </button>
+                <button
+                  class="button-black modal__button"
+                  type="button"
+                >
+                  No
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal__wrapper"
+    >
+      <div
+        class="modal"
+      >
+        <div
+          class="modal__header"
+        >
+          <div
+            class="header__title"
+          >
+            <p
+              class="title__text"
+            >
+              Worning!
+            </p>
+          </div>
+          <button
+            class="header__button"
+            type="button"
+          >
+            <svg
+              fill="black"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                fill="white"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="modal__container"
+        >
+          <div
+            class="modal__content modal__content-form"
+          >
+            <p
+              class="modal__body-title title__logOut"
+            >
+              Are you sure you want to delete product?
+            </p>
+            <div
+              class="footer__email"
+            >
+              <button
+                class="button-white modal__button"
+                type="button"
+              >
+                Yes
+              </button>
+              <button
+                class="button-black modal__button"
+                type="button"
+              >
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Тестування компонента  ModalEmailAutorization > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal__wrapper"
+      >
+        <div
+          class="modal"
+        >
+          <div
+            class="modal__header"
+          >
+            <div
+              class="header__title"
+            >
+              <svg
+                class="header__svg"
+                fill="none"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.0213 11.0779L14.8767 13.9326L13.9333 14.8759L11.0787 12.0206C10.0165 12.8721 8.69532 13.3352 7.33398 13.3333C4.02198 13.3333 1.33398 10.6453 1.33398 7.33325C1.33398 4.02125 4.02198 1.33325 7.33398 1.33325C10.646 1.33325 13.334 4.02125 13.334 7.33325C13.3359 8.69459 12.8728 10.0157 12.0213 11.0779ZM10.684 10.5833C11.5301 9.71318 12.0026 8.54687 12.0007 7.33325C12.0007 4.75459 9.91198 2.66659 7.33398 2.66659C4.75532 2.66659 2.66732 4.75459 2.66732 7.33325C2.66732 9.91125 4.75532 11.9999 7.33398 11.9999C8.5476 12.0018 9.71391 11.5293 10.584 10.6833L10.684 10.5833Z"
+                  fill="#FEFEFE"
+                />
+              </svg>
+              <p
+                class="title__text"
+              >
+                Check your email!
+              </p>
+            </div>
+            <button
+              class="header__button"
+              type="button"
+            >
+              <svg
+                fill="black"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal__container"
+          >
+            <div
+              class="modal__content modal__content-form"
+            >
+              <p
+                class="modal__body-title title__registr"
+              >
+                Check your email and finish autorization
+              </p>
+              <div
+                class="footer__email"
+              >
+                <button
+                  class="button-white modal__button"
+                  type="button"
+                >
+                  Send a letter again
+                </button>
+                <button
+                  class="button-black modal__button"
+                  type="button"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal__wrapper"
+    >
+      <div
+        class="modal"
+      >
+        <div
+          class="modal__header"
+        >
+          <div
+            class="header__title"
+          >
+            <svg
+              class="header__svg"
+              fill="none"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.0213 11.0779L14.8767 13.9326L13.9333 14.8759L11.0787 12.0206C10.0165 12.8721 8.69532 13.3352 7.33398 13.3333C4.02198 13.3333 1.33398 10.6453 1.33398 7.33325C1.33398 4.02125 4.02198 1.33325 7.33398 1.33325C10.646 1.33325 13.334 4.02125 13.334 7.33325C13.3359 8.69459 12.8728 10.0157 12.0213 11.0779ZM10.684 10.5833C11.5301 9.71318 12.0026 8.54687 12.0007 7.33325C12.0007 4.75459 9.91198 2.66659 7.33398 2.66659C4.75532 2.66659 2.66732 4.75459 2.66732 7.33325C2.66732 9.91125 4.75532 11.9999 7.33398 11.9999C8.5476 12.0018 9.71391 11.5293 10.584 10.6833L10.684 10.5833Z"
+                fill="#FEFEFE"
+              />
+            </svg>
+            <p
+              class="title__text"
+            >
+              Check your email!
+            </p>
+          </div>
+          <button
+            class="header__button"
+            type="button"
+          >
+            <svg
+              fill="black"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                fill="white"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="modal__container"
+        >
+          <div
+            class="modal__content modal__content-form"
+          >
+            <p
+              class="modal__body-title title__registr"
+            >
+              Check your email and finish autorization
+            </p>
+            <div
+              class="footer__email"
+            >
+              <button
+                class="button-white modal__button"
+                type="button"
+              >
+                Send a letter again
+              </button>
+              <button
+                class="button-black modal__button"
+                type="button"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

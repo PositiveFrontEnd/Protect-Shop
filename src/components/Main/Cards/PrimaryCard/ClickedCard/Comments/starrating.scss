@@ -1,0 +1,47 @@
+.inactive-star path {
+  fill: #e9e9e9;
+}
+input[type="radio"] {
+  display: none;
+}
+.active-star path {
+  fill: yellow;
+  cursor: pointer;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: default;
+}
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+.rating__wrapper {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (width<768px) {
+    max-width: 280px;
+  }
+  cursor: default;
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+.comment__tips {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+.comment__tips.inactive {
+  display: none;
+}

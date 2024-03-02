@@ -1,0 +1,230 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  ModalAddedCart > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal__wrapper"
+      >
+        <div
+          class="modal"
+        >
+          <div
+            class="modal__header"
+          >
+            <div
+              class="header__title"
+            >
+              <svg
+                class="header__svg"
+                fill="none"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.95161 13.7158C4.53787 14.2069 5.23217 14.5521 5.97761 14.7231C6.04894 14.7465 6.09694 14.6531 6.04894 14.6065C4.45227 13.0831 5.32961 11.4345 5.97761 10.6911C6.43961 10.1605 7.09761 9.28645 7.04961 8.11445C7.04961 7.99712 7.16961 7.90312 7.26427 7.97379C8.17027 8.44245 8.78961 9.47379 8.95627 10.3171C9.21894 10.0598 9.31427 9.66112 9.31427 9.30979C9.31427 9.19245 9.45694 9.09845 9.57627 9.19245C10.4343 9.96579 11.9116 12.5905 9.52827 14.6525C9.48094 14.6998 9.52827 14.7938 9.57627 14.7705C10.2989 14.581 10.9786 14.2547 11.5783 13.8091C15.4629 10.8091 12.9363 5.48912 11.2916 3.73179C11.0776 3.52045 10.6963 3.66112 10.6963 3.96579C10.6723 4.59912 10.4816 5.30179 9.98161 5.77045C9.60027 4.17712 8.32961 2.36712 6.51827 1.47645C6.28027 1.35912 5.99427 1.54645 6.01827 1.80445C6.06494 3.98445 4.64294 5.37245 3.40361 7.17712C2.30694 8.79379 1.59227 11.7705 3.95161 13.7158Z"
+                  fill="#FEFEFE"
+                />
+              </svg>
+              <p
+                class="title__text"
+              >
+                Goods added to cart successfully!
+              </p>
+            </div>
+            <button
+              class="header__button"
+              type="button"
+            >
+              <svg
+                fill="black"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal__container"
+          >
+            <div
+              class="modal__content modal__content-form"
+            >
+              <p
+                class="modal__body-title title__logOut"
+              >
+                There are tree goods in the cart
+              </p>
+              <p
+                class="modal__body-totalPrice"
+              >
+                Total : $ 
+              </p>
+              <div
+                class="modal__footer"
+              >
+                <button
+                  class="button-white modal__button"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+                <button
+                  class="button-black  button__changText"
+                  type="button"
+                >
+                  Go to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal__wrapper"
+    >
+      <div
+        class="modal"
+      >
+        <div
+          class="modal__header"
+        >
+          <div
+            class="header__title"
+          >
+            <svg
+              class="header__svg"
+              fill="none"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.95161 13.7158C4.53787 14.2069 5.23217 14.5521 5.97761 14.7231C6.04894 14.7465 6.09694 14.6531 6.04894 14.6065C4.45227 13.0831 5.32961 11.4345 5.97761 10.6911C6.43961 10.1605 7.09761 9.28645 7.04961 8.11445C7.04961 7.99712 7.16961 7.90312 7.26427 7.97379C8.17027 8.44245 8.78961 9.47379 8.95627 10.3171C9.21894 10.0598 9.31427 9.66112 9.31427 9.30979C9.31427 9.19245 9.45694 9.09845 9.57627 9.19245C10.4343 9.96579 11.9116 12.5905 9.52827 14.6525C9.48094 14.6998 9.52827 14.7938 9.57627 14.7705C10.2989 14.581 10.9786 14.2547 11.5783 13.8091C15.4629 10.8091 12.9363 5.48912 11.2916 3.73179C11.0776 3.52045 10.6963 3.66112 10.6963 3.96579C10.6723 4.59912 10.4816 5.30179 9.98161 5.77045C9.60027 4.17712 8.32961 2.36712 6.51827 1.47645C6.28027 1.35912 5.99427 1.54645 6.01827 1.80445C6.06494 3.98445 4.64294 5.37245 3.40361 7.17712C2.30694 8.79379 1.59227 11.7705 3.95161 13.7158Z"
+                fill="#FEFEFE"
+              />
+            </svg>
+            <p
+              class="title__text"
+            >
+              Goods added to cart successfully!
+            </p>
+          </div>
+          <button
+            class="header__button"
+            type="button"
+          >
+            <svg
+              fill="black"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                fill="white"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="modal__container"
+        >
+          <div
+            class="modal__content modal__content-form"
+          >
+            <p
+              class="modal__body-title title__logOut"
+            >
+              There are tree goods in the cart
+            </p>
+            <p
+              class="modal__body-totalPrice"
+            >
+              Total : $ 
+            </p>
+            <div
+              class="modal__footer"
+            >
+              <button
+                class="button-white modal__button"
+                type="button"
+              >
+                Continue shopping
+              </button>
+              <button
+                class="button-black  button__changText"
+                type="button"
+              >
+                Go to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

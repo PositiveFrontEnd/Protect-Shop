@@ -1,0 +1,121 @@
+.form__container__box__authorization {
+  .form__container__box__main__authorization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 20px;
+
+    form {
+      .authoriz__link__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 322px;
+
+        a {
+          color: var(--font-color);
+          font-size: 14px;
+        }
+      }
+    }
+
+    .have__acc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 16px 5vw 24px 0;
+
+      p {
+        margin-right: 12px;
+        color: var(--black);
+        font-size: 14px;
+      }
+
+      a {
+        color: #3760ce;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .img__form__authorization__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -30px !important;
+    overflow: hidden;
+
+    .img__form__registr {
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  @media (width >= 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .form__container__box__main__authorization {
+      max-width: 450px;
+      margin-left: 5vw;
+
+      form {
+        .authoriz__link__box {
+          max-width: 350px;
+        }
+      }
+    }
+
+    .have__acc {
+      p {
+        color: var(--black);
+        font-size: 16px;
+      }
+
+      a {
+        color: #3760ce;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+    .img__form__authorization__container {
+      margin: 0 !important;
+
+      .img__form__registr {
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (width>=1024px) {
+    .form__container__box__main__authorization {
+      max-width: 507px;
+
+      form {
+        .authoriz__link__box {
+          max-width: 420px;
+        }
+      }
+    }
+  }
+}
+
+.wrong__password__massage {
+  margin-bottom: 1vh;
+  color: var(--incorrect);
+  font-size: 12px;
+
+  @media (width>=768px) {
+    font-size: 16px;
+  }
+}

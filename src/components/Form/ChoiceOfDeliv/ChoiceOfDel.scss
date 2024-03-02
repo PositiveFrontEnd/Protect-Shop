@@ -1,0 +1,17 @@
+.input__text__choice {
+  input {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    color: var(--Fild-type-color);
+    font-size: 14px;
+    background-color: var(--white-light) !important;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    height: 100px;
+    @media (width>=1024px) {
+      height: 154px;
+    }
+  }
+}

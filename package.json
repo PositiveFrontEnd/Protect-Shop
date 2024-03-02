@@ -1,0 +1,91 @@
+{
+  "name": "protect",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=16.17.1",
+    "npm": "~8.15.0"
+  },
+  "scripts": {
+    "setup": "npm i --unsafe-perm",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "npx vitest",
+    "vitestUI": "npx vitest --ui",
+    "coverage": "npx vitest --coverage",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
+    "@react-oauth/google": "^0.12.1",
+    "@reduxjs/toolkit": "^2.0.1",
+    "axios": "^1.6.7",
+    "classnames": "^2.3.2",
+    "formik": "^2.4.5",
+    "jwt-decode": "^4.0.0",
+    "mongoose": "^8.0.3",
+    "or": "^0.2.0",
+    "prop-types": "^15.8.1",
+    "rc-slider": "^10.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-email": "^2.0.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.18.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2",
+    "resend": "^3.2.0",
+    "with": "^7.0.2",
+    "yup": "^1.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "@vitest/ui": "^1.0.4",
+    "babel-jest": "^24.8.0",
+    "babel-preset-react-app": "^10.0.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "happy-dom": "^12.10.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-scss-transform": "^1.0.3",
+    "jest-svg-transformer": "^1.0.0",
+    "jest-transform-css": "^6.0.1",
+    "prettier": "^3.1.1",
+    "react-test-renderer": "^18.2.0",
+    "redux-mock-store": "^1.5.4",
+    "sass": "^1.69.5",
+    "swiper": "^9.4.1",
+    "vite": "^4.4.5",
+    "vite-plugin-svgr": "^4.2.0",
+    "vitest": "^1.0.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "swiper/css": "swiper/swiper.min.css"
+    },
+    "transform": {
+      "^.+\\.css$": "jest-transform-css",
+      "^.+\\.(ts|js|jsx)$": "babel-jest",
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.scss$": "jest-scss-transform"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!swiper|swiper/react|ssr-window|dom7)"
+    ]
+  }
+}

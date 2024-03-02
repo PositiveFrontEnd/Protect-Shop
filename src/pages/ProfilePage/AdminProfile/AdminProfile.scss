@@ -1,0 +1,180 @@
+.order__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: var(--black);
+        font-size: 18px;
+        font-family: "Noto Sans";
+        text-transform: uppercase;
+    }
+
+    .order__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .order__links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            min-width: 360px;
+            padding: 24px;
+            color: var(--black);
+            font-size: 16px;
+
+            a:hover,
+            .order.active {
+                gap: 20px;
+                box-sizing: border-box;
+                color: var(--black);
+                font-weight: 600;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (width >=768px) {
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 60px;
+            color: var(--black);
+            font-size: 24px;
+        }
+
+        .order__box {
+            display: flex;
+            flex-direction: row;
+            // align-items: flex-start;
+            // justify-content: flex-start;
+            min-width: 100%;
+
+            .order__links {
+                align-self: start;
+                justify-self: start;
+                max-width: 257px;
+                margin-right: 66px;
+                background: #f5f5f5;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+.order__container{
+    width: 100%;
+    
+}
+.orders__list {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "order__no status name contct__info button";
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr;
+    border: 1px solid var(--inactive);
+    min-height: 60px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+} 
+.orders__list-bold {
+    font-weight: 600;
+}
+.order__cont {
+    position: relative;
+}
+.order__status {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    border: 1px solid var(--incorrect);
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--feedback);
+}
+.order__title-general {
+    font-weight: 600;
+    font-size: 34px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.order__title{
+    font-weight: 600;
+    font-size: 26px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.cange__order__wrapper {
+    .order__products{
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "img quantity name color__order itemNo price";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        border: 1px solid var(--black);
+        align-items: center;
+        justify-items: center;
+        min-height: 50px;
+        text-align: center;
+    }
+    .img {
+        width: 100%;
+    }
+    .total__price {
+        text-align: end;
+    }
+    .name {
+        text-transform: uppercase;
+    }
+}
+.customer__data{
+    .data__item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto, minmax(200px, 1fr));
+        padding: 15px;
+        border: 1px solid var(--black);
+    }
+}
+.order__tabs__box{
+    width: 100%;
+    background-color: var(--fild-type-color);
+}
+.order__tabs {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: var(--font-color);
+    padding-top: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    p {
+        border-left: 1px solid var(--white);
+        border-right: 1px solid var(--white);
+        border-top: 1px solid var(--white);
+        background-color: var(--inactive);
+        padding: auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 18px;
+        text-transform: uppercase;
+
+    }
+}
+.order__tabs .active {
+    background-color: var(--white);
+    color: var(--black);
+}

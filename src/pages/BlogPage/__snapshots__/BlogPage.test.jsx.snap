@@ -1,0 +1,264 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  BlogPage > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="blog"
+      >
+        <div
+          class="container"
+        >
+          <h3
+            class="blog__title"
+          >
+            Blog
+          </h3>
+          <ul
+            class="blog__info"
+          >
+            <li>
+              <img
+                alt="blogOne"
+                class="blog__img"
+                src="/Images/blogImg1.jpg"
+              />
+              <h4
+                class="info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder
+              </p>
+              <p
+                class="info__description"
+              >
+                and at the fingertips.
+              </p>
+            </li>
+            <li>
+              <img
+                alt="blogtwo"
+                class="blog__img"
+                src="/Images/blogImg2.jpg"
+              />
+              <h4
+                class="info__title"
+              >
+                Sackbags
+              </h4>
+              <p
+                class="info__description"
+              >
+                Sackbags with large fasteners and chains have become popular this season.
+              </p>
+              <p
+                class="info__description"
+              >
+                These bags are suitable for many styles, from classics to modern minimalism.
+              </p>
+            </li>
+            <li>
+              <img
+                alt="blogThree"
+                class="blog__img"
+                src="/Images/blogImg3.jpg"
+              />
+              <h4
+                class="info__title"
+              >
+                Sackbags
+              </h4>
+              <p
+                class="info__description"
+              >
+                Sackbags with large fasteners and chains have become popular this season.
+              </p>
+              <p
+                class="info__description"
+              >
+                These bags are suitable for many styles, from classics to modern minimalism.
+              </p>
+            </li>
+            <li>
+              <img
+                alt="blogFour"
+                class="blog__img"
+                src="/Images/blogImg4.jpg"
+              />
+              <h4
+                class="info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="blog"
+    >
+      <div
+        class="container"
+      >
+        <h3
+          class="blog__title"
+        >
+          Blog
+        </h3>
+        <ul
+          class="blog__info"
+        >
+          <li>
+            <img
+              alt="blogOne"
+              class="blog__img"
+              src="/Images/blogImg1.jpg"
+            />
+            <h4
+              class="info__title"
+            >
+              Mini bags forever 
+            </h4>
+            <p
+              class="info__description"
+            >
+              Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder
+            </p>
+            <p
+              class="info__description"
+            >
+              and at the fingertips.
+            </p>
+          </li>
+          <li>
+            <img
+              alt="blogtwo"
+              class="blog__img"
+              src="/Images/blogImg2.jpg"
+            />
+            <h4
+              class="info__title"
+            >
+              Sackbags
+            </h4>
+            <p
+              class="info__description"
+            >
+              Sackbags with large fasteners and chains have become popular this season.
+            </p>
+            <p
+              class="info__description"
+            >
+              These bags are suitable for many styles, from classics to modern minimalism.
+            </p>
+          </li>
+          <li>
+            <img
+              alt="blogThree"
+              class="blog__img"
+              src="/Images/blogImg3.jpg"
+            />
+            <h4
+              class="info__title"
+            >
+              Sackbags
+            </h4>
+            <p
+              class="info__description"
+            >
+              Sackbags with large fasteners and chains have become popular this season.
+            </p>
+            <p
+              class="info__description"
+            >
+              These bags are suitable for many styles, from classics to modern minimalism.
+            </p>
+          </li>
+          <li>
+            <img
+              alt="blogFour"
+              class="blog__img"
+              src="/Images/blogImg4.jpg"
+            />
+            <h4
+              class="info__title"
+            >
+              Mini bags forever 
+            </h4>
+            <p
+              class="info__description"
+            >
+              Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

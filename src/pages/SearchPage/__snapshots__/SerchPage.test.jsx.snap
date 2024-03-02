@@ -1,0 +1,1750 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  SearchPage > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="header__search"
+        >
+          <svg
+            fill="none"
+            height="33"
+            viewBox="0 0 32 33"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.1553 24.5414L27.8647 30.2521L29.7513 28.3654L24.0407 22.6561C25.7436 20.5317 26.6699 17.8894 26.666 15.1667C26.666 8.54275 21.29 3.16675 14.666 3.16675C8.04202 3.16675 2.66602 8.54275 2.66602 15.1667C2.66602 21.7907 8.04202 27.1667 14.666 27.1667C17.3887 27.1706 20.031 26.2444 22.1553 24.5414ZM21.166 21.8667C19.4259 23.5589 17.0933 24.5039 14.666 24.5001C9.50868 24.5001 5.33268 20.3227 5.33268 15.1667C5.33268 10.0094 9.50868 5.83341 14.666 5.83341C19.822 5.83341 23.9993 10.0094 23.9993 15.1667C24.0032 17.594 23.0582 19.9266 21.366 21.6667L21.166 21.8667Z"
+              fill="#191919"
+            />
+          </svg>
+          <form>
+            <input
+              class="header__search__title"
+              name="search"
+              placeholder="Search"
+              type="text"
+              value="some text"
+            />
+          </form>
+        </div>
+        <section
+          class="hero__wrapper"
+        >
+          <div
+            class="swiper swiper-initialized swiper-horizontal mySwiper"
+          >
+            <div
+              class="swiper-wrapper"
+              style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+            >
+              <div
+                class="swiper-slide hero__img__wrapper"
+                data-swiper-slide-index="0"
+              >
+                <div>
+                  <img
+                    src="/Images/heroSale.jpg"
+                  />
+                  <div
+                    class="title__button__wrapper"
+                  >
+                    <p
+                      class="title"
+                    >
+                      Hurry up to get highest discount
+                    </p>
+                    <a
+                      class="button-black hero__button"
+                      href="/catalogue?status=sell"
+                    >
+                        see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide hero__img__wrapper"
+                data-swiper-slide-index="1"
+              >
+                <div>
+                  <img
+                    src="/Images/heroNewCollection.jpg"
+                  />
+                  <div
+                    class="title__button__wrapper"
+                  >
+                    <p
+                      class="title"
+                    >
+                      New collection for summer travel
+                    </p>
+                    <a
+                      class="button-black hero__button"
+                      href="/catalogue?categories=men,woman&type=backpack"
+                    >
+                        see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide hero__img__wrapper"
+                data-swiper-slide-index="2"
+              >
+                <div>
+                  <img
+                    src="/Images/heroAdventure.jpg"
+                  />
+                  <div
+                    class="title__button__wrapper"
+                  >
+                    <p
+                      class="title"
+                    >
+                      Essentials for Every Adventure
+                    </p>
+                    <a
+                      class="button-black hero__button"
+                      href="/catalogue?categories=children&type=backpack"
+                    >
+                        see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-button-prev"
+            />
+            <div
+              class="swiper-button-next"
+            />
+            <div
+              class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+            >
+              <span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              />
+              <span
+                class="swiper-pagination-bullet"
+              />
+              <span
+                class="swiper-pagination-bullet"
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            class="products__wrapper"
+          >
+            <div
+              class="container products"
+            >
+              <div
+                class="products__images"
+              >
+                <div
+                  class="products__images"
+                >
+                  <img
+                    alt=""
+                    src="/Images/forWomen.jpg"
+                  />
+                  <a
+                    class="button-black products__image__caption"
+                    href="/catalogue?categories=woman"
+                  >
+                    for woman
+                  </a>
+                </div>
+                <div
+                  class="products__images"
+                >
+                  <img
+                    alt=""
+                    src="/Images/forKids.jpg"
+                  />
+                  <a
+                    class="button-black products__image__caption"
+                    href="/catalogue?categories=children"
+                  >
+                    for woman
+                  </a>
+                </div>
+                <div
+                  class="products__images"
+                >
+                  <img
+                    alt=""
+                    src="/Images/forMen.jpg"
+                  />
+                  <a
+                    class="button-black products__image__caption"
+                    href="/catalogue?categories=men"
+                  >
+                    for woman
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="popular__conteiner"
+        >
+          <div
+            class="container"
+          >
+            <h4
+              class="popular__title"
+            >
+              The Most Popular shopping for her
+            </h4>
+            <div
+              class="popular__wrapper"
+            />
+          </div>
+        </section>
+        <div
+          class="special-offer__wrapper"
+        >
+          <div
+            class="container buttons"
+          >
+            <button
+              class="button-black special-offer__button"
+              type="button"
+            >
+              New here $20 off your first purchase
+            </button>
+            <button
+              class="button-black special-offer__button"
+              type="button"
+            >
+              Get 10% discount for subscription
+            </button>
+          </div>
+        </div>
+        <section>
+          <div
+            class="feedbacks__wrapper"
+          >
+            <div
+              class="container feedbacks"
+            >
+              <h2
+                class="feedbacks__title"
+              >
+                feedbacks
+              </h2>
+              <div
+                class="feedbacks__content"
+              >
+                <div
+                  class="feedbacks__card"
+                >
+                  <div
+                    class="feedbacks__image"
+                  >
+                    <img
+                      alt=""
+                      src="/Images/feedback1.jpg"
+                    />
+                  </div>
+                  <div
+                    class="feedbacks__stars"
+                  >
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p
+                    class="feedbacks__card__name"
+                  >
+                    olena
+                  </p>
+                  <p
+                    class="feedbacks__card__description"
+                  >
+                    Small bags are my favorite in this season. They are perfect for parties and weekends when you don't have to wear many things.
+                  </p>
+                </div>
+                <div
+                  class="feedbacks__card"
+                >
+                  <div
+                    class="feedbacks__image"
+                  >
+                    <img
+                      alt=""
+                      src="/Images/feedback2.jpg"
+                    />
+                  </div>
+                  <div
+                    class="feedbacks__stars"
+                  >
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p
+                    class="feedbacks__card__name"
+                  >
+                    semen
+                  </p>
+                  <p
+                    class="feedbacks__card__description"
+                  >
+                    Backpack is the best for me. These bags are suitable for many styles, from classics to modern minimalism.
+                  </p>
+                </div>
+                <div
+                  class="feedbacks__card"
+                >
+                  <div
+                    class="feedbacks__image"
+                  >
+                    <img
+                      alt=""
+                      src="/Images/feedback3.jpg"
+                    />
+                  </div>
+                  <div
+                    class="feedbacks__stars"
+                  >
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <svg
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 12 12"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clip-path="url(#clip0_1704_1143)"
+                      >
+                        <path
+                          d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                          fill="#FDE82A"
+                        />
+                      </g>
+                      <defs>
+                        <clippath
+                          id="clip0_1704_1143"
+                        >
+                          <rect
+                            fill="white"
+                            height="12"
+                            width="12"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p
+                    class="feedbacks__card__name"
+                  >
+                    anna
+                  </p>
+                  <p
+                    class="feedbacks__card__description"
+                  >
+                    Handbags with large fasteners and chains it’s for me. Such bags can be worn both on the shoulder and at the fingertips.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="feedbacks__button"
+              >
+                <button
+                  class="button-white"
+                  type="button"
+                >
+                  see more
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="blog__wrapper"
+        >
+          <div
+            class="container"
+          >
+            <h2
+              class="blog__title"
+            >
+              blog
+            </h2>
+            <ul
+              class="blog__info"
+            >
+              <li
+                class="mobile__description"
+              >
+                <img
+                  alt="sectionBlogOne"
+                  class="blog__img"
+                  src="/Images/sectionBlogOne.jpg"
+                />
+                <h4
+                  class="blog__info__title"
+                >
+                  Mini bags forever 
+                </h4>
+                <p
+                  class="blog__info__description"
+                >
+                  Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+                </p>
+              </li>
+              <li
+                class="develop__description"
+              >
+                <img
+                  alt=""
+                  class="blog__img"
+                  src="/Images/sectionBlogTwo.jpg"
+                />
+                <h4
+                  class="blog__info__title"
+                >
+                  Mini bags forever 
+                </h4>
+                <p
+                  class="blog__info__description"
+                >
+                  Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+                </p>
+              </li>
+              <li
+                class="develop__description"
+              >
+                <img
+                  alt=""
+                  class="blog__img"
+                  src="/Images/sectionBlogThree.jpg"
+                />
+                <h4
+                  class="blog__info__title"
+                >
+                  Sackbags
+                </h4>
+                <p
+                  class="blog__info__description"
+                >
+                  Sackbags with large fasteners and chains have become popular this season.
+                </p>
+                <p
+                  class="blog__info__description"
+                >
+                  These bags are suitable for many styles, from classics to modern minimalism.
+                </p>
+              </li>
+            </ul>
+            <div
+              class="blog__button"
+            >
+              <button
+                class="button-white"
+                type="button"
+              >
+                See more
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          class="insta__wrapper "
+        >
+          <div
+            class="container"
+          >
+            <h4
+              class="insta__title"
+            >
+              We are in Instagram @Protect.com
+            </h4>
+            <div
+              class="insta__img__wrapper"
+            />
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="header__search"
+      >
+        <svg
+          fill="none"
+          height="33"
+          viewBox="0 0 32 33"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.1553 24.5414L27.8647 30.2521L29.7513 28.3654L24.0407 22.6561C25.7436 20.5317 26.6699 17.8894 26.666 15.1667C26.666 8.54275 21.29 3.16675 14.666 3.16675C8.04202 3.16675 2.66602 8.54275 2.66602 15.1667C2.66602 21.7907 8.04202 27.1667 14.666 27.1667C17.3887 27.1706 20.031 26.2444 22.1553 24.5414ZM21.166 21.8667C19.4259 23.5589 17.0933 24.5039 14.666 24.5001C9.50868 24.5001 5.33268 20.3227 5.33268 15.1667C5.33268 10.0094 9.50868 5.83341 14.666 5.83341C19.822 5.83341 23.9993 10.0094 23.9993 15.1667C24.0032 17.594 23.0582 19.9266 21.366 21.6667L21.166 21.8667Z"
+            fill="#191919"
+          />
+        </svg>
+        <form>
+          <input
+            class="header__search__title"
+            name="search"
+            placeholder="Search"
+            type="text"
+            value="some text"
+          />
+        </form>
+      </div>
+      <section
+        class="hero__wrapper"
+      >
+        <div
+          class="swiper swiper-initialized swiper-horizontal mySwiper"
+        >
+          <div
+            class="swiper-wrapper"
+            style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+          >
+            <div
+              class="swiper-slide hero__img__wrapper"
+              data-swiper-slide-index="0"
+            >
+              <div>
+                <img
+                  src="/Images/heroSale.jpg"
+                />
+                <div
+                  class="title__button__wrapper"
+                >
+                  <p
+                    class="title"
+                  >
+                    Hurry up to get highest discount
+                  </p>
+                  <a
+                    class="button-black hero__button"
+                    href="/catalogue?status=sell"
+                  >
+                      see more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide hero__img__wrapper"
+              data-swiper-slide-index="1"
+            >
+              <div>
+                <img
+                  src="/Images/heroNewCollection.jpg"
+                />
+                <div
+                  class="title__button__wrapper"
+                >
+                  <p
+                    class="title"
+                  >
+                    New collection for summer travel
+                  </p>
+                  <a
+                    class="button-black hero__button"
+                    href="/catalogue?categories=men,woman&type=backpack"
+                  >
+                      see more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide hero__img__wrapper"
+              data-swiper-slide-index="2"
+            >
+              <div>
+                <img
+                  src="/Images/heroAdventure.jpg"
+                />
+                <div
+                  class="title__button__wrapper"
+                >
+                  <p
+                    class="title"
+                  >
+                    Essentials for Every Adventure
+                  </p>
+                  <a
+                    class="button-black hero__button"
+                    href="/catalogue?categories=children&type=backpack"
+                  >
+                      see more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-button-prev"
+          />
+          <div
+            class="swiper-button-next"
+          />
+          <div
+            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+          >
+            <span
+              class="swiper-pagination-bullet swiper-pagination-bullet-active"
+            />
+            <span
+              class="swiper-pagination-bullet"
+            />
+            <span
+              class="swiper-pagination-bullet"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          class="products__wrapper"
+        >
+          <div
+            class="container products"
+          >
+            <div
+              class="products__images"
+            >
+              <div
+                class="products__images"
+              >
+                <img
+                  alt=""
+                  src="/Images/forWomen.jpg"
+                />
+                <a
+                  class="button-black products__image__caption"
+                  href="/catalogue?categories=woman"
+                >
+                  for woman
+                </a>
+              </div>
+              <div
+                class="products__images"
+              >
+                <img
+                  alt=""
+                  src="/Images/forKids.jpg"
+                />
+                <a
+                  class="button-black products__image__caption"
+                  href="/catalogue?categories=children"
+                >
+                  for woman
+                </a>
+              </div>
+              <div
+                class="products__images"
+              >
+                <img
+                  alt=""
+                  src="/Images/forMen.jpg"
+                />
+                <a
+                  class="button-black products__image__caption"
+                  href="/catalogue?categories=men"
+                >
+                  for woman
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="popular__conteiner"
+      >
+        <div
+          class="container"
+        >
+          <h4
+            class="popular__title"
+          >
+            The Most Popular shopping for her
+          </h4>
+          <div
+            class="popular__wrapper"
+          />
+        </div>
+      </section>
+      <div
+        class="special-offer__wrapper"
+      >
+        <div
+          class="container buttons"
+        >
+          <button
+            class="button-black special-offer__button"
+            type="button"
+          >
+            New here $20 off your first purchase
+          </button>
+          <button
+            class="button-black special-offer__button"
+            type="button"
+          >
+            Get 10% discount for subscription
+          </button>
+        </div>
+      </div>
+      <section>
+        <div
+          class="feedbacks__wrapper"
+        >
+          <div
+            class="container feedbacks"
+          >
+            <h2
+              class="feedbacks__title"
+            >
+              feedbacks
+            </h2>
+            <div
+              class="feedbacks__content"
+            >
+              <div
+                class="feedbacks__card"
+              >
+                <div
+                  class="feedbacks__image"
+                >
+                  <img
+                    alt=""
+                    src="/Images/feedback1.jpg"
+                  />
+                </div>
+                <div
+                  class="feedbacks__stars"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <p
+                  class="feedbacks__card__name"
+                >
+                  olena
+                </p>
+                <p
+                  class="feedbacks__card__description"
+                >
+                  Small bags are my favorite in this season. They are perfect for parties and weekends when you don't have to wear many things.
+                </p>
+              </div>
+              <div
+                class="feedbacks__card"
+              >
+                <div
+                  class="feedbacks__image"
+                >
+                  <img
+                    alt=""
+                    src="/Images/feedback2.jpg"
+                  />
+                </div>
+                <div
+                  class="feedbacks__stars"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <p
+                  class="feedbacks__card__name"
+                >
+                  semen
+                </p>
+                <p
+                  class="feedbacks__card__description"
+                >
+                  Backpack is the best for me. These bags are suitable for many styles, from classics to modern minimalism.
+                </p>
+              </div>
+              <div
+                class="feedbacks__card"
+              >
+                <div
+                  class="feedbacks__image"
+                >
+                  <img
+                    alt=""
+                    src="/Images/feedback3.jpg"
+                  />
+                </div>
+                <div
+                  class="feedbacks__stars"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 12 12"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1704_1143)"
+                    >
+                      <path
+                        d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
+                        fill="#FDE82A"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1704_1143"
+                      >
+                        <rect
+                          fill="white"
+                          height="12"
+                          width="12"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <p
+                  class="feedbacks__card__name"
+                >
+                  anna
+                </p>
+                <p
+                  class="feedbacks__card__description"
+                >
+                  Handbags with large fasteners and chains it’s for me. Such bags can be worn both on the shoulder and at the fingertips.
+                </p>
+              </div>
+            </div>
+            <div
+              class="feedbacks__button"
+            >
+              <button
+                class="button-white"
+                type="button"
+              >
+                see more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="blog__wrapper"
+      >
+        <div
+          class="container"
+        >
+          <h2
+            class="blog__title"
+          >
+            blog
+          </h2>
+          <ul
+            class="blog__info"
+          >
+            <li
+              class="mobile__description"
+            >
+              <img
+                alt="sectionBlogOne"
+                class="blog__img"
+                src="/Images/sectionBlogOne.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+              </p>
+            </li>
+            <li
+              class="develop__description"
+            >
+              <img
+                alt=""
+                class="blog__img"
+                src="/Images/sectionBlogTwo.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+              </p>
+            </li>
+            <li
+              class="develop__description"
+            >
+              <img
+                alt=""
+                class="blog__img"
+                src="/Images/sectionBlogThree.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Sackbags
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Sackbags with large fasteners and chains have become popular this season.
+              </p>
+              <p
+                class="blog__info__description"
+              >
+                These bags are suitable for many styles, from classics to modern minimalism.
+              </p>
+            </li>
+          </ul>
+          <div
+            class="blog__button"
+          >
+            <button
+              class="button-white"
+              type="button"
+            >
+              See more
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="insta__wrapper "
+      >
+        <div
+          class="container"
+        >
+          <h4
+            class="insta__title"
+          >
+            We are in Instagram @Protect.com
+          </h4>
+          <div
+            class="insta__img__wrapper"
+          />
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

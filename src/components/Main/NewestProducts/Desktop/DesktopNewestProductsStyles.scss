@@ -1,0 +1,54 @@
+.desktop__newest__wrapper {
+  background-color: var(--background);
+  padding-block: 60px;
+
+  .desktop__newest__title {
+    color: var(--black);
+    font-size: 24px;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .desktop__newest__cards {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 60px;
+
+    @media (width<900px) {
+      padding-top: 20px;
+    }
+
+    .desktop__newest__card {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      max-width: 400px;
+      cursor: pointer;
+
+      .desktop__newest__img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .desktop__newest__name {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        font-size: 24px;
+        font-family: "Noto Sans", sans-serif;
+        text-transform: uppercase;
+
+        @media (width<1200px) {
+          font-size: 16px;
+        }
+
+        @media (width<900px) {
+          left: 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

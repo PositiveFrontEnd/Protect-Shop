@@ -1,0 +1,572 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  RegastrationPage > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="container"
+      >
+        <div
+          class="form__container__box"
+        >
+          <div
+            class="form__container__box__main"
+          >
+            <div
+              class="form__butt__container"
+            >
+              <span
+                class="form__title"
+              >
+                Registration
+              </span>
+              <div
+                class="form__butt__box"
+              />
+              <span
+                class="form__butt__element"
+              >
+                OR
+              </span>
+            </div>
+            <div
+              class="form__box-registr"
+            >
+              <form
+                action="#"
+              >
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    >
+                      First Name
+                    </p>
+                    <input
+                      class="form__input form__input-modal"
+                      name="firstName"
+                      placeholder="Name"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    >
+                      Last Name
+                    </p>
+                    <input
+                      class="form__input form__input-modal"
+                      name="lastName"
+                      placeholder="Last Name"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    >
+                      Email Adress
+                    </p>
+                    <input
+                      class="form__input form__input-modal"
+                      name="email"
+                      placeholder="Email Adress"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    >
+                      Phone
+                    </p>
+                    <input
+                      class="form__input form__input-modal"
+                      name="telephone"
+                      placeholder="+38 098 2322 232"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <div
+                  class="password__wrapper"
+                >
+                  <label
+                    class="form__field form__field-modal form__field-registr mb-3"
+                  >
+                    <div
+                      class="form__little__box"
+                    >
+                      <p
+                        class="form__title"
+                      >
+                        Password
+                      </p>
+                      <div
+                        class="form__little__box-pass"
+                      >
+                        <input
+                          class="form__input form__input-modal"
+                          name="password"
+                          placeholder="Password"
+                          type="password"
+                          value=""
+                        />
+                        <button
+                          class="password__toggle-btn"
+                          type="button"
+                        >
+                          <svg
+                            fill="none"
+                            height="21px"
+                            viewBox="0 0 24 24"
+                            width="21px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g
+                              id="SVGRepo_bgCarrier"
+                              stroke-width="0"
+                            />
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <g
+                              id="SVGRepo_iconCarrier"
+                            >
+                              <path
+                                d="M22 12C22 12 21.3082 13.3317 20 14.8335M10 5.23552C10.3244 5.15822 10.6578 5.09828 11 5.05822C11.3254 5.02013 11.6588 5 12 5C14.8779 5 17.198 6.43162 18.8762 8M12 9C12.3506 9 12.6872 9.06015 13 9.17071C13.8524 9.47199 14.528 10.1476 14.8293 11C14.9398 11.3128 15 11.6494 15 12M3 3L21 21M12 15C11.6494 15 11.3128 14.9398 11 14.8293C10.1476 14.528 9.47202 13.8524 9.17073 13C9.11389 12.8392 9.07037 12.6721 9.0415 12.5M4.14701 9C3.83877 9.34451 3.56234 9.68241 3.31864 10C2.45286 11.1282 2 12 2 12C2 12 5.63636 19 12 19C12.3412 19 12.6746 18.9799 13 18.9418"
+                                stroke="#8a8a8a"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                              />
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <label
+                  class="select__label select__modal  mb-3"
+                >
+                  <div
+                    class="select__wrapper"
+                  >
+                    <span
+                      class="select__label__text"
+                    >
+                      Gender
+                    </span>
+                    <select
+                      class="select__input select__input-modal"
+                      name="gender"
+                    >
+                      <option
+                        label="Gender"
+                        value=""
+                      />
+                      <option
+                        label="Male"
+                        value="male"
+                      />
+                      <option
+                        label="Female"
+                        value="female"
+                      />
+                    </select>
+                  </div>
+                </label>
+                <label
+                  class="checkbox__label mb-3"
+                >
+                  <div
+                    class="checkbox__wrapper"
+                  >
+                    <input
+                      class="checkbox__input"
+                      name="checkbox"
+                      type="checkbox"
+                      value="false"
+                    />
+                    <span
+                      class="checkbox__label__text"
+                    >
+                      I have read the rules of site and agree with them
+                    </span>
+                  </div>
+                </label>
+                <button
+                  class="button-black button__submit button__registr__page"
+                  type="submit"
+                >
+                  LOG IN
+                </button>
+              </form>
+            </div>
+            <div
+              class="have__acc"
+            >
+              <p>
+                Already have an account? 
+              </p>
+              <a
+                href="/account/authorization"
+              >
+                Sing in
+              </a>
+            </div>
+          </div>
+          <div
+            class="img__form__registr__container"
+          >
+            <img
+              alt="Registration"
+              class="img__form__registr"
+              src="/Images/regestrationF.jpg"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="container"
+    >
+      <div
+        class="form__container__box"
+      >
+        <div
+          class="form__container__box__main"
+        >
+          <div
+            class="form__butt__container"
+          >
+            <span
+              class="form__title"
+            >
+              Registration
+            </span>
+            <div
+              class="form__butt__box"
+            />
+            <span
+              class="form__butt__element"
+            >
+              OR
+            </span>
+          </div>
+          <div
+            class="form__box-registr"
+          >
+            <form
+              action="#"
+            >
+              <label
+                class="form__field form__field-modal form__field-registr  mb-3"
+              >
+                <div
+                  class="form__little__box "
+                >
+                  <p
+                    class="form__title"
+                  >
+                    First Name
+                  </p>
+                  <input
+                    class="form__input form__input-modal"
+                    name="firstName"
+                    placeholder="Name"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </label>
+              <label
+                class="form__field form__field-modal form__field-registr  mb-3"
+              >
+                <div
+                  class="form__little__box "
+                >
+                  <p
+                    class="form__title"
+                  >
+                    Last Name
+                  </p>
+                  <input
+                    class="form__input form__input-modal"
+                    name="lastName"
+                    placeholder="Last Name"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </label>
+              <label
+                class="form__field form__field-modal form__field-registr  mb-3"
+              >
+                <div
+                  class="form__little__box "
+                >
+                  <p
+                    class="form__title"
+                  >
+                    Email Adress
+                  </p>
+                  <input
+                    class="form__input form__input-modal"
+                    name="email"
+                    placeholder="Email Adress"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </label>
+              <label
+                class="form__field form__field-modal form__field-registr  mb-3"
+              >
+                <div
+                  class="form__little__box "
+                >
+                  <p
+                    class="form__title"
+                  >
+                    Phone
+                  </p>
+                  <input
+                    class="form__input form__input-modal"
+                    name="telephone"
+                    placeholder="+38 098 2322 232"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </label>
+              <div
+                class="password__wrapper"
+              >
+                <label
+                  class="form__field form__field-modal form__field-registr mb-3"
+                >
+                  <div
+                    class="form__little__box"
+                  >
+                    <p
+                      class="form__title"
+                    >
+                      Password
+                    </p>
+                    <div
+                      class="form__little__box-pass"
+                    >
+                      <input
+                        class="form__input form__input-modal"
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <button
+                        class="password__toggle-btn"
+                        type="button"
+                      >
+                        <svg
+                          fill="none"
+                          height="21px"
+                          viewBox="0 0 24 24"
+                          width="21px"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            id="SVGRepo_bgCarrier"
+                            stroke-width="0"
+                          />
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <g
+                            id="SVGRepo_iconCarrier"
+                          >
+                            <path
+                              d="M22 12C22 12 21.3082 13.3317 20 14.8335M10 5.23552C10.3244 5.15822 10.6578 5.09828 11 5.05822C11.3254 5.02013 11.6588 5 12 5C14.8779 5 17.198 6.43162 18.8762 8M12 9C12.3506 9 12.6872 9.06015 13 9.17071C13.8524 9.47199 14.528 10.1476 14.8293 11C14.9398 11.3128 15 11.6494 15 12M3 3L21 21M12 15C11.6494 15 11.3128 14.9398 11 14.8293C10.1476 14.528 9.47202 13.8524 9.17073 13C9.11389 12.8392 9.07037 12.6721 9.0415 12.5M4.14701 9C3.83877 9.34451 3.56234 9.68241 3.31864 10C2.45286 11.1282 2 12 2 12C2 12 5.63636 19 12 19C12.3412 19 12.6746 18.9799 13 18.9418"
+                              stroke="#8a8a8a"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                            />
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <label
+                class="select__label select__modal  mb-3"
+              >
+                <div
+                  class="select__wrapper"
+                >
+                  <span
+                    class="select__label__text"
+                  >
+                    Gender
+                  </span>
+                  <select
+                    class="select__input select__input-modal"
+                    name="gender"
+                  >
+                    <option
+                      label="Gender"
+                      value=""
+                    />
+                    <option
+                      label="Male"
+                      value="male"
+                    />
+                    <option
+                      label="Female"
+                      value="female"
+                    />
+                  </select>
+                </div>
+              </label>
+              <label
+                class="checkbox__label mb-3"
+              >
+                <div
+                  class="checkbox__wrapper"
+                >
+                  <input
+                    class="checkbox__input"
+                    name="checkbox"
+                    type="checkbox"
+                    value="false"
+                  />
+                  <span
+                    class="checkbox__label__text"
+                  >
+                    I have read the rules of site and agree with them
+                  </span>
+                </div>
+              </label>
+              <button
+                class="button-black button__submit button__registr__page"
+                type="submit"
+              >
+                LOG IN
+              </button>
+            </form>
+          </div>
+          <div
+            class="have__acc"
+          >
+            <p>
+              Already have an account? 
+            </p>
+            <a
+              href="/account/authorization"
+            >
+              Sing in
+            </a>
+          </div>
+        </div>
+        <div
+          class="img__form__registr__container"
+        >
+          <img
+            alt="Registration"
+            class="img__form__registr"
+            src="/Images/regestrationF.jpg"
+          />
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

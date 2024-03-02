@@ -1,0 +1,270 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  HeroSlider > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="swiper swiper-initialized swiper-horizontal mySwiper"
+      >
+        <div
+          class="swiper-wrapper"
+          style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+        >
+          <div
+            class="swiper-slide hero__img__wrapper"
+            data-swiper-slide-index="0"
+          >
+            <div>
+              <img
+                src="/Images/heroSale.jpg"
+              />
+              <div
+                class="title__button__wrapper"
+              >
+                <p
+                  class="title"
+                >
+                  Hurry up to get highest discount
+                </p>
+                <a
+                  class="button-black hero__button"
+                  href="/catalogue?status=sell"
+                >
+                    see more
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide hero__img__wrapper"
+            data-swiper-slide-index="1"
+          >
+            <div>
+              <img
+                src="/Images/heroNewCollection.jpg"
+              />
+              <div
+                class="title__button__wrapper"
+              >
+                <p
+                  class="title"
+                >
+                  New collection for summer travel
+                </p>
+                <a
+                  class="button-black hero__button"
+                  href="/catalogue?categories=men,woman&type=backpack"
+                >
+                    see more
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide hero__img__wrapper"
+            data-swiper-slide-index="2"
+          >
+            <div>
+              <img
+                src="/Images/heroAdventure.jpg"
+              />
+              <div
+                class="title__button__wrapper"
+              >
+                <p
+                  class="title"
+                >
+                  Essentials for Every Adventure
+                </p>
+                <a
+                  class="button-black hero__button"
+                  href="/catalogue?categories=children&type=backpack"
+                >
+                    see more
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-button-prev"
+        />
+        <div
+          class="swiper-button-next"
+        />
+        <div
+          class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+        >
+          <span
+            class="swiper-pagination-bullet swiper-pagination-bullet-active"
+          />
+          <span
+            class="swiper-pagination-bullet"
+          />
+          <span
+            class="swiper-pagination-bullet"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="swiper swiper-initialized swiper-horizontal mySwiper"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide hero__img__wrapper"
+          data-swiper-slide-index="0"
+        >
+          <div>
+            <img
+              src="/Images/heroSale.jpg"
+            />
+            <div
+              class="title__button__wrapper"
+            >
+              <p
+                class="title"
+              >
+                Hurry up to get highest discount
+              </p>
+              <a
+                class="button-black hero__button"
+                href="/catalogue?status=sell"
+              >
+                  see more
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide hero__img__wrapper"
+          data-swiper-slide-index="1"
+        >
+          <div>
+            <img
+              src="/Images/heroNewCollection.jpg"
+            />
+            <div
+              class="title__button__wrapper"
+            >
+              <p
+                class="title"
+              >
+                New collection for summer travel
+              </p>
+              <a
+                class="button-black hero__button"
+                href="/catalogue?categories=men,woman&type=backpack"
+              >
+                  see more
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide hero__img__wrapper"
+          data-swiper-slide-index="2"
+        >
+          <div>
+            <img
+              src="/Images/heroAdventure.jpg"
+            />
+            <div
+              class="title__button__wrapper"
+            >
+              <p
+                class="title"
+              >
+                Essentials for Every Adventure
+              </p>
+              <a
+                class="button-black hero__button"
+                href="/catalogue?categories=children&type=backpack"
+              >
+                  see more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-button-prev"
+      />
+      <div
+        class="swiper-button-next"
+      />
+      <div
+        class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+      >
+        <span
+          class="swiper-pagination-bullet swiper-pagination-bullet-active"
+        />
+        <span
+          class="swiper-pagination-bullet"
+        />
+        <span
+          class="swiper-pagination-bullet"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

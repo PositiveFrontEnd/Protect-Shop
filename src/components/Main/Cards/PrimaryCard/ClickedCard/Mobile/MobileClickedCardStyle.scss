@@ -1,0 +1,209 @@
+.mobile__card {
+  display: flex;
+  flex-direction: column;
+  .mobile__card__toggler {
+    margin-block: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 768px;
+
+    .mobile__card__switch {
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;
+      padding-block: 10px;
+      border-bottom: 4px solid var(--inactive);
+      transition: border-bottom-color 0.3s ease;
+    }
+    .mobile__card__switch.active {
+      content: "";
+      display: flex;
+      justify-content: center;
+      border-bottom: 4px solid var(--black);
+      max-width: 328px;
+    }
+    .mobile__card__switch:hover {
+      cursor: pointer;
+    }
+  }
+
+  .mobile__card__title {
+    text-align: center;
+    padding-block: 16px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .mobile__card__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    .mobile__card__images-main {
+      align-self: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .mobile__card__images-additional {
+      display: flex;
+      gap: 3px;
+      padding-inline: 16px;
+      align-self: self-start;
+
+      img {
+        max-width: 75px;
+        cursor: pointer;
+      }
+    }
+  }
+  .mobile__card__feedbacks {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mobile__card__stars {
+      .star {
+        width: 30px;
+      }
+    }
+
+    .mobile__card__comments {
+      span {
+        font-size: 16px;
+        color: var(--inactive);
+      }
+    }
+  }
+  .mobile__card__price {
+    padding: 8px 16px;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .mobile__card__colors {
+    padding: 8px 16px;
+    display: flex;
+    gap: 16px;
+    .color__button {
+      width: 36px !important;
+      height: 36px !important;
+      transition: transform 0.5s ease;
+    }
+    .color__button.selected {
+      transform: scale(1.35);
+    }
+  }
+
+  .mobile__card__buttons {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .mobile__card__buttons-primary {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 8px;
+        max-width: 450px !important;
+        border: 1px solid black;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+
+      .locker {
+        margin-left: 12px;
+      }
+
+      .favorite {
+        margin-left: 12px;
+        align-self: center;
+      }
+    }
+
+    .mobile__card__buttons-secondary {
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 8px;
+        background-color: var(--black);
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: var(--white);
+        border-radius: 12px;
+        text-transform: uppercase;
+      }
+      .checkmark {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .card__comments.active {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .card__comments {
+    display: none;
+  }
+
+  .mobile__card__description {
+    display: none;
+    button {
+      width: 100%;
+    }
+  }
+  .mobile__card__description.active {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    margin-top: 10px;
+  }
+}
+
+.desktop__card__counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 34px;
+
+  @media (width>=768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // gap: 34px;gap
+  }
+
+  .desktop__card__counter-min {
+    background-color: #d9d9d9;
+    min-width: 30px;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+
+    @media (width>=768px) {
+      background-color: #d9d9d9;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+}

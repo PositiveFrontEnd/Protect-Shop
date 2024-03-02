@@ -1,0 +1,442 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  ModalForm > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal__wrapper"
+      >
+        <div
+          class="modal"
+        >
+          <div
+            class="modal__header"
+          >
+            <div
+              class="header__title"
+            >
+              <svg
+                class="header__svg"
+                fill="none"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5261 1.8856C15.7864 1.62525 15.7864 1.20314 15.5261 0.942787L15.0547 0.471385C14.7943 0.211035 14.3722 0.211036 14.1119 0.471385L11.2834 3.29983L10.1049 2.12127C9.9142 1.93061 9.62746 1.87357 9.37833 1.97676C9.1292 2.07995 8.9668 2.32303 8.9668 2.59268V6.36391C8.9668 6.73213 9.26526 7.0306 9.63346 7.0306H13.4047C13.6743 7.0306 13.9175 6.86813 14.0206 6.61903C14.1238 6.36992 14.0668 6.08317 13.8761 5.89251L12.6977 4.71404L15.5261 1.8856Z"
+                  fill="#FEFEFE"
+                />
+                <path
+                  d="M1.33791 3.02769C1.27065 2.07483 2.07752 1.33325 3.03079 1.33325H5.07135C5.56069 1.33325 6.00203 1.62809 6.19023 2.08072L7.04351 4.13289C7.25138 4.6328 7.10385 5.21021 6.68185 5.54853L6.14994 5.97495C5.91257 6.16524 5.83187 6.49338 5.97261 6.76307C6.69591 8.14934 7.76491 9.32581 9.06491 10.1777C9.33931 10.3575 9.70178 10.286 9.90651 10.0295L10.4608 9.33527C10.7984 8.91241 11.3746 8.76454 11.8734 8.97287L13.9214 9.82794C14.3731 10.0165 14.6673 10.4588 14.6673 10.9491V11.6577H14.6399V12.9665C14.6399 13.9217 13.8999 14.7303 12.949 14.6626C6.86871 14.2301 1.76896 9.13441 1.33791 3.02769Z"
+                  fill="#FEFEFE"
+                />
+              </svg>
+              <p
+                class="title__text"
+              >
+                Call me out
+              </p>
+            </div>
+            <button
+              class="header__button"
+              type="button"
+            >
+              <svg
+                fill="black"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal__container"
+          >
+            <div
+              class="modal__content modal__content-form"
+            >
+              <p
+                class="modal__body-title title__CallOut"
+              >
+                If you still have questions, leave your contacts and our manager will call you
+              </p>
+              <div
+                class="form__box form__modal__box"
+              >
+                <form
+                  action="#"
+                  name="<input type="text" placeholder="YOUR NAME" class="form__input form__input-modal" value="" name="name">"
+                >
+                  <label
+                    class="form__field form__field-modal form__field-registr  mb-3"
+                  >
+                    <div
+                      class="form__little__box "
+                    >
+                      <p
+                        class="form__title"
+                      />
+                      <input
+                        class="form__input form__input-modal"
+                        name="name"
+                        placeholder="YOUR NAME"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </label>
+                  <label
+                    class="form__field form__field-modal form__field-registr  mb-3"
+                  >
+                    <div
+                      class="form__little__box "
+                    >
+                      <p
+                        class="form__title"
+                      />
+                      <input
+                        class="form__input form__input-modal"
+                        name="phone"
+                        placeholder="YOUR PHONE"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </label>
+                  <label
+                    class="form__field form__field-modal form__field-registr  mb-3"
+                  >
+                    <div
+                      class="form__little__box "
+                    >
+                      <p
+                        class="form__title"
+                      />
+                      <input
+                        class="form__input form__input-modal"
+                        name="email"
+                        placeholder="YOUR EMAIL"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </label>
+                  <label
+                    class="select__label select__modal  mb-3"
+                  >
+                    <div
+                      class="select__wrapper"
+                    >
+                      <span
+                        class="select__label__text"
+                      />
+                      <select
+                        class="select__input select__input-modal"
+                        name="question"
+                      >
+                        <option
+                          label="YOUR QUESTION"
+                          value="my question"
+                        />
+                        <option
+                          label="Product Information"
+                          value="Product Information"
+                        />
+                        <option
+                          label="Shipping and Payment"
+                          value="Shipping and Payment"
+                        />
+                        <option
+                          label="Returns and Exchanges"
+                          value="Returns and Exchanges"
+                        />
+                        <option
+                          label="Security and Privacy"
+                          value="Security and Privacy"
+                        />
+                      </select>
+                    </div>
+                  </label>
+                  <label
+                    class="form__field form__field-modal form__field-registr  mb-3 input__text"
+                  >
+                    <div
+                      class="form__little__box "
+                    >
+                      <p
+                        class="form__title"
+                      />
+                      <input
+                        class="form__input form__input-modal"
+                        name="letter"
+                        placeholder="TEXT"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </label>
+                  <button
+                    class="button-black button__submit button__submit__modal-call"
+                    type="submit"
+                  >
+                    SUBMIT
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal__wrapper"
+    >
+      <div
+        class="modal"
+      >
+        <div
+          class="modal__header"
+        >
+          <div
+            class="header__title"
+          >
+            <svg
+              class="header__svg"
+              fill="none"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5261 1.8856C15.7864 1.62525 15.7864 1.20314 15.5261 0.942787L15.0547 0.471385C14.7943 0.211035 14.3722 0.211036 14.1119 0.471385L11.2834 3.29983L10.1049 2.12127C9.9142 1.93061 9.62746 1.87357 9.37833 1.97676C9.1292 2.07995 8.9668 2.32303 8.9668 2.59268V6.36391C8.9668 6.73213 9.26526 7.0306 9.63346 7.0306H13.4047C13.6743 7.0306 13.9175 6.86813 14.0206 6.61903C14.1238 6.36992 14.0668 6.08317 13.8761 5.89251L12.6977 4.71404L15.5261 1.8856Z"
+                fill="#FEFEFE"
+              />
+              <path
+                d="M1.33791 3.02769C1.27065 2.07483 2.07752 1.33325 3.03079 1.33325H5.07135C5.56069 1.33325 6.00203 1.62809 6.19023 2.08072L7.04351 4.13289C7.25138 4.6328 7.10385 5.21021 6.68185 5.54853L6.14994 5.97495C5.91257 6.16524 5.83187 6.49338 5.97261 6.76307C6.69591 8.14934 7.76491 9.32581 9.06491 10.1777C9.33931 10.3575 9.70178 10.286 9.90651 10.0295L10.4608 9.33527C10.7984 8.91241 11.3746 8.76454 11.8734 8.97287L13.9214 9.82794C14.3731 10.0165 14.6673 10.4588 14.6673 10.9491V11.6577H14.6399V12.9665C14.6399 13.9217 13.8999 14.7303 12.949 14.6626C6.86871 14.2301 1.76896 9.13441 1.33791 3.02769Z"
+                fill="#FEFEFE"
+              />
+            </svg>
+            <p
+              class="title__text"
+            >
+              Call me out
+            </p>
+          </div>
+          <button
+            class="header__button"
+            type="button"
+          >
+            <svg
+              fill="black"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                fill="white"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="modal__container"
+        >
+          <div
+            class="modal__content modal__content-form"
+          >
+            <p
+              class="modal__body-title title__CallOut"
+            >
+              If you still have questions, leave your contacts and our manager will call you
+            </p>
+            <div
+              class="form__box form__modal__box"
+            >
+              <form
+                action="#"
+                name="<input type="text" placeholder="YOUR NAME" class="form__input form__input-modal" value="" name="name">"
+              >
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    />
+                    <input
+                      class="form__input form__input-modal"
+                      name="name"
+                      placeholder="YOUR NAME"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    />
+                    <input
+                      class="form__input form__input-modal"
+                      name="phone"
+                      placeholder="YOUR PHONE"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    />
+                    <input
+                      class="form__input form__input-modal"
+                      name="email"
+                      placeholder="YOUR EMAIL"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <label
+                  class="select__label select__modal  mb-3"
+                >
+                  <div
+                    class="select__wrapper"
+                  >
+                    <span
+                      class="select__label__text"
+                    />
+                    <select
+                      class="select__input select__input-modal"
+                      name="question"
+                    >
+                      <option
+                        label="YOUR QUESTION"
+                        value="my question"
+                      />
+                      <option
+                        label="Product Information"
+                        value="Product Information"
+                      />
+                      <option
+                        label="Shipping and Payment"
+                        value="Shipping and Payment"
+                      />
+                      <option
+                        label="Returns and Exchanges"
+                        value="Returns and Exchanges"
+                      />
+                      <option
+                        label="Security and Privacy"
+                        value="Security and Privacy"
+                      />
+                    </select>
+                  </div>
+                </label>
+                <label
+                  class="form__field form__field-modal form__field-registr  mb-3 input__text"
+                >
+                  <div
+                    class="form__little__box "
+                  >
+                    <p
+                      class="form__title"
+                    />
+                    <input
+                      class="form__input form__input-modal"
+                      name="letter"
+                      placeholder="TEXT"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </label>
+                <button
+                  class="button-black button__submit button__submit__modal-call"
+                  type="submit"
+                >
+                  SUBMIT
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

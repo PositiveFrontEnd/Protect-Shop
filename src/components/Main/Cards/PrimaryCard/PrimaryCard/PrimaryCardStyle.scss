@@ -1,0 +1,220 @@
+.primary__card {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 10px;
+  .card__favorites {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+  }
+
+  .card__image {
+    position: relative;
+    .card__image__box-front {
+      display: flex;
+      justify-content: center;
+      .card__image-main {
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+    .card__image__box-back {
+      display: none;
+      position: absolute;
+      top: 0;
+      .card__image-main {
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+    .card__image__text {
+      position: absolute;
+      padding-inline: 4px;
+      top: 0;
+      left: 12px;
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      background-color: var(--white);
+      color: var(--black);
+
+      @media (width>=768px) {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  .card__image:hover {
+    .card__image__box-back {
+      display: block;
+    }
+    @media (width<=1024px) {
+      .card__image__box-back {
+        display: none;
+      }
+    }
+  }
+
+  .card__description {
+    padding-inline: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 6px;
+    @media (width>=768px) {
+      padding-inline: 12px;
+    }
+
+    .card__feedbacks {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      justify-content: space-between;
+      @media (width>=768px) {
+        align-items: center;
+      }
+
+      .card__comments {
+        color: var(--inactive);
+        font-size: 10px;
+        letter-spacing: 0.55px;
+        @media (width>=450px) {
+          font-size: 14px;
+        }
+        @media (width>=768px) {
+          font-size: 11px;
+          line-height: 150%;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .card__name {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .card__name-major {
+        max-width: 310px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--black);
+        cursor: pointer;
+
+        @media (width>=768px) {
+          font-size: 14px;
+          line-height: 100%;
+          height: 20px;
+        }
+      }
+
+      .lower {
+        font-size: 15px;
+
+        @media (width>=768px) {
+          font-size: 13px;
+        }
+        @media (width>=1000px) {
+          font-size: 12px;
+        }
+      }
+      .card__name-major:hover {
+        text-decoration: underline;
+      }
+
+      .card__name-minor {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: var(--fild-type-color);
+
+        @media (width>=768px) {
+          font-size: 14px;
+          color: #746666;
+        }
+      }
+
+      .card__name-major::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .card__price {
+      display: flex;
+      font-size: 14px;
+      line-height: 150%;
+
+      @media (width>=768px) {
+        height: 27px;
+        align-items: flex-end;
+      }
+
+      .card__price-old-new {
+        color: var(--incorrect);
+        text-decoration: line-through;
+        margin-right: 20px;
+        @media (width>=768px) {
+          font-size: 14px;
+          margin-right: 20px;
+        }
+      }
+      .card__price-old {
+        color: var(--incorrect);
+        text-decoration: line-through;
+      }
+
+      .card__price-new {
+        color: #847979;
+        @media (width>=768px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .card__additionals {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .card__colors {
+        display: flex;
+        gap: 8px;
+
+        .card__colors-color {
+          width: 20px !important;
+          height: 20px !important;
+          cursor: default;
+        }
+        .card__colors-color.active {
+          scale: 1.2 !important;
+        }
+      }
+    }
+  }
+
+  .star {
+    width: 16px;
+    height: 16px;
+
+    @media (width>=768px) {
+      width: 14px;
+      height: 14px;
+    }
+    @media (width>=1000px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.card__sizes {
+  color: var(--black);
+  font-size: 12px !important;
+  line-height: 150%;
+  text-transform: uppercase;
+  @media (width<=768px) {
+    display: none;
+  }
+}

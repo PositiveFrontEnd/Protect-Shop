@@ -1,0 +1,152 @@
+.form__contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form__contact__info__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form__box__choice {
+      gap: 0;
+      flex-direction: column;
+      .form__littl-box__choice {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .basket__order__page {
+        .basket__title-order__page {
+          display: none;
+        }
+        .basket__content-order__page {
+          .shopping__card__wrapper-order__page {
+            margin-top: 5px;
+            padding-inline: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .shopping__card__image-order__page {
+              margin-right: 10px;
+              img {
+                width: 79px;
+                height: 79px;
+              }
+            }
+            .shopping__card__info {
+              .shopping__card__info-icon-order__page {
+                display: none;
+              }
+            }
+          }
+          .basket__promoCode-order__page {
+            .promoCode__useCode-order__page {
+              display: none;
+            }
+
+            .promoCode__container-order__page {
+              display: flex;
+              flex-direction: column;
+              .promo__code {
+                display: flex;
+              }
+              .button__order__page {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .button__Check {
+    margin-top: 0;
+  }
+
+  @media (width >= 768px) {
+    width: 100%;
+    max-width: 900px;
+    .form__contact__info__container {
+      width: 100%;
+
+      .form__box__choice {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .form__littl-box__choice {
+          align-items: flex-start;
+        }
+        .basket__order__page {
+          margin-bottom: 0;
+          position: relative;
+          bottom: 70px;
+          .basket__title-order__page {
+            display: none;
+          }
+          .basket__content-order__page {
+            display: flex;
+            flex-direction: column;
+            .shopping__card__wrapper-order__page {
+              .shopping__card__info {
+                .shopping__card__info-icon-order__page {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+            .butt__contine__shopping-order__page {
+              display: none;
+            }
+            .basket__promoCode-order__page {
+              .promoCode__useCode-order__page {
+                display: none;
+              }
+              .promoCode__container-order__page {
+                .basket__total__price-order__page {
+                  margin-top: 0;
+                }
+                flex-direction: column-reverse;
+                .button__order__page {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (width>=1024px) {
+    max-width: 1440px;
+    .form__contact__info__container {
+      .form__box__choice {
+        gap: 95px;
+        .basket__order__page {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0 0;
+          .basket__content-order__page {
+            width: 100%;
+            gap: 0;
+            .shopping__card__wrapper-order__page {
+              justify-content: flex-start;
+              .shopping__card__image-order__page {
+                margin-right: 10px;
+                img {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .button__Check {
+      margin-top: 40px;
+    }
+  }
+}

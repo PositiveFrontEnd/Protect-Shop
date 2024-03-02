@@ -1,0 +1,104 @@
+.basket {
+  margin-bottom: 24px;
+
+  @media (width >= 768px) {
+    margin-bottom: 60px;
+  }
+
+  .basket__title {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (width >= 768px) {
+      margin-top: 20px;
+      margin-bottom: 60px;
+      font-size: 24px;
+    }
+  }
+
+  .basket__content {
+    display: grid;
+
+    @media (width <= 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (width >= 1065px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+    }
+  }
+
+  .basket__promoCode {
+    margin-top: 24px;
+
+    @media (width >= 768px) {
+      margin-top: 0;
+    }
+
+    .promoCode__container {
+      .promoCode__title {
+        padding-bottom: 5px;
+      }
+    }
+
+    .promoCode__containet__input {
+      display: none;
+
+      .promoCode__input {
+        width: 244px;
+        padding: 9px 10px 9px 16px;
+        border: 1px solid black;
+        border-radius: 12px 0 0 12px;
+
+        @media (width >= 768px) {
+          max-width: 400px;
+          padding: 12px 0 12px 12px;
+        }
+      }
+
+      .promoCode__apply {
+        width: 84px;
+        border-radius: 0 12px 12px 0;
+
+        @media (width >= 768px) {
+        }
+      }
+    }
+  }
+
+  .basket__total__price {
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @media (width >= 768px) {
+      margin-top: 65px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .basket__button__continue {
+    display: none;
+
+    @media (width >= 1065px) {
+      display: block;
+      margin-top: 37px;
+    }
+  }
+
+  .basket__noProducts {
+    text-align: center;
+  }
+}
+
+.promoCode{
+  text-decoration: line-through;
+  padding-right: 7px;
+  color: red;
+}

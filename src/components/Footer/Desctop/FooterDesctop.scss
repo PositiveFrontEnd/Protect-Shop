@@ -1,0 +1,29 @@
+.footer__logo {
+  @media (width>=768px) {
+    padding-top: 0;
+  }
+}
+
+.footer__menu__flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer__title__wrapper {
+  padding-bottom: 20px;
+}
+
+.footer__item li {
+  padding-bottom: 8px;
+}
+
+.footer__rights {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__direction__rows {
+  padding-bottom: 30px;
+}

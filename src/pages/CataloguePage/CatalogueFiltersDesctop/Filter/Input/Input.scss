@@ -1,0 +1,35 @@
+.input__desktop__box {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 2px 0;
+
+  .input__desktop__checkbox {
+    width: 100%;
+    max-width: 12px;
+    max-height: 12px;
+    margin: 4px;
+  }
+
+  .input__desktop__label {
+    color: var(--black);
+    font-size: 12px;
+  }
+
+  .input__desktop__search {
+    display: flex;
+    gap: 124px;
+    align-items: center;
+    width: 100%;
+    max-width: 240px;
+    padding: 8px 12px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+  }
+
+  .input__desktop__search__icon {
+    position: absolute;
+    right: 44px;
+  }
+}

@@ -1,0 +1,16 @@
+.label__bold{
+    font-size: 16px;
+    font-weight: 700;
+}
+.product__textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    height: 200px;
+    overflow-y: auto;
+    resize: none;
+    color: var(--fild-type-color);
+    background-color: var(--white-dark);
+    margin-bottom: 12px;
+}

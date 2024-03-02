@@ -1,0 +1,119 @@
+.modal__content-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__modal__box {
+  width: 320px;
+  margin-top: 20px;
+  margin-left: 40px;
+
+  form {
+    width: 100%;
+
+    .form__field-modal {
+      .svg__error-valid__modal {
+        bottom: 42px;
+        left: -30px;
+      }
+
+      .svg__ok-valid__modal {
+        bottom: 20px;
+        left: -30px;
+      }
+
+      .form__little__box {
+        .form__input-modal {
+          margin-top: 8px;
+          margin-bottom: 8px;
+          padding-top: 14px;
+          padding-bottom: 12px;
+          color: var(--Fild-type-color);
+          font-size: 14px;
+          background-color: var(--white-light);
+          border: 1px solid var(--black);
+          border-radius: 12px;
+        }
+      }
+    }
+
+    .error__message-modal {
+      margin-top: 3px;
+    }
+
+    .select__wrapper {
+      margin-bottom: 0;
+      color: var(--Fild-type-color);
+      font-size: 16px;
+      .select__input-modal {
+        font-weight: 400;
+        width: 88%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-top: 14px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        background-color: var(--white-light);
+        border: 1px solid var(--black);
+        border-radius: 12px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>');
+        background-repeat: no-repeat;
+        background-position: 252px center;
+        select {
+          padding: 0 9px;
+          option {
+            color: var(--Fild-type-color);
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
+    .input__text {
+      input {
+        height: 72px;
+        vertical-align: 1;
+      }
+    }
+
+    .button__submit__modal-call {
+      width: 88%;
+      margin-top: 0;
+    }
+  }
+
+  @media (width >= 768px) {
+    width: 100%;
+    max-width: 450px;
+    margin-left: 60px;
+    form {
+      .select__wrapper {
+        .select__input-modal {
+          background-position: 360px center;
+        }
+      }
+    }
+  }
+
+  @media (width >= 1024px) {
+    max-width: 507px;
+    margin-left: 80px;
+
+    form {
+      .select__wrapper {
+        .select__input-modal {
+          background-position: 410px center;
+        }
+      }
+      .button__submit__modal-call {
+        max-width: 447px;
+      }
+    }
+  }
+}

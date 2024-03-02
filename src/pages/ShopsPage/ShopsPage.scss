@@ -1,0 +1,155 @@
+.shops__title {
+  padding: 8px 0;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 25px;
+  text-align: center;
+
+  @media (width >= 768px) {
+    padding: 10px 0;
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+.shops__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  justify-content: center;
+  padding: 8px 16px 16px;
+
+  @media (width>=481px) {
+    padding: 8px 30px;
+  }
+
+  @media (width >= 768px) {
+    padding: 40px 80px 20px;
+  }
+}
+
+.shops__nav a.active {
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.shops {
+  display: flex;
+  flex-direction: column;
+
+  @media (width>=481px) {
+    padding: 0 30px;
+  }
+
+  @media (width >= 768px) {
+    flex-direction: row-reverse;
+    height: 417px;
+    padding: 0 80px;
+  }
+}
+
+.shops__map {
+  align-self: center;
+  width: 100%;
+  margin: 0 -26px;
+
+  @media (width >= 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 417px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+
+    @media (width >= 768px) {
+      width: 80%;
+      max-width: 740px;
+      height: 417px;
+      object-fit: cover;
+    }
+  }
+}
+
+.shops__img {
+
+  width: 100%;
+  height: 317px;
+
+  @media (width >= 768px) {
+    width: 80%;
+    max-width: 740px;
+    height: 417px;
+    object-fit: cover;
+  }
+}
+
+.shops__marker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 15px;
+  background: var(--white);
+  border: var(--fild-type-color) 1px solid;
+  border-radius: 2px;
+}
+
+.shops__content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 16px;
+
+  @media (width>=481px) {
+    padding: 8px 0;
+  }
+
+  @media (width >= 768px) {
+    flex-direction: column;
+    width: 334px;
+    height: 417px;
+    overflow: scroll;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--fild-type-color);
+  border-radius: 2px;
+}
+
+.shops__content {
+  padding: 20px 0 8px;
+
+  .shops__city {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+}
+
+.shops__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+
+  .shops__contacts__item {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .shops__contacts__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

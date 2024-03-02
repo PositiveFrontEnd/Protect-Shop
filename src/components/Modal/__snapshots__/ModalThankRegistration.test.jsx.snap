@@ -1,0 +1,236 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  ModalThankRegistration > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal__wrapper"
+      >
+        <div
+          class="modal"
+        >
+          <div
+            class="modal__header"
+          >
+            <div
+              class="header__title"
+            >
+              <svg
+                class="header__svg"
+                fill="none"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.1129 6.00184C26.4113 5.26384 25.5756 4.67847 24.6544 4.27979C23.7333 3.88113 22.745 3.67713 21.7474 3.67971C20.7497 3.67713 19.7616 3.88113 18.8404 4.27979C17.9193 4.67847 17.0836 5.26384 16.3819 6.00184L15.9539 6.46309L15.5259 6.01773C14.1069 4.54144 12.1824 3.71208 10.1757 3.71208C8.169 3.71208 6.2445 4.54144 4.82548 6.01773C3.42504 7.50429 2.64062 9.5029 2.64062 11.5845C2.64062 13.6661 3.42504 15.6647 4.82548 17.1512L15.1743 27.9507C15.3892 28.1742 15.6806 28.2997 15.9845 28.2997C16.2882 28.2997 16.5798 28.1742 16.7947 27.9507L27.1435 17.1512C28.5445 15.6598 29.3262 13.6555 29.3206 11.57C29.3149 9.48458 28.522 7.48492 27.1129 6.00184Z"
+                  fill="#FEFEFE"
+                />
+              </svg>
+              <p
+                class="title__text"
+              >
+                Thank you for registration!
+              </p>
+            </div>
+            <button
+              class="header__button"
+              type="button"
+            >
+              <svg
+                fill="black"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal__container"
+          >
+            <div
+              class="modal__content modal__content-form"
+            >
+              <p
+                class="modal__body-title title__logOut"
+              >
+                We glad to know that you with us
+              </p>
+              <p
+                class="modal__body-text"
+              >
+                Congratulations! Your personal cabinet was successfully created. Now you can take advantage of additional features: View order history, print an account, edit your contactnformation and delivery address, and more.
+                <br />
+                <br />
+                If you have any questions, please contact us.
+              </p>
+              <div
+                class="modal__footer"
+              >
+                <button
+                  class="button-white modal__button"
+                  type="button"
+                >
+                  View my account
+                </button>
+                <button
+                  class="button-black modal__button"
+                  type="button"
+                >
+                  Сontinue shopping
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal__wrapper"
+    >
+      <div
+        class="modal"
+      >
+        <div
+          class="modal__header"
+        >
+          <div
+            class="header__title"
+          >
+            <svg
+              class="header__svg"
+              fill="none"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M27.1129 6.00184C26.4113 5.26384 25.5756 4.67847 24.6544 4.27979C23.7333 3.88113 22.745 3.67713 21.7474 3.67971C20.7497 3.67713 19.7616 3.88113 18.8404 4.27979C17.9193 4.67847 17.0836 5.26384 16.3819 6.00184L15.9539 6.46309L15.5259 6.01773C14.1069 4.54144 12.1824 3.71208 10.1757 3.71208C8.169 3.71208 6.2445 4.54144 4.82548 6.01773C3.42504 7.50429 2.64062 9.5029 2.64062 11.5845C2.64062 13.6661 3.42504 15.6647 4.82548 17.1512L15.1743 27.9507C15.3892 28.1742 15.6806 28.2997 15.9845 28.2997C16.2882 28.2997 16.5798 28.1742 16.7947 27.9507L27.1435 17.1512C28.5445 15.6598 29.3262 13.6555 29.3206 11.57C29.3149 9.48458 28.522 7.48492 27.1129 6.00184Z"
+                fill="#FEFEFE"
+              />
+            </svg>
+            <p
+              class="title__text"
+            >
+              Thank you for registration!
+            </p>
+          </div>
+          <button
+            class="header__button"
+            type="button"
+          >
+            <svg
+              fill="black"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.12587 8L2 2.87413L2.87413 2L8 7.12587L13.1259 2L14 2.87413L8.87413 8L14 13.1259L13.1259 14L8 8.87413L2.87413 14L2 13.1259L7.12587 8Z"
+                fill="white"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="modal__container"
+        >
+          <div
+            class="modal__content modal__content-form"
+          >
+            <p
+              class="modal__body-title title__logOut"
+            >
+              We glad to know that you with us
+            </p>
+            <p
+              class="modal__body-text"
+            >
+              Congratulations! Your personal cabinet was successfully created. Now you can take advantage of additional features: View order history, print an account, edit your contactnformation and delivery address, and more.
+              <br />
+              <br />
+              If you have any questions, please contact us.
+            </p>
+            <div
+              class="modal__footer"
+            >
+              <button
+                class="button-white modal__button"
+                type="button"
+              >
+                View my account
+              </button>
+              <button
+                class="button-black modal__button"
+                type="button"
+              >
+                Сontinue shopping
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

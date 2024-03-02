@@ -1,0 +1,15 @@
+.content {
+  @media (width >= 768px) {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+  }
+
+  @media (width >= 1024px) {
+    gap: 50px;
+  }
+
+  @media (width >= 1240px) {
+    gap: 100px;
+  }
+}

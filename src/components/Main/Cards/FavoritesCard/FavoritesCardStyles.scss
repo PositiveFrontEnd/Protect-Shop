@@ -1,0 +1,99 @@
+.favorite__card__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 160px;
+
+  @media (width>430px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .favorite__card__image {
+    position: relative;
+    max-width: 160px;
+    margin-bottom: 12px;
+    img {
+      cursor: pointer;
+    }
+
+    @media (width>430px) {
+      position: static;
+      max-width: 100px;
+    }
+
+    @media (width>768px) {
+      max-width: 160px;
+    }
+
+    @media (width>1024px) {
+      max-width: 200px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .favorite__card__image-close {
+      position: absolute;
+      top: 1px;
+      right: 10px;
+      color: var(--inactive);
+      font-size: 14px;
+
+      @media (width>430px) {
+        font-size: 18px;
+      }
+    }
+
+    .favorite__card__image-close:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
+
+  .favorite__card__name,
+  .favorite__card__price {
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @media (width>430px) {
+      font-size: 10px;
+    }
+
+    @media (width>768px) {
+      font-size: 14px;
+    }
+  }
+
+  .favorite__card__button {
+    margin-top: 12px;
+    margin-right: 20px;
+    font-size: 12px;
+
+    @media (width>430px) {
+      width: 20%;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+
+    @media (width>768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.desktop__card__counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .desktop__card__counter-min {
+    width: 30px;
+    height: 30px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+  }
+}

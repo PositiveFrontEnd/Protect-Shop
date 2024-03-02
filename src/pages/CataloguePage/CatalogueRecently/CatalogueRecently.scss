@@ -1,0 +1,29 @@
+.recently {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .recently__title {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    color: var(--black);
+    font-family: "Noto Sans", sans-serif;
+    text-transform: uppercase;
+
+    @media (width>=481px) {
+      padding-bottom: 30px;
+      font-size: 18px;
+    }
+
+    @media (width>=768px) {
+      align-self: flex-start;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+
+  .recently__card__box {
+    display: flex;
+  }
+}

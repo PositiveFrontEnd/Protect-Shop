@@ -1,0 +1,242 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Тестування компонента  Blog > Знімок 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="blog__wrapper"
+      >
+        <div
+          class="container"
+        >
+          <h2
+            class="blog__title"
+          >
+            blog
+          </h2>
+          <ul
+            class="blog__info"
+          >
+            <li
+              class="mobile__description"
+            >
+              <img
+                alt="sectionBlogOne"
+                class="blog__img"
+                src="/Images/sectionBlogOne.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+              </p>
+            </li>
+            <li
+              class="develop__description"
+            >
+              <img
+                alt=""
+                class="blog__img"
+                src="/Images/sectionBlogTwo.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Mini bags forever 
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+              </p>
+            </li>
+            <li
+              class="develop__description"
+            >
+              <img
+                alt=""
+                class="blog__img"
+                src="/Images/sectionBlogThree.jpg"
+              />
+              <h4
+                class="blog__info__title"
+              >
+                Sackbags
+              </h4>
+              <p
+                class="blog__info__description"
+              >
+                Sackbags with large fasteners and chains have become popular this season.
+              </p>
+              <p
+                class="blog__info__description"
+              >
+                These bags are suitable for many styles, from classics to modern minimalism.
+              </p>
+            </li>
+          </ul>
+          <div
+            class="blog__button"
+          >
+            <button
+              class="button-white"
+              type="button"
+            >
+              See more
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="blog__wrapper"
+    >
+      <div
+        class="container"
+      >
+        <h2
+          class="blog__title"
+        >
+          blog
+        </h2>
+        <ul
+          class="blog__info"
+        >
+          <li
+            class="mobile__description"
+          >
+            <img
+              alt="sectionBlogOne"
+              class="blog__img"
+              src="/Images/sectionBlogOne.jpg"
+            />
+            <h4
+              class="blog__info__title"
+            >
+              Mini bags forever 
+            </h4>
+            <p
+              class="blog__info__description"
+            >
+              Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+            </p>
+          </li>
+          <li
+            class="develop__description"
+          >
+            <img
+              alt=""
+              class="blog__img"
+              src="/Images/sectionBlogTwo.jpg"
+            />
+            <h4
+              class="blog__info__title"
+            >
+              Mini bags forever 
+            </h4>
+            <p
+              class="blog__info__description"
+            >
+              Small bags have become very popular this season. They are perfect for parties and weekends when you don't have to wear many things. Such bags can be worn both on the shoulder and at the fingertips.
+            </p>
+          </li>
+          <li
+            class="develop__description"
+          >
+            <img
+              alt=""
+              class="blog__img"
+              src="/Images/sectionBlogThree.jpg"
+            />
+            <h4
+              class="blog__info__title"
+            >
+              Sackbags
+            </h4>
+            <p
+              class="blog__info__description"
+            >
+              Sackbags with large fasteners and chains have become popular this season.
+            </p>
+            <p
+              class="blog__info__description"
+            >
+              These bags are suitable for many styles, from classics to modern minimalism.
+            </p>
+          </li>
+        </ul>
+        <div
+          class="blog__button"
+        >
+          <button
+            class="button-white"
+            type="button"
+          >
+            See more
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

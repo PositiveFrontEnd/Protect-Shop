@@ -1,0 +1,68 @@
+.mobile__feedbacks__wrapper {
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+
+  .feedbacks__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .feedbacks__swiper {
+    padding-block: 20px;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  .feedbacks__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 8px;
+    background-color: var(--feedback);
+  }
+
+  .card__image {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .card__stars {
+    display: flex;
+    gap: 12px;
+  }
+
+  .star {
+    max-width: 16px;
+  }
+
+  .card__name {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .card__description {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .mobile__feedbacks__button {
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 16px;
+    text-align: center;
+  }
+}

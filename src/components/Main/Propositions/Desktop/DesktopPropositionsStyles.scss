@@ -1,0 +1,38 @@
+.desktop__propositions__wrapper {
+  background-color: var(--white);
+  padding-block: 60px;
+
+  .desktop__propositions__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    .desktop__propositions__card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+
+      .desktop__propositions__icons {
+        position: relative;
+
+        .icon__center {
+          position: absolute;
+          top: 20px;
+          left: 13px;
+        }
+      }
+
+      span {
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (width<1000px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

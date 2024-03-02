@@ -1,0 +1,21 @@
+.drop__title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  padding-block: 8px;
+}
+
+.drop__title.active {
+  border-bottom: 1px solid #afa7a7;
+}
+
+.drop__action {
+  padding: 16px;
+  background-color: var(--white);
+
+  p {
+    font-size: 16px;
+  }
+}

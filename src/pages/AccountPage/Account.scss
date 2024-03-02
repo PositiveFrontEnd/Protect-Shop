@@ -1,0 +1,65 @@
+.swiper-slide img {
+  height: 77vh;
+}
+
+.link__box__account__page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 446px;
+  margin: 0 auto;
+  margin-top: 19px;
+  margin-bottom: 19px;
+
+  .registration__link,
+  .authorization__link {
+    margin-left: 8px;
+    color: var(--black);
+    font-size: 14px;
+  }
+
+  .account__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .account__page__svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (width >= 768px) {
+    .swiper-slide img {
+      height: 60vh;
+    }
+
+    .link__box__account__page {
+      max-width: 540px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+
+      .registration__link,
+      .authorization__link {
+        margin-left: 16px;
+        color: var(--black);
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (width>=1024px) {
+    .link__box__account__page {
+      max-width: 606px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+
+      .registration__link,
+      .authorization__link {
+        margin-left: 16px;
+        color: var(--black);
+        font-size: 16px;
+      }
+    }
+  }
+}

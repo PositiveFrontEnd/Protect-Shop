@@ -1,0 +1,21 @@
+.mobile__propositions__wrapper {
+  background-color: var(--white);
+  padding-block: 24px;
+
+  .mobile__propositions__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mobile__propositions__icons {
+      position: relative;
+
+      .mobile__icon {
+        position: absolute;
+        top: 20px;
+        left: 13px;
+      }
+    }
+  }
+}

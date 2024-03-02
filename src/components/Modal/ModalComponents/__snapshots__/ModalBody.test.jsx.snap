@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test Modal > render Modal 1`] = `
+<DocumentFragment>
+  <div
+    class="modal__container"
+  >
+    <div
+      class="modal__content modal__content-form"
+    >
+      some text
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,10 @@
+<svg className="button__svg" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+<g clip-path="url(#clip0_620_40962)">
+<path d="M12.4384 13.3269H12.6884V13.0769V9.14863L14.1577 7.68353V14.7961H0.873047V1.51149H11.3008L9.82739 2.98072H2.59228H2.34228V3.23072V13.0769V13.3269H2.59228H12.4384ZM16.0233 2.34816L7.52234 10.8227L4.18035 7.48075L5.21923 6.44187L7.34726 8.56983L7.52376 8.74633L7.70053 8.57011L14.9858 1.30775L16.0233 2.34816Z" fill="white" stroke="#514949" stroke-width="0.5"/>
+</g>
+<defs>
+<clipPath id="clip0_620_40962">
+<rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg>

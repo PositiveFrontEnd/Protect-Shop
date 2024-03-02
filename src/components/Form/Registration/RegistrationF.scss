@@ -1,0 +1,229 @@
+.form__box-registr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    .form__field-registr {
+      width: 328px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .svg__error-valid,
+      .svg__ok-valid {
+        position: relative;
+      }
+
+      .svg__error-valid {
+        bottom: 40px;
+        width: 18px;
+        height: 18px;
+        left: 7px;
+      }
+
+      .svg__ok-valid {
+        bottom: 22px;
+        width: 19px;
+        height: 19px;
+        left: 4px;
+      }
+
+      .form__little__box {
+        width: 88%;
+
+        .form__title {
+          padding-left: 3px;
+          color: var(--black);
+          font-weight: 700;
+          font-size: 14px;
+        }
+
+        .form__input {
+          width: 328px;
+          margin-top: 4px;
+          margin-bottom: 12px;
+          padding: 10px 12px;
+          color: var(--fild-type-color);
+          font-size: 16px;
+          background-color: var(--white-dark);
+          border-radius: 12px;
+
+          &:focus {
+            color: var(--black);
+          }
+        }
+
+        .input-ok,
+        .input-error {
+          font-size: 16px;
+        }
+
+        .input-error {
+          color: var(--incorrect);
+          border: 1px solid var(--incorrect);
+        }
+
+        .input-ok {
+          color: #95c989;
+          border: 1px solid #95c989;
+        }
+        .form__little__box-pass {
+          width: 355px;
+          display: flex;
+          flex-direction: row;
+          .password__toggle-btn {
+            position: relative;
+            right: 40px;
+            top: 0px;
+          }
+        }
+      }
+    }
+
+    .select__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .select__label__text {
+        padding-left: 3px;
+        color: var(--black);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .select__input {
+        width: 328px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        color: var(--fild-type-color);
+        font-size: 16px;
+        background-color: var(--white-dark);
+        border-radius: 12px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>');
+        background-repeat: no-repeat;
+        background-position: 295px center;
+      }
+    }
+
+    .checkbox__label {
+      .checkbox__wrapper {
+        display: flex;
+        margin-bottom: 12px;
+
+        input[type="checkbox"] {
+          width: 12px;
+          height: 12px;
+          border-radius: 3px;
+        }
+
+        .checkbox__label__text {
+          margin-left: 8px;
+          color: var(--font-color);
+          font-size: 12px;
+        }
+      }
+    }
+
+    .error__message,
+    .err__checkbox {
+      position: relative;
+      bottom: 1vh;
+      color: var(--incorrect);
+      font-size: 12px;
+    }
+
+    .button__registr__page {
+      width: 100%;
+      max-width: 768px;
+      margin-top: 32px;
+    }
+  }
+
+  @media (width >= 768px) {
+    max-width: 450px;
+    margin-left: 0;
+  }
+
+  @media (width>=1024px) {
+    max-width: 567px;
+
+    form {
+      .form__field-registr {
+        width: 446px;
+        .svg__error-valid {
+          bottom: 47px;
+          width: 20px;
+          height: 20px;
+          left: 16px;
+        }
+
+        .svg__ok-valid {
+          bottom: 29px;
+          width: 22px;
+          height: 22px;
+          left: 16px;
+        }
+
+        .form__little__box {
+          .form__title {
+            color: var(--black);
+            font-size: 16px;
+          }
+
+          .form__input {
+            width: 446px;
+            margin-top: 4px;
+            margin-bottom: 20px;
+          }
+          .form__little__box-pass {
+            width: 466px;
+            display: flex;
+            flex-direction: row;
+            .password__toggle-btn {
+              top: -4px;
+            }
+          }
+        }
+      }
+
+      .select__wrapper {
+        .select__label__text {
+          font-size: 16px;
+        }
+        .select__input {
+          width: 445px;
+          background-position: 410px center;
+        }
+      }
+    }
+  }
+}
+
+.registration__error__text {
+  color: var(--incorrect);
+  font-size: 12px;
+
+  a {
+    color: #8a8a8a;
+  }
+
+  @media (width>=768px) {
+    font-size: 16px;
+  }
+}
+
+.password__wrapper {
+  position: relative;
+
+  .showpassword__icons__wrapper {
+    position: absolute;
+    top: 34px;
+    right: 110px;
+  }
+}
