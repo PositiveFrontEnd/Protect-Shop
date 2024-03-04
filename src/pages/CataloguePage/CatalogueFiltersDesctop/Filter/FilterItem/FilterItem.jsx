@@ -12,7 +12,6 @@ import { useSearchParams } from "react-router-dom";
 
 const FilterItem = (
     { param,
-        className,
         handleChange,
         name }) => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -37,7 +36,6 @@ const FilterItem = (
             name={name}
             text={element}
             checked={values[name]?.includes(element)}
-            className={className}
             handleChange={handleChange}
         />
 
@@ -77,7 +75,6 @@ const FilterItem = (
 
 
 FilterItem.propTypes = {
-    className: PropTypes.string,
     param: PropTypes.string,
     handleChange: PropTypes.func,
     name: PropTypes.string,

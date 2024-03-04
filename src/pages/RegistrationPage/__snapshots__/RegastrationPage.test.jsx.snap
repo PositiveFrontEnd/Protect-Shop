@@ -231,7 +231,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
                   class="button-black button__submit button__registr__page"
                   type="submit"
                 >
-                  LOG IN
+                  Sign up
                 </button>
               </form>
             </div>
@@ -244,7 +244,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
               <a
                 href="/account/authorization"
               >
-                Sing in
+                Log in
               </a>
             </div>
           </div>
@@ -488,7 +488,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
                 class="button-black button__submit button__registr__page"
                 type="submit"
               >
-                LOG IN
+                Sign up
               </button>
             </form>
           </div>
@@ -501,7 +501,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
             <a
               href="/account/authorization"
             >
-              Sing in
+              Log in
             </a>
           </div>
         </div>

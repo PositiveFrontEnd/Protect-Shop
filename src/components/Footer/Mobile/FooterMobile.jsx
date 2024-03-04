@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom'
+import React, {useEffect, useState} from "react";
+import {Link, useLocation} from 'react-router-dom'
 import FooterItem from "./FooterItemMobile";
 import Insta from "../Svg/Socialnet/insta.svg?react"
 import YouTube from "../Svg/Socialnet/youtube.svg?react"
@@ -11,8 +11,10 @@ import Mastercard from '../Svg/Payment/masterCard.svg?react'
 import Applepay from '../Svg/Payment/applepay.svg?react'
 import Googlepay from '../Svg/Payment/googlePay.svg?react'
 import Logo from '../Svg/logo.svg?react'
+import ScrollUp from '../Svg/scrollUp.svg?react'
 import Home from '../Svg/Menu/home.svg?react'
 import Account from '../Svg/Menu/account.svg?react'
+import Mail from '../Svg/Menu/mail.svg?react'
 import Favorites from '../Svg/Menu/favorites.svg?react'
 import Cart from '../Svg/Menu/cart.svg?react'
 import './FooterMobile.scss'
@@ -20,7 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     selectorBaskets,
     selectorFavoriteForCustomer,
-    selectorGuestBasket, selectorGuestFavorite,
+    selectorGuestBasket, selectorGuestFavorite, selectorIsAdmin,
     selectorToken
 } from "../../../store/selectors";
 import { actionGetBasket } from "src/store/basketSlice";
@@ -32,6 +34,7 @@ const FooterMobile = () => {
     const location = useLocation();
     const renderDiv = location.pathname !== '/account'
     const token = useSelector(selectorToken);
+    const isAdmin = useSelector(selectorIsAdmin);
     const basketProduct = useSelector(selectorBaskets);
     const basketGuest = useSelector(selectorGuestBasket);
     const basketGuestCount = Object.keys(basketGuest).length;
@@ -46,8 +49,33 @@ const FooterMobile = () => {
         localStorage.setItem('basketProduct', JSON.stringify(savedBasketProduct));
     }, [basketProduct]);
 
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     return (
         <>
+            <div
+                className={`scroll__to__top ${isVisible ? 'visible' : ''}`}
+                onClick={scrollToTop}>
+                <ScrollUp/>
+            </div>
             <div className='footer__menu-mobile'>
                 {renderDiv && (
                     <div className='footer__menu'>
@@ -94,7 +122,7 @@ const FooterMobile = () => {
                         </div>
                     </div>
                 )}
-                <div className='footer__bottom__menu container'>
+                <div className='footer__bottom__menu'>
                     <div className='footer__bottom__menu__item'>
                         <Link to='/'>
                             <Home />
@@ -102,9 +130,9 @@ const FooterMobile = () => {
                         </Link>
                     </div>
                     <div className='footer__bottom__menu__item'>
-                        {token ? (
-                            <Link to="/account/information">
-                                <Account />
+                        {isAdmin ? (
+                            <Link to="/account">
+                                <Mail/>
                                 <p className="bottom__menu__name">Account</p>
                             </Link>
                         ) : (
@@ -127,8 +155,8 @@ const FooterMobile = () => {
                         </Link>
                     </div>
                     <div className='footer__bottom__menu__item'>
-                        <Link to='/cart'>
-                            <><Cart />{(token && basketProduct.products && basketProduct.products.length !== 0) ? (
+                        <Link to={isAdmin ? "#" : "/cart"}>
+                            <><Cart/>{(token && basketProduct.products && basketProduct.products.length !== 0) ? (
                                 <span className='product__amount-footer'>{basketProduct.products.length}</span>) : (
                                 (!token && basketGuest && basketGuestCount !== 0) ?
                                     <span className='product__amount-footer'>{basketGuestCount}</span> :

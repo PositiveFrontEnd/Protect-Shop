@@ -36,13 +36,13 @@ const MobileProducts = () => {
               <img src={forKids} alt="" />
             </div>
 
-            <Link className="button-black product__image__caption" to='/catalogue?categories=children'>for woman</Link>
+            <Link className="button-black product__image__caption" to='/catalogue?categories=children'>for children</Link>
           </SwiperSlide>
           <SwiperSlide className="products__image">
             <div className="slide">
               <img src={forMen} alt="" />
             </div>
-            <Link className="button-black product__image__caption" to='/catalogue?categories=men'>for woman</Link>
+            <Link className="button-black product__image__caption" to='/catalogue?categories=men'>for men</Link>
           </SwiperSlide>
         </Swiper>
       </div>

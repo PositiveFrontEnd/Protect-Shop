@@ -178,10 +178,25 @@ function ChoiceOfDelivF() {
           modalChangeAll()
             dispatch(actionCreateNewOrderNotLoggerCustomer({ products: productsOrderForGuest, ...updatedFormData, ...orderGuestData, ...letterGuest  }))
             dispatch(actionDeleteGuestBasket())
+            dispatch(actionUpDateFormGuest({
+              country: "",
+              deliveryAddress: {
+                        city: "",
+                        address: "",
+                        postal: "",
+                      }, 
+                      firstName:"",
+                      lastName:"",
+                      shipping: "",
+                      paymentInfo: "",
+                      status: "",
+                      email: "",
+                      mobile: "",
+            }))
         }
      }
       }
-      // validationSchema={validationChoiceDelivery}
+      validationSchema={validationChoiceDelivery}
     >
       {({ errors, touched }) => (
        <div className="form__box-registr form__contact__info">

@@ -18,7 +18,7 @@ const HeaderSearch = () => {
 
     const handleSearch = () => {
         dispatch(actionSearchProducts({ query: `${inputText}` }))
-        navigate(`/search/${inputText}`)
+        navigate(`/search?request=${encodeURIComponent(inputText)}`)
     }
 
     const inputRef = useRef(null);

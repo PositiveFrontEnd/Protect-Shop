@@ -17,6 +17,10 @@ const ShopsMap = ({center, markers, zoom}) => {
             setSelectedMarker(null)
         }, 2000);
     };
+    const mapOptions = {
+        mapTypeControl: false,
+        streetViewControl: false,
+    };
     return (
         <div className='shops__map'>
             {isLoaded && (
@@ -24,6 +28,7 @@ const ShopsMap = ({center, markers, zoom}) => {
                     mapContainerClassName='shops__img'
                     center={center}
                     zoom={zoom}
+                    options={mapOptions}
                 >{markers.map((marker, index) => (
                     <Marker position={{lat: marker.lat, lng: marker.lng}}
                             key={index}

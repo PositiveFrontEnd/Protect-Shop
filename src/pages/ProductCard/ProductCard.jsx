@@ -20,7 +20,7 @@ const ProductCard = () => {
 
   useEffect(() => {
     dispatch(actionGetProductComments(id));
-  }, [id]);
+  }, [id, currentProduct._id]);
 
   return (
     <>

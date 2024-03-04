@@ -4,8 +4,7 @@ import MobileClickedCard from "./Mobile/MobileClickedCard";
 import DesktopClickedCard from "./Desktop/DesktopClickedCard";
 import { actionFavoriteForAll } from "../../../../../store/favoriteSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectorIsAdmin, selectorToken } from "../../../../../store/selectors";
-import AdminClickedCard from "./Desktop/AdminClickedCard";
+import { selectorToken } from "../../../../../store/selectors";
 
 const ClickedCard = ({ cards, colors }) => {
   const { currentPrice, name, imageUrls, myCustomParam, _id, likes, color } =
@@ -29,9 +28,7 @@ const ClickedCard = ({ cards, colors }) => {
     event.stopPropagation();
     dispatch(actionFavoriteForAll({ productId, token }));
   };
-  const isAdmin = useSelector(selectorIsAdmin);
-
-  return (
+   return (
     <>
       {isMobile ? (
         <MobileClickedCard
@@ -45,28 +42,18 @@ const ClickedCard = ({ cards, colors }) => {
           likes={likes}
           color={color}
         />
-      ) : (
-        isAdmin ?
-          (
-            <AdminClickedCard
-              currentPrice={currentPrice}
-              name={name}
-              imageUrls={imageUrls}
-              myCustomParam={myCustomParam}
-              colors={colors}
-              handleFavorite={(event) => handleFavorite(_id, event)}
-              _id={_id} />
-          ) : (
-            <DesktopClickedCard
-              currentPrice={currentPrice}
-              name={name}
-              imageUrls={imageUrls}
-              myCustomParam={myCustomParam}
-              colors={colors}
-              handleFavorite={(event) => handleFavorite(_id, event)}
-              _id={_id}
-              likes={likes}
-              color={color} />)
+      )  : (
+        <DesktopClickedCard
+          currentPrice={currentPrice}
+          name={name}
+          imageUrls={imageUrls}
+          myCustomParam={myCustomParam}
+          colors={colors}
+          handleFavorite={(event) => handleFavorite(_id, event)}
+          _id={_id}
+          likes={likes}
+          color={color}
+        />
       )}
     </>
   );

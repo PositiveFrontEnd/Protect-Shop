@@ -53,7 +53,31 @@
         display: none;
       }
       .item__main {
+        display: flex;
+        justify-content: space-between;
         font-size: 16px;
+        .main__button__answer{
+          color: rgb(186, 183, 183);
+        }
+      }
+
+      .item__input{
+        border: 1px solid rgb(172, 168, 168);
+        height: 28px;
+       width: 100%;
+       border-radius: 13px;
+       margin-top: 10px;
+       padding: 6px;
+      }
+
+      .item__answerAdmin{
+        margin-top: 15px;
+        border: 1px solid rgb(186, 184, 184);
+        padding: 10px;
+        border-radius: 10px;
+        .answerAdmin__user__name{
+          color: rgb(181, 177, 177);
+        }
       }
 
       .item__header {

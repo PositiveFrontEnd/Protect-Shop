@@ -152,7 +152,7 @@ const RegistrationForm = () => {
                 </>
               )}
               <Button
-                children="LOG IN"
+                children="Sign up"
                 black
                 type="submit"
                 className="button__submit button__registr__page"

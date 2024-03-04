@@ -150,7 +150,7 @@ const DesktopClickedCard = ({
                 onClick={() => {
                   dispatch(actionGetOneProduct(item._id));
                   navigate(
-                    `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
+                    `/catalogue/${item.categories}/${item.type}/${item._id}`
                   );
                 }}
                 key={index}

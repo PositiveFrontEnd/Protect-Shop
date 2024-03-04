@@ -17,7 +17,7 @@ const RegistrationPage = () => {
             <RegistrationForm />
             <div className="have__acc">
               <p>Already have an account? </p>
-              <Link to="/account/authorization">Sing in</Link>
+              <Link to="/account/authorization">Log in</Link>
             </div>
           </div>
           <div className="img__form__registr__container">

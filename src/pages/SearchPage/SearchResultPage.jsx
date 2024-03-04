@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { actionInputText } from "../../store/homeSlice";
+import React, {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {actionInputText} from "../../store/homeSlice";
 import {
     actionGetOneProduct,
     actionGetThreeProducts,
@@ -13,11 +13,12 @@ import {
     selectorThreeProducts,
     selectorToken
 } from "../../store/selectors";
-import { actionFavoriteForAll } from "../../store/favoriteSlice"
+import {actionFavoriteForAll} from "../../store/favoriteSlice"
 import PrimaryCard from "../../components/Main/Cards/PrimaryCard/PrimaryCard/PrimaryCard";
 import SearchSort from "src/pages/SearchPage/SearchSort";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router";
+import {Link} from "react-router-dom";
+import ScrollUp from "src/components/Footer/Svg/scrollUp.svg?react";
 
 
 const SearchResultPage = () => {
@@ -30,8 +31,8 @@ const SearchResultPage = () => {
     }
 
     const handleSearch = () => {
-        dispatch(actionSearchProducts({ query: `${inputText}` }))
-        navigate(`/search/${inputText}`)
+        dispatch(actionSearchProducts({query: `${inputText}`}))
+        navigate(`/search?request=${encodeURIComponent(inputText)}`)
         handleReset()
     }
 
@@ -102,7 +103,7 @@ const SearchResultPage = () => {
     const threeProducts = useSelector(selectorThreeProducts);
     const handleFavorite = (productId, event) => {
         event.stopPropagation();
-        dispatch(actionFavoriteForAll({ productId, token }));
+        dispatch(actionFavoriteForAll({productId, token}));
     };
 
     const handleProduct = (item) => {
@@ -112,6 +113,26 @@ const SearchResultPage = () => {
             `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
         );
     };
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 700) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
     return (
         <div className='container'>
@@ -120,44 +141,52 @@ const SearchResultPage = () => {
                 <div className='search__input-group'>
                     <form onSubmit={handleSubmit}>
                         <input value={inputText} type='text' name='search'
-                            onChange={handleInputChange}
-                            className='search__input'
-                            onKeyDown={handleEnterPress} />
+                               onChange={handleInputChange}
+                               className='search__input'
+                               onKeyDown={handleEnterPress}/>
                     </form>
                     <Button black onClick={handleSearch} className='search__btn'>SEARCH</Button>
                 </div>
                 <div className='search__function-group'>
-                    <SearchSort handleSort={handleSort} sort={sort} />
+                    <SearchSort handleSort={handleSort} sort={sort}/>
                 </div>
             </div>
             {sortedProducts.length === 0 ?
                 <h3 className='search__result__title'>We don’t have this goods
-                    now<br /> Change your search request<br /> or look other similar goods in our <Link to='/catalogue'><span>catalogue</span></Link></h3> :
+                    now<br/> Change your search request<br/> or look other similar goods in our <Link
+                        to='/catalogue'><span>catalogue</span></Link></h3> :
                 <h3 className='search__result__title'>We found this goods for you</h3>
             }
             <div className='search__result'>
                 {firstSortedProducts.map((item) => (
                     <PrimaryCard key={item._id} card={item} arr={threeProducts}
-                        handleProduct={handleProduct}
-                        handleFavorite={handleFavorite}
+                                 handleProduct={handleProduct}
+                                 handleFavorite={handleFavorite}
                     />))}
                 {clickCount === 1 && (
                     secondSortedProducts.map((item) => (
                         <PrimaryCard key={item._id} card={item} arr={threeProducts}
-                            handleProduct={handleProduct}
-                            handleFavorite={handleFavorite}
+                                     handleProduct={handleProduct}
+                                     handleFavorite={handleFavorite}
                         />)))}
                 {clickCount === 2 && (
                     restSortedProducts.map((item) => (
                         <PrimaryCard key={item._id} card={item} arr={threeProducts}
-                            handleProduct={handleProduct}
-                            handleFavorite={handleFavorite}
+                                     handleProduct={handleProduct}
+                                     handleFavorite={handleFavorite}
                         />)))}
             </div>
             {sortedProducts.length > 12 && (
-                <Button
-                    className={clickCount === 2 || (clickCount === 1 && sortedProducts.length < 24) ? 'button-inactive' : 'button-white button__SeeMore-white'}
-                    click={handleIncrement}>See more</Button>
+                <>
+                    <div
+                        className={`scroll__to__top ${isVisible ? 'visible' : ''}`}
+                        onClick={scrollToTop}>
+                        <ScrollUp/>
+                    </div>
+                    <Button
+                        className={clickCount === 2 || (clickCount === 1 && sortedProducts.length < 24) ? 'button-inactive' : 'button-white button__SeeMore-white'}
+                        click={handleIncrement}>See more</Button>
+                </>
             )}
         </div>
     );

@@ -61,6 +61,9 @@ const Comments = ({ name, color, id }) => {
               firstName={item.customer.login}
               lastName={item.customer.lastName}
               comment={item.content}
+              status={isAuthorized.isAdmin}
+              id={item._id}
+              commentAdmin={item.commentAdmin}
             />
           ))}
         </div>

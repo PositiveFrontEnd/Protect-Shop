@@ -6,38 +6,43 @@ import { Field } from "formik";
 const Input = ({
     text,
     type,
-    className,
     name,
     handleChange,
+    checked,
     restProps
 }) => {
     return (
-        <label className="input__box">
+        <div className=" input__desktop__box">
             <Field
                 type={type}
                 name={name}
-                className={className}
+                className="input__desktop"
                 onChange={handleChange}
+                checked={checked}
                 value={text}
+                id={text}
                 {...restProps}
             />
-            <p className="input__label">{text}</p>
-        </label>
+            <label for={text} className="input__desktop__label">{text}</label>
+        </div>
     );
 };
 
 Input.defaultProps = {
     type: "checkbox",
-    className: "input__checkbox",
+    className: "input__desktop__checkbox",
 };
 
 Input.propTypes = {
     text: PropTypes.string,
     type: PropTypes.string,
+    placeholder: PropTypes.string,
     className: PropTypes.string,
     restProps: PropTypes.any,
-    icon: PropTypes.any,
+    handleChange: PropTypes.func,
     name: PropTypes.string,
+    checked: PropTypes.any
 };
+
 
 export default Input;

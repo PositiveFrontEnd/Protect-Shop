@@ -21,7 +21,7 @@ exports[`Тестування компонента  HeaderMenu > Знімок 1`
           new
         </a>
         <a
-          class="header__link-catalogue"
+          class="header__link"
           href="/catalogue"
         >
           catalogue
@@ -58,7 +58,7 @@ exports[`Тестування компонента  HeaderMenu > Знімок 1`
         new
       </a>
       <a
-        class="header__link-catalogue"
+        class="header__link"
         href="/catalogue"
       >
         catalogue

@@ -31,16 +31,17 @@ const UserActivity = () => {
                     }, 30000);
                 
                 }
-            }, 180000);
+            }, 600000);
         };
 
         const handleBeforeUnload = (event) => {
             if (token && isAdmin) {
-                dispatch(actionToken(''));
-                dispatch(actionUserRegistrationData(''))
+                // dispatch(actionToken(''));
+                // dispatch(actionUserRegistrationData(''))
+            } else {
+                navigate('/account')
+                setShowModal(false);
             }
-            setShowModal(false);
-            navigate('/account/authorization');
         //     event.preventDefault();
         //    return event.returnValue = '';
             // return event.returnValue = 'Are you sure you want to leave?';

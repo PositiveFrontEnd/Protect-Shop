@@ -46,7 +46,12 @@ const token = useSelector(selectorToken)
     
     setPromoCode('');
   };
-
+  const handleEventPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); 
+      handleSubmit(); 
+    }
+  };
   return (
     <div className="promoCode__containet__input promo__code">
       <input
@@ -55,8 +60,10 @@ const token = useSelector(selectorToken)
         placeholder="Enter promo code"
         value={promoCode}
         onChange={handleChange}
+        onKeyDown={handleEventPress}
       />
       <Button
+      type="button"
         children="APLLY"
         black
         className={`button__submit button__submit__modal-call promoCode__apply ${isValid ? '' : 'disabled'}`}

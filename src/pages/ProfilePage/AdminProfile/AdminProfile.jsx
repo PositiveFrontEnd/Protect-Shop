@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink, Outlet, useLocation, useNavigate} from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import ModalLogOut from './../../../components/Modal/ModalLogOut';
 import { ContextFunctions } from '../../../context/context';
 import { useDispatch } from "react-redux";
@@ -9,30 +9,30 @@ import './AdminProfile.scss'
 
 
 const AdminProfile = () => {
-    const location = useLocation();
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
+  const location = useLocation();
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const crumbs = location.pathname.split("/").filter((crumb) => crumb !== "");
   const lastCrumb = crumbs[crumbs.length - 1];
 
-    const isNavLinkActive = (to) => {
+  const isNavLinkActive = (to) => {
     return location.pathname.includes(to);
   }
-  
-  const {modalChangeAll, isModalAll} = useContext(ContextFunctions)
-     const handleLogout = () => {
-      dispatch(actionToken(''))
-      dispatch(actionFavorite([]))
-      navigate('/catalogue');
+
+  const { modalChangeAll, isModalAll } = useContext(ContextFunctions)
+  const handleLogout = () => {
+    dispatch(actionToken(''))
+    dispatch(actionFavorite([]))
+    navigate('/catalogue');
   }
- 
+
   return (
     <>
-      <section className="container order__container">
+      <section className="container admin__container">
         <h2>{location.pathname.split("/").filter((crumb) => crumb !== "").pop()}</h2>
-        <div className="order__box">
-          <nav className="order__links">
+        <div className="admin__box">
+          <nav className="admin__links">
             <NavLink
               className={`order ${isNavLinkActive("/letters") ? "active" : ""}`}
               to="letters"
@@ -51,6 +51,12 @@ const AdminProfile = () => {
             >
               Create new Product
             </NavLink>
+            <NavLink
+              className={`order ${isNavLinkActive("/changeproductgalery") ? "active" : ""}`}
+              to="changeproductgalery"
+            >
+              Change product from catalogue
+            </NavLink>
             <a href="#" onClick={modalChangeAll}>Log out</a>
             {isModalAll && (
               <ModalLogOut
@@ -66,7 +72,7 @@ const AdminProfile = () => {
           <Outlet />
 
         </div>
-        </section>
+      </section>
     </>
   );
 };

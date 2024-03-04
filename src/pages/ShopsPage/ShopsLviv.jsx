@@ -13,7 +13,7 @@ const ShopsLviv = () => {
 
     return (
         <div className='shops container'>
-            <ShopsMap zoom={14.4} center={center} markers={markers}/>
+            <ShopsMap zoom={13.6} center={center} markers={markers}/>
             <div className='shops__content__block'>
                 <ShopsContent city='Lviv' hours='10:00 – 21:00'
                               address='Lviv, str. Pid Dubom, 7b'/>

@@ -208,7 +208,6 @@ export const actionGetAllOrders = () => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/orders`, "GET");
 
     if (response) {
-      console.log(response);
       return response
     }
   } catch (error) {
@@ -220,7 +219,15 @@ export const actionGetAllOrders = () => async (dispatch) => {
 export const actionUpdateOrder = (data) => async (dispatch) => {
   try {
     dispatch(actionIsAnimation(true));
-    const { order, token, id } = data;
+    const { order, token, id, datahtml, subscriberMail } = data;
+    
+    order.email = subscriberMail
+    order.letterSubject = "Your order was changed"
+    order.letterHtml = `<h3>Hello ${datahtml.firstName}</h3>
+    <p>Order status #${datahtml.orderNo} has been changed to "${order.status}"</p>
+    <p>Your PROTECT team</p>
+    `
+
     const newOrder = {
       headers: {
         "Content-Type": "application/json",
@@ -238,6 +245,10 @@ export const actionUpdateOrder = (data) => async (dispatch) => {
       console.log(response);
     }
   } catch (error) {
+    const { order, token, id, subscriberMail} = data;
+    console.log(order)
+console.log(subscriberMail)
+    
     console.error("Сталася помилка під час виконання функції:", error);
   } finally {
     dispatch(actionIsAnimation(false));

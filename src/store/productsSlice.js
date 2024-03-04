@@ -20,6 +20,7 @@ const productsSlice = createSlice({
     searchProducts: [],
     youSee: [],
     previewProductInfo: {},
+    previewProductInfo: {},
   },
   reducers: {
     actionProducts: (state, { payload }) => {
@@ -68,6 +69,7 @@ const productsSlice = createSlice({
     actionPreviewProductData: (state, { payload }) => {
       state.previewProductInfo = payload;
     },
+    
   },
 });
 
@@ -108,6 +110,7 @@ export const actionGetOneProduct = (id) => async (dispatch) => {
     if (response) {
       dispatch(actionYouSee(response));
       dispatch(actionOneProduct(response));
+      dispatch(actionPreviewProductData(response))
       return response;
     }
   } catch (error) {
@@ -330,6 +333,29 @@ export const actionLoadingFilterProducts = (data) => async (dispatch) => {
     );
     if (response) {
       dispatch(actionTwelveFilterProducts(response.data));
+    }
+  } catch (error) {
+    console.error("Сталася помилка під час виконання функції:", error);
+  } finally {
+    dispatch(actionIsAnimation(false));
+  }
+};
+export const actionDeleteProduct = (data) => async (dispatch) => {
+  try {
+    dispatch(actionIsAnimation(true));
+    const { id, token } = data;
+    const deleteProduct = {
+      headers: {
+        Authorization: `${token}`,
+      },
+    };
+    const response = await sendRequest(
+      `${API_URL}/products/${id}`,
+      "DELETE",
+      deleteProduct
+    );
+    if (response.status === 200) {
+      console.log("delete product", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);

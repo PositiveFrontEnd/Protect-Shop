@@ -47,7 +47,8 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
   return (
     <div className="primary__card">
       <Heart
-        handleFavorite={(event) => handleFavorite(newCard._id, event)}
+        handleFavorite={(event) =>{ handleFavorite(newCard._id, event)}}
+
         className="card__favorites"
         id={newCard._id}
       />

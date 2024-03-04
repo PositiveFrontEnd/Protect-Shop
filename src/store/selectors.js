@@ -49,3 +49,7 @@ export const selectorPreviewProductInfo = (state) =>
 export const selectorProductComments = (state) =>
   state.comments.productComments;
 export const selectorProductComment = (state) => state.comments.productComment;
+export const selectorLetterAll = (state) => state.message.letterAll;
+export const selectorLetterToUpdate = (state) => state.message.letterToUpdate
+export const selectorImportantLetters = (state) => state.message.importantLetters
+

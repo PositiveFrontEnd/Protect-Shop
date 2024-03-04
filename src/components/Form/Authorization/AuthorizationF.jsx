@@ -97,7 +97,7 @@ const AuthorizationForm = () => {
               <Link to="forgot_password">Forgot your password?</Link>
             </div>
             <Button
-              children="SING IN"
+              children="LOG IN"
               black
               type="submit"
               className="button__submit button__registr__page"

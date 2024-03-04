@@ -102,6 +102,10 @@ header {
     text-decoration: underline;
   }
 }
+.header__link:active{
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 .header__search {
   display: none;
@@ -166,4 +170,7 @@ header {
   position: absolute;
   top: 5px;
   font-size: 12px;
+}
+.mail{
+  margin-top: 2px;
 }

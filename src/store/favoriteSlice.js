@@ -44,7 +44,6 @@ export const actionFavoriteForAll = (data) => async (dispatch) => {
   if (token) {
     try {
       let isFavorite = await dispatch(actionGetFavorite(token));
-
         let productIds = isFavorite?.products.map((product) => product._id);
 
         if (isFavorite) {

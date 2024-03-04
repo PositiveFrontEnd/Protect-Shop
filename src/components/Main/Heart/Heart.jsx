@@ -13,13 +13,14 @@ const Heart = ({handleFavorite, className, id}) => {
     const favoriteForCustomer = useSelector(selectorFavoriteForCustomer)
     const favoriteForGuest = useSelector(selectorGuestFavorite)
 
-
     const favorite = token ? favoriteForCustomer : favoriteForGuest
 
     return(
       <div
           className={cx('hearts', className)}
-          onClick={(event) => {handleFavorite(event)}}>
+        onClick={(event) => {
+          handleFavorite(event)
+        }}>
           {favorite.includes(id) ? <HeartBlack  /> : <HeartWhite />}
 
 

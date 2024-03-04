@@ -1,23 +1,45 @@
-.input__box {
+.input__desktop__box {
   position: relative;
   display: flex;
   gap: 12px;
   align-items: center;
-  padding: 2px 0 2px 8px;
+  padding: 2px 0;
 
-  .input__checkbox {
-    width: 100%;
-    max-width: 12px;
-    max-height: 12px;
-    margin: 4px;
+  .input__desktop {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
   }
-
-  .input__label {
+  .input__desktop + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .input__desktop + label::before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+  }
+  .input__desktop:checked + label::before {
+    border-color: var(--fild-type-color);
+    background-color: var(--fild-type-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' d='M13.128 1.5l-7.18 7.224-3.076-3.1L0 9.76 5.948 15.5 16 4.387z'/%3e%3c/svg%3e");
+  }
+  .input__desktop__label {
     color: var(--black);
-    font-size: 14px;
+    font-size: 12px;
   }
 
-  .input__search {
+  .input__desktop__search {
     display: flex;
     gap: 124px;
     align-items: center;
@@ -28,7 +50,7 @@
     border-radius: 12px;
   }
 
-  .input__search__icon {
+  .input__desktop__search__icon {
     position: absolute;
     right: 44px;
   }

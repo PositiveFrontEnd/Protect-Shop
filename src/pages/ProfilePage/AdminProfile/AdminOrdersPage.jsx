@@ -65,7 +65,7 @@ const AdminOrdersPage = () => {
                 </div>
                 {newData.length > 0 && newData.map(order => (
                     <OrderItemCard
-                        key={order.id}
+                        key={order._id}
                         orderNo={order.orderNo}
                         dateItem={order.date}
                         mobile={order.mobile}

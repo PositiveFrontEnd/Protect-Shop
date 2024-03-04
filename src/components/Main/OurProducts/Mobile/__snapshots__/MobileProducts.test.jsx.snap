@@ -54,7 +54,7 @@ exports[`Тестування компонента  MobileProducts > Знімо�
                   class="button-black product__image__caption"
                   href="/catalogue?categories=children"
                 >
-                  for woman
+                  for children
                 </a>
               </div>
               <div
@@ -72,7 +72,7 @@ exports[`Тестування компонента  MobileProducts > Знімо�
                   class="button-black product__image__caption"
                   href="/catalogue?categories=men"
                 >
-                  for woman
+                  for men
                 </a>
               </div>
             </div>
@@ -131,7 +131,7 @@ exports[`Тестування компонента  MobileProducts > Знімо�
                 class="button-black product__image__caption"
                 href="/catalogue?categories=children"
               >
-                for woman
+                for children
               </a>
             </div>
             <div
@@ -149,7 +149,7 @@ exports[`Тестування компонента  MobileProducts > Знімо�
                 class="button-black product__image__caption"
                 href="/catalogue?categories=men"
               >
-                for woman
+                for men
               </a>
             </div>
           </div>

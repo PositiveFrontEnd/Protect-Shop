@@ -19,12 +19,11 @@ const DesktopProducts = () => {
             </div>
             <div className="products__images">
               <img src={forKids} alt="" />
-              <Link className="button-black products__image__caption" to='/catalogue?categories=children'>for woman</Link>
-
+              <Link className="button-black products__image__caption" to='/catalogue?categories=children'>for children</Link>
             </div>
             <div className="products__images">
               <img src={forMen} alt="" />
-              <Link className="button-black products__image__caption" to='/catalogue?categories=men'>for woman</Link>
+              <Link className="button-black products__image__caption" to='/catalogue?categories=men'>for men</Link>
 
             </div>
           </div>

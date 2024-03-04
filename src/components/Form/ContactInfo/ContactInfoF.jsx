@@ -9,21 +9,23 @@ import "./ContactInfoStyles.scss";
 import BasketPage from "../../../pages/BasketPage/BasketPage";
 import { useDispatch, useSelector } from 'react-redux';
 import {actionInfoOrderForGuest, actionUpDateForm, actionUpDateFormGuest} from '../../../store/orderSlice.js'
-import { selectorRegistrationData, selectorToken } from "../../../store/selectors.js";
+import { selectorRegistrationData, selectorToken ,selectorOrderFormData,selectorOrderFormDataGuest} from "../../../store/selectors.js";
 import { useNavigate } from "react-router-dom";
 
 function ContactInfoF() {
   const dispatch = useDispatch()
   const user = useSelector(selectorRegistrationData)
   const token = useSelector(selectorToken)
+  const form = useSelector(selectorOrderFormData)
+  const formGuest = useSelector(selectorOrderFormDataGuest)
   const navigate = useNavigate()
   return (
     <Formik
       initialValues={{
-        firstName: "",
-        email: "",
-        lastName: "",
-        telephone: "",
+        firstName: "" || token ? form.firstName: formGuest.firstName ,
+        email: ""|| token ? form.email :formGuest.email,
+        lastName: "" ||token ? form.lastName :formGuest.lastName,
+        telephone: "" ||token ?  form.mobile : formGuest.mobile,
       }}
       onSubmit={(values) => {
 
@@ -45,7 +47,7 @@ function ContactInfoF() {
         navigate('/cart/placing_an_order/choice_of_delivery')
       }
       }
-      // validationSchema={validationContactInfo}
+      validationSchema={validationContactInfo}
     >
       {({ errors, touched }) => (
         <div className="form__box-registr form__contact__info">

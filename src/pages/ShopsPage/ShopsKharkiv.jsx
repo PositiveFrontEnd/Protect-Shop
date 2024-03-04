@@ -14,7 +14,7 @@ const ShopsKharkiv = () => {
 
     return (
         <div className='shops container'>
-            <ShopsMap zoom={12.3} center={center} markers={markers}/>
+            <ShopsMap zoom={12} center={center} markers={markers}/>
             <div className='shops__content__block'>
                 <ShopsContent city='kharkiv' hours='10:00 – 21:00'
                               address='Kharkiv, str. Sumska, 10'/>
