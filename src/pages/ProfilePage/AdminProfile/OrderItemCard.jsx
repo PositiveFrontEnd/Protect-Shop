@@ -11,8 +11,8 @@ const OrderItemCard = ({ orderNo, dateItem, mobile, deliveryAddress, firstName, 
     const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}`;
     return (
         <div className="orders__list">
-            <p className="status">{orderNo}</p>
-            <p className="status">{formattedDate}</p>
+            <p className="order__no">{orderNo}</p>
+            <p className="date">{formattedDate}</p>
             <p className="name">{firstName} {lastName}</p>
             <div className="contct__info">
                 <p>{mobile}</p>

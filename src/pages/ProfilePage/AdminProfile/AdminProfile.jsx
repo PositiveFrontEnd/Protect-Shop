@@ -29,48 +29,51 @@ const AdminProfile = () => {
 
   return (
     <>
-      <section className="container admin__container">
-        <h2>{location.pathname.split("/").filter((crumb) => crumb !== "").pop()}</h2>
-        <div className="admin__box">
-          <nav className="admin__links">
-            <NavLink
-              className={`order ${isNavLinkActive("/letters") ? "active" : ""}`}
-              to="letters"
-            >
-              Customer's letters
-            </NavLink>
-            <NavLink
-              className={`order ${isNavLinkActive("/orderstatus") ? "active" : ""}`}
-              to="orderstatus"
-            >
-              Orders
-            </NavLink>
-            <NavLink
-              className={`order ${isNavLinkActive("/newproduct") ? "active" : ""}`}
-              to="newproduct"
-            >
-              Create new Product
-            </NavLink>
-            <NavLink
-              className={`order ${isNavLinkActive("/changeproductgalery") ? "active" : ""}`}
-              to="changeproductgalery"
-            >
-              Change product from catalogue
-            </NavLink>
-            <a href="#" onClick={modalChangeAll}>Log out</a>
-            {isModalAll && (
-              <ModalLogOut
-                isOpen={modalChangeAll}
-                onclick={modalChangeAll}
-                firstClick={modalChangeAll}
-                secondaryClick={() => {
-                  handleLogout()
-                  modalChangeAll()
-                }}
-              />)}
-          </nav>
-          <Outlet />
+      <section className="container">
+        <div className="admin__container">
 
+          <h2>{location.pathname.split("/").filter((crumb) => crumb !== "").pop()}</h2>
+          <div className="admin__box">
+            <nav className="admin__links">
+              <NavLink
+                className={`order ${isNavLinkActive("/letters") ? "active" : ""}`}
+                to="letters"
+              >
+                Customer's letters
+              </NavLink>
+              <NavLink
+                className={`order ${isNavLinkActive("/orderstatus") ? "active" : ""}`}
+                to="orderstatus"
+              >
+                Orders
+              </NavLink>
+              <NavLink
+                className={`order ${isNavLinkActive("/newproduct") ? "active" : ""}`}
+                to="newproduct"
+              >
+                Create new Product
+              </NavLink>
+              <NavLink
+                className={`order ${isNavLinkActive("/changeproductgalery") ? "active" : ""}`}
+                to="changeproductgalery"
+              >
+                Change product from catalogue
+              </NavLink>
+              <a href="#" onClick={modalChangeAll}>Log out</a>
+              {isModalAll && (
+                <ModalLogOut
+                  isOpen={modalChangeAll}
+                  onclick={modalChangeAll}
+                  firstClick={modalChangeAll}
+                  secondaryClick={() => {
+                    handleLogout()
+                    modalChangeAll()
+                  }}
+                />)}
+            </nav>
+            <Outlet />
+
+          </div>
         </div>
       </section>
     </>

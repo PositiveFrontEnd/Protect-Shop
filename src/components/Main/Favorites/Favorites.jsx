@@ -80,7 +80,6 @@ const Favorites = () => {
   };
   const { isModalAll, modalChangeAll } = useContext(ContextFunctions);
   const favorite = token ? favU : favG;
-  console.log(favorite);
   const favorites = favorite.map((item, index) => (
     <FavorutesCard
       modalChangeAll={modalChangeAll}
@@ -117,14 +116,17 @@ const Favorites = () => {
   }, [isModalAll, modalChangeAll]);
   return (
     <>
-      <div className="favorites__wrapper container">
-        {favorites.length > 0 ? (
-          favorites
-        ) : (
-          <h4 className="favorit__list__empty">The Favorites list is empty</h4>
-        )}
+      <div className="container">
+        <div className="favorites__wrapper ">
+          {favorites.length > 0 ? (
+            favorites
+          ) : (
+            <h4 className="favorit__list__empty">The Favorites list is empty</h4>
+          )}
+        </div>
+        {isModalAll && <ModalAddToBasket isOpen={() => modalChangeAll()} />}
+
       </div>
-      {isModalAll && <ModalAddToBasket isOpen={() => modalChangeAll()} />}
     </>
   );
 };

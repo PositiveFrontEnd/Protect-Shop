@@ -10,7 +10,7 @@ import {
   actionLoadingTwelveProductsByType,
 } from "../../../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -24,11 +24,11 @@ const AlsoBuy = () => {
   const navigate = useNavigate();
   const token = useSelector(selectorToken);
   const [additional, setAdditional] = useState();
-  const { type, categories } = useParams();
+
   const handleProduct = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(`/catalogue/${categories}/${type}/${item._id}`);
+    navigate(`/catalogue/${item.categories}/${item.type}/${item._id}`);
   };
   const handleFavorite = (productId, event) => {
     event.stopPropagation();
@@ -39,7 +39,7 @@ const AlsoBuy = () => {
       try {
         const data = await dispatch(
           actionLoadingTwelveProductsByType(
-            `categories=${categories}&type=${type}`
+            `categories=${product.categories}&type=${product.type}`
           )
         );
         setAdditional(data);
@@ -49,7 +49,7 @@ const AlsoBuy = () => {
     };
 
     fetch();
-  }, [product._id]);
+  }, [product.categories]);
 
   return (
     <div className="swiper__also">

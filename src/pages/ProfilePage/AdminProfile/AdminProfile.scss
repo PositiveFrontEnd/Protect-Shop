@@ -51,7 +51,7 @@
             display: flex;
             gap: 20px;
             flex-direction: row;
-            justify-content: space-between;
+            // justify-content: space-between;
             min-width: 100%;
 
             .admin__links {
@@ -73,21 +73,7 @@
     
 }
 
-.orders__list {
-    display: grid;
-    width: 100%;
-    grid-template-areas: 
-    "order__no status name contct__info button";
-    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr;
-    border: 1px solid var(--inactive);
-    min-height: 60px;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-} 
-.orders__list-bold {
-    font-weight: 600;
-}
+
 .letter-important {
     font-weight: 700;
     color: var(--incorrect);
@@ -118,225 +104,7 @@
     position: relative;
 }
 
-.order__cont {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 30px;
-    padding-right: 30px;
-    position: relative;
-    // margin-bottom: 60px;
-    .sort {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            min-width: 160px;
-            padding: 8px 16px;
-            font-size: 12px;
-            line-height: 16px;
-            text-transform: uppercase;
-            border: 1px solid var(--black);
-            border-radius: 12px;
-    
-            @media (width >=768px) {
-                height: 48px;
-                padding: 14px 16px;
-                font-weight: 600;
-            }
-    
-            @media (width >=1024px) {
-                width: 311px;
-                font-size: 16px;
-            }
-        }
-    
-        .sort-open {
-            justify-content: space-between;
-            width: 160px;
-            padding: 8px 16px;
-            font-size: 12px;
-            line-height: 16px;
-            text-transform: uppercase;
-            background: var(--inactive);
-            border: 1px solid var(--black);
-            border-bottom: none;
-            border-radius: 12px 12px 0 0;
-            
-            @media (width >=768px) {
-                height: 48px;
-                padding: 14px 16px;
-                font-weight: 600;
-            }
-    
-            @media (width >=1024px) {
-                width: 311px;
-                font-size: 16px;
-            }
-        }
-    
-        .sort__dropdown {
-            position: absolute;
-            top: 78px;;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding: 12px 16px;
-            font-size: 16px;
-            line-height: 19px;
-            border: 1px solid var(--black);
-            border-top: none;
-            border-radius: 0 0 12px 12px;
-    
-            @media (width >=1024px) {
-                width: 311px;
-            }
-        }
-    
-        .sort__dropdown input {
-            display: none;
-        }
-    
-        .sort__dropdown label:hover {
-            font-weight: 600;
-            cursor: pointer;
-        }
-}
 
-.order__title-general {
-    font-weight: 600;
-    font-size: 34px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-.order__title{
-    font-weight: 600;
-    font-size: 26px;
-    padding-top: 15px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-.cange__order__wrapper {
-    .products_wrap{
-        border: 1px solid var(--inactive);
-    }
-    .order__products{
-        display: grid;
-        width: 100%;
-        grid-template-areas:
-            "img quantity name color__order itemNo price";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        border: 1px solid var(--inactive);
-        align-items: center;
-        justify-items: center;
-        min-height: 50px;
-        text-align: center;
-    }
-    .img {
-        width: 100%;
-    }
-    
-    .name {
-        text-transform: uppercase;
-    }
-}
-.total__price {
-    padding-top: 30px;
-    text-align: end;
-    font-weight: 600;
-    font-size: 18px;
-}
-.customer__data{
-        border: 1px solid var(--inactive);
-    .data__item{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(auto, minmax(200px, 1fr));
-        padding: 15px;
-        border: 1px solid var(--inactive);
-    }
-}
-.order__tabs__box{
-    width: 100%;
-    background-color: var(--fild-type-color);
-}
-.order__tabs {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    color: var(--font-color);
-    padding-top: 20px;
-    padding-left: 20px;
-    cursor: pointer;
-    p {
-        border-left: 1px solid var(--white);
-        border-right: 1px solid var(--white);
-        border-top: 1px solid var(--white);
-        background-color: var(--inactive);
-        padding: auto;
-        padding-bottom: 20px;
-        padding-top: 20px;
-        text-align: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        font-size: 18px;
-        text-transform: uppercase;
-
-    }
-}
-.order__tabs .active {
-    background-color: var(--white);
-    color: var(--black);
-}
-.letter__change{
-    width: 100%;
-    position: relative;
-    .letter__button{
-        margin: 0 auto;
-        margin-top: 50px;
-    }
-    .letter__cont {
-        // position: absolute;
-        // right: 80px;
-        // top: 20px;
-        .letter__change__menu {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            gap: 30px;
-            padding-bottom: 30px;
-    }
-        .letter__status{
-            font-size: 20px;
-            border: 1px solid var(--incorrect);
-            padding: 10px;
-            border-radius: 7px;
-            background-color: var(--feedback);
-        }
-    }
-    .change__letter__wrapper {
-        .letter {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            p {
-                border-bottom: 1px solid var(--inactive);
-                padding: 20px;
-
-            }
-        }
-        .letter__key{
-            font-weight: 700;
-            .letter__value {
-                font-weight: 400;
-                padding-left: 30px;
-            }
-        }
-    }
-.important{
-    margin-right: 20px;
-}
-}
 .noletters {
     padding-top: 40px;
     text-align: center;
@@ -402,4 +170,23 @@
 .admin__cards__list {
     // display: flex;
     // flex-direction: row;
+}
+.change__product__container{
+    max-width: 100%;
+}
+.search__admin {
+    width: 100%;
+}
+.search__cont__admin{
+    width: 100%;
+    position: relative;
+    .scroll__to__top {
+        position: fixed;
+        bottom: 60px;
+        right: 20px;
+    }
+}
+.loadmore__button {
+    margin: 0 auto;
+    margin-top: 60px;
 }

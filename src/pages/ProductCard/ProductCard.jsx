@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ClickedCard from "../../components/Main/Cards/PrimaryCard/ClickedCard/ClickedCard";
 import { useDispatch, useSelector } from "react-redux";
 import { selectorCard, selectorLoading } from "../../store/selectors";
@@ -17,33 +17,40 @@ const ProductCard = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectorLoading);
   const currentProduct = useSelector(selectorCard);
+  const [isClickedCardLoaded, setIsClickedCardLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(actionGetOneProduct(id));
     dispatch(actionGetProductComments(id));
-  }, [id]);
-  if (isLoading || Object.keys(currentProduct).length === 0) {
-    return <></>;
-  } else {
-    return (
-      <>
-        <section className="container center">
-          <ClickedCard />
-        </section>
-        <section>
-          <AlsoLike categories={categories} />
-        </section>
-        <section>
-          <Blog />
-        </section>
-        <section>
-          <AlsoBuy categories={categories} type={type} />
-        </section>
-        <section>
-          <Instagram />
-        </section>
-      </>
-    );
-  }
+  }, [id, dispatch]);
+
+  useEffect(() => {
+    if (Object.keys(currentProduct).length > 0) {
+      setIsClickedCardLoaded(true);
+    }
+  }, [currentProduct]);
+
+  return (
+    <section>
+      {isClickedCardLoaded && <ClickedCard />}
+      {(!isLoading || isClickedCardLoaded) && (
+        <>
+          <section>
+            <AlsoLike categories={categories} />
+          </section>
+          <section>
+            <Blog />
+          </section>
+          <section>
+            <AlsoBuy categories={categories} type={type} />
+          </section>
+          <section>
+            <Instagram />
+          </section>
+        </>
+      )}
+    </section>
+  );
 };
 
 export default ProductCard;

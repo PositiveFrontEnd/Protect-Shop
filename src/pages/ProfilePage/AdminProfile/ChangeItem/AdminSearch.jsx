@@ -23,6 +23,7 @@ const AdminSearch = () => {
     const handleSearch = (values) => {
         dispatch(actionSearchProducts({ query: values.search }));
         navigate(`/account/changeproductgalery/${values.search}`);
+        // navigate(`/changeproductgalery?inputText=${encodeURIComponent(inputText)}`)
     }
 
     const handleSubmit = (values, { resetForm }) => {
@@ -38,7 +39,7 @@ const AdminSearch = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='change__product__container'>
             <div className='admin__search__input-group '>
                 <Formik
                     initialValues={{ search: inputText }}

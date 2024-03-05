@@ -47,7 +47,7 @@ const AlsoLike = () => {
     };
 
     fetch();
-  }, [product._id]);
+  }, [product.categories]);
   return (
     <div className="swiper__also">
       <div className="container">

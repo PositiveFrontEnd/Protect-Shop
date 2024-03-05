@@ -64,7 +64,7 @@ const LatterChangeStatusPage = () => {
 
     return (
         <>
-            <div className="container letter__change">
+            <div className="letter__change">
                 <div className="letter__cont">
                     <h4  className="order__title">Letter</h4>
                     <div className="letter__change__menu">

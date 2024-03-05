@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import React, { useEffect, useState } from "react";
-import './ChangeProductForm.scss'
+import '../NewProduct/NewProductForm.scss'
 import validationSchema from "./ValidationProductForm"
 import Input from "../Inputs/Input";
 import SelectInput from "../Inputs/Select";
@@ -11,13 +11,11 @@ import { actionPreviewProductData } from "../../../store/productsSlice";
 import { selectorPreviewProductInfo } from "../../../store/selectors";
 
 const ChangeProductForm = () => {
-  const [formData, setFormData] = useState()
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const productToChangeOld = useSelector(selectorPreviewProductInfo);
   const [productToChange, setProductToChange] = useState({})
-  console.log(productToChangeOld)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,15 +35,10 @@ const ChangeProductForm = () => {
     useEffect(() => {
       setProductToChange(productToChangeOld)
     }, [productToChangeOld]);
-  
-  // // console.log(Object.keys(productToChange).length)
-  // // console.log(productToChangeOld)
   const handleCleanForm = () => {
-    // setProductToChange({})
       dispatch(actionPreviewProductData({}))
 
   }
-console.log(productToChangeOld)
   return (
       
         <Formik
@@ -56,30 +49,8 @@ console.log(productToChangeOld)
           ...productToChangeOld
         }
       }
-        // :
-        // {
-        //   brand: productToChange.brand,
-        //   name: productToChange.name,
-        //   categories: productToChange.categories,
-        //   color: productToChange.color,
-        //   country: productToChange.country,
-        //   currentPrice: productToChange.currentPrice,
-        //   previousPrice: productToChange.previousPrice,
-        //   delivery: productToChange.delivery,
-        //   imageUrls: productToChange.imageUrls,
-        //   material: productToChange.material,
-        //   productUrl: productToChange.productUrl,
-        //   quantity: productToChange.quantity,
-        //   size: productToChange.size,
-        //   status: productToChange.status,
-        //   type: productToChange.type,
-        //   myCustomParam: productToChange.myCustomParam,
-        // }}
-      
-        onSubmit={(values) => {
-            // setFormData(values)
-          console.log(values);
 
+        onSubmit={(values) => {
           setProductToChange(values)
       dispatch(actionPreviewProductData(values))
         
@@ -89,16 +60,17 @@ console.log(productToChangeOld)
 
           })
       }}
-        // validationSchema={validationSchema}
-        
+       
         >
         {({ errors, touched }) => (
-          <div className="form__box-registr">
+        <div className="create__product__container">
+
+          <div className="form__box-admin">
           <Form>
             <div className="new__prouct__form">
 
         
-            <div>
+            <div className="product__column">
               
                 <Input
                   className="mb-3"
@@ -186,7 +158,7 @@ console.log(productToChangeOld)
                 ))}
               </div>
             </div>
-            <div>
+            <div  className="product__column">
 
               <Input
                 className="mb-3"
@@ -270,6 +242,7 @@ console.log(productToChangeOld)
             </div>
             </Form>
           </div>
+        </div>
           
          )} 
       </Formik>

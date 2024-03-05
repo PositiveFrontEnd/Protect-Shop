@@ -1,0 +1,122 @@
+.letter__list { 
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "name phone star";
+    grid-template-columns: 1fr 1fr 1.5fr;
+    border: 1px solid var(--inactive);
+    min-height: 60px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    .date, .question {
+        display: none;
+    }
+    @media(width >= 1200px) {
+    font-size: 16px;
+        .date, .question {
+                display: block;
+            }
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "date name question phone star";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    }
+
+    .star {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+.letter__list-bold {
+    font-weight: 600;
+}
+
+.order__change {
+    position: relative;
+}
+
+
+.letter__change {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+
+    .letter__button {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .letter__cont {
+        .letter__change__menu {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+
+        .letter__status {
+            font-size: 20px;
+            border: 1px solid var(--incorrect);
+            padding: 10px;
+            border-radius: 7px;
+            background-color: var(--feedback);
+        }
+    }
+
+    .change__letter__wrapper {
+        .letter {
+            font-size: 14px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            @media(width>=768px){
+            font-size: 16px;
+            }
+
+            p {
+                border-bottom: 1px solid var(--inactive);
+                padding: 20px;
+
+            }
+        }
+
+        .letter__key {
+            font-weight: 700;
+
+            .letter__value {
+                font-weight: 400;
+                padding-left: 30px;
+            }
+        }
+    }
+
+    .important {
+        margin-right: 20px;
+    }
+}
+
+.noletters {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.read__letter {
+    background-color: var(--white-dark);
+
+}
+
+.new__letter {
+    font-weight: 700;
+    background-color: var(--white);
+}
+.letter-important {
+    font-weight: 700;
+    color: var(--incorrect);
+}

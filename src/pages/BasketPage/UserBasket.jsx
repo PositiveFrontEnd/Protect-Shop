@@ -39,7 +39,9 @@ const UserBasket = () => {
   const handleNavigate = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(`/catalogue/${item.categories}/${item.type}/${item._id}`);
+    navigate(
+      `/catalogue/${item.categories}/${item.type}/${item._id}`
+    );
   };
   const handleFavorite = (productId, event) => {
     event.stopPropagation();

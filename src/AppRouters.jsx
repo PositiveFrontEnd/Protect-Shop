@@ -44,7 +44,7 @@ import AdminNewProductPage from "./pages/ProfilePage/AdminProfile/AdminNewProduc
 import PreviewProduct from './pages/ProfilePage/AdminProfile/PreviewProduct';
 import LatterChangeStatusPage from "./pages/ProfilePage/AdminProfile/LetterChangeStatusPage";
 import { actionAddToImportant, actionAllLetters } from "./store/messageSlice";
-import AdminChangeProductGalery from "./pages/ProfilePage/AdminProfile/ChangeItem/AdminChangeProductGalery";
+import AdminChangeProductGalery from "./pages/ProfilePage/AdminProfile/ChangeItem/ChangeProductPage";
 import ChangeProductForm from './components/Form/ChangeProduct/ChangeProducrForm';
 import AdminSearchResultPage from "./pages/ProfilePage/AdminProfile/ChangeItem/AdminSearchResultPage";
 // import { actionAllLetters, actionLetters } from "./store/messageSlice";
@@ -56,6 +56,8 @@ const AppRouters = () => {
   const productToChangeOld = useSelector(selectorPreviewProductInfo)
   const [lettersFirstLoad, setLettersFirstLoad] = useState([])
   const [importants, setImportants] = useState([])
+  const userData = useSelector(selectorRegistrationData)
+  const isAdmin = userData.isAdmin
   // const importants = useSelector(selectorImportantLetters)
 
   useEffect(() => {
@@ -64,29 +66,29 @@ const AppRouters = () => {
   }, [token, dispatch])
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await dispatch(actionAllLetters())
-        setLettersFirstLoad(response)
+    if (isAdmin) {
+      const fetchData = async () => {
+          try {
+            const response = await dispatch(actionAllLetters())
+            setLettersFirstLoad(response)
+          }
+          catch {
+            console.log("error")
+          }
+        }
+        fetchData()
       }
-      catch {
-        console.log("error")
-      }
-    }
-    fetchData()
-  }, [dispatch])
-  useEffect(() => {
+    }, [dispatch, isAdmin])
+ useEffect(() => {
     const importantIds = lettersFirstLoad
       .filter((item) => item.important === true)
       .map((item) => item._id);
 
-    setImportants(importantIds);
-    dispatch(actionAddToImportant(importantIds))
-  }, [dispatch, lettersFirstLoad]);
-
-
-  const userData = useSelector(selectorRegistrationData)
-  const isAdmin = userData.isAdmin
+   setImportants(importantIds);
+   dispatch(actionAddToImportant(importantIds))
+ }, [dispatch, lettersFirstLoad]);
+  
+  
   return (
     <>
       <Header />

@@ -27,3 +27,24 @@
     gap: 100px;
   }
 }
+.search__result__admin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+
+  @media (width >=768px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+  }
+
+  @media (width >=1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+  }
+}
+.search__cont {
+  width: 100%;
+}

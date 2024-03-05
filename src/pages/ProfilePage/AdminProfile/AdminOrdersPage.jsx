@@ -4,6 +4,7 @@ import { actionGetAllOrders } from "../../../store/orderSlice"
 import OrderItemCard from "./OrderItemCard"
 import { selectorToken } from "../../../store/selectors"
 import { useLocation, useNavigate } from "react-router-dom"
+import "./AdminOrder.scss"
 
 const AdminOrdersPage = () => {
     const dispatch = useDispatch()

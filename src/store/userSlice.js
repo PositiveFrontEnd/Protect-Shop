@@ -16,7 +16,7 @@ const userSlice = createSlice({
     // registrationData:  "{}",
 
     correctData: "",
-    isAdmin: false,
+    isAdmin: JSON.parse(localStorage.getItem("isAdmin") || false),
   },
   reducers: {
     actionToken: (state, { payload }) => {
@@ -44,6 +44,8 @@ const userSlice = createSlice({
     },
     actionIsAdmin: (state, { payload }) => {
       state.isAdmin = payload;
+      localStorage.setItem("isAdmin", JSON.stringify(state.isAdmin));
+
     },
   },
 });

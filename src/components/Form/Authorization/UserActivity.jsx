@@ -31,32 +31,32 @@ const UserActivity = () => {
                     }, 30000);
                 
                 }
-            }, 600000);
+            }, 1800000);
         };
 
-        const handleBeforeUnload = (event) => {
-            if (token && isAdmin) {
-                // dispatch(actionToken(''));
-                // dispatch(actionUserRegistrationData(''))
-            } else {
-                navigate('/account')
-                setShowModal(false);
-            }
-        //     event.preventDefault();
-        //    return event.returnValue = '';
-            // return event.returnValue = 'Are you sure you want to leave?';
-        };    
+        // const handleBeforeUnload = (event) => {
+        //     if (token && isAdmin) {
+        //         // dispatch(actionToken(''));
+        //         // dispatch(actionUserRegistrationData(''))
+        //     } else {
+        //         navigate('/account')
+        //         setShowModal(false);
+        //     }
+        // //     event.preventDefault();
+        // //    return event.returnValue = '';
+        //     // return event.returnValue = 'Are you sure you want to leave?';
+        // };    
 
         window.addEventListener("mousemove", resetTimer);
         window.addEventListener("keydown", resetTimer);
-        window.addEventListener("beforeunload", handleBeforeUnload);
+        // window.addEventListener("beforeunload", handleBeforeUnload);
 
         resetTimer();
 
         return () => {
             window.removeEventListener("mousemove", resetTimer);
             window.removeEventListener("keydown", resetTimer);
-            window.removeEventListener("beforeunload", handleBeforeUnload);
+            // window.removeEventListener("beforeunload", handleBeforeUnload);
             clearTimeout(logoutTimerRef.current);
         };
     }, [dispatch, navigate]);

@@ -2,20 +2,10 @@
   position: relative;
   .unfilled__stars {
     display: flex;
-
-    .star {
-      max-width: 30px;
-      max-height: 30px;
-    }
   }
   .filled__stars {
     display: flex;
     top: 0;
     position: absolute;
-
-    .filled__star {
-      max-width: 30px;
-      max-height: 30px;
-    }
   }
 }

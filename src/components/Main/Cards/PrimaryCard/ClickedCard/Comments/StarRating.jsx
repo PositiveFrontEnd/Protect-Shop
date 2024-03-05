@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Star from "../Images/star.svg?react";
+import Star from "../../../Images/star.svg?react";
 import "./starrating.scss";
 
 const Rating = ({ onRatingChange }) => {
@@ -31,8 +31,8 @@ const Rating = ({ onRatingChange }) => {
                 key={star}
                 className={
                   currentRating <= (hover || rating)
-                    ? "active-star"
-                    : "inactive-star"
+                    ? "active__star active__star-comment"
+                    : "default__star active__star-comment"
                 }
                 onMouseEnter={() => setHover(currentRating)}
                 onMouseLeave={() => setHover(null)}

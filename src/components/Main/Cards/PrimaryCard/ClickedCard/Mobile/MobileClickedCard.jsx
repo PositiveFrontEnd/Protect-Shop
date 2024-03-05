@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./MobileClickedCardStyle.scss";
 import "../Desktop/DesktopClickedCardStyle.scss";
-import Star from "../Images/star.svg?react";
+import Star from "../../../Images/star.svg?react";
 import Favorite from "../Images/favorite.svg?react";
 import Locker from "../Images/locker.svg?react";
 import Checkmark from "../Images/checkmark.svg?react";
@@ -16,6 +16,7 @@ import {
   selectorCard,
   selectorProductComments,
   selectorThreeProducts,
+  selectorIsAdmin,
 } from "../../../../../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import ModalAddToBasket from "../../../../../Modal/ModalAddToBasket";
@@ -26,11 +27,13 @@ import { useEffect } from "react";
 import CounterForUser from "../Desktop/CounterForUser";
 import CounterForGuest from "../Desktop/CounterForGuest";
 import Heart from "../../../../Heart/Heart";
-import { actionGetOneProduct } from "../../../../../../store/productsSlice";
+import { actionDeleteProduct, actionGetOneProduct, actionPreviewProductData } from "../../../../../../store/productsSlice";
 import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
 import Comments from "../Comments/Comments.jsx";
 import StarsRaiting from "../StarsRaiting.jsx";
+import Button from "../../../../../Button/Button.jsx";
+import ModalDeleteProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
 const MobileClickedCard = ({
   currentPrice,
   name,
@@ -44,6 +47,7 @@ const MobileClickedCard = ({
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentProduct = useSelector(selectorCard);
+  const isAdmin = useSelector(selectorIsAdmin)
   const [startIndex, setIndex] = useState(0);
   const [activeSwitch, setActiveSwitch] = useState("info");
   const handleSwitchClick = (type) => {
@@ -78,6 +82,19 @@ const MobileClickedCard = ({
 
   const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
   const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
+
+
+  const [deleteProductModal, setDeleteProductModal] = useState(false)
+
+const handleChangeCard = () => {
+    dispatch(actionPreviewProductData(currentProduct))
+    navigate('/account/changeproductgalery')
+  }
+ const handleDeleteProductModal = () => { setDeleteProductModal(!deleteProductModal) }
+  const handleDeleteProduct = () => dispatch(actionDeleteProduct({ _id, token }))
+
+
+
   return (
     <section>
       <div className="mobile__card">
@@ -98,16 +115,18 @@ const MobileClickedCard = ({
         </div>
         <div className="mobile__card__toggler">
           <p
-            className={`mobile__card__switch ${activeSwitch === "info" ? "active" : ""
-              }`}
+            className={`mobile__card__switch ${
+              activeSwitch === "info" ? "active" : ""
+            }`}
             onClick={() => handleSwitchClick("info")}
             type="info"
           >
             info
           </p>
           <p
-            className={`mobile__card__switch ${activeSwitch === "comments" ? "active" : ""
-              }`}
+            className={`mobile__card__switch ${
+              activeSwitch === "comments" ? "active" : ""
+            }`}
             onClick={() => handleSwitchClick("comments")}
             type="comments"
           >
@@ -128,7 +147,7 @@ const MobileClickedCard = ({
             <div className="mobile__card__stars">
               {averageLikes === 0 ? (
                 [...Array(5)].map((item, index) => (
-                  <Star className="star" key={index} />
+                  <Star className="default__star" key={index} />
                 ))
               ) : (
                 <StarsRaiting />
@@ -160,9 +179,9 @@ const MobileClickedCard = ({
           </div>
           <div className="mobile__card__buttons">
             <div className="mobile__card__buttons-primary">
-              {token ? (
+              {token ? (isAdmin ? (<Button black click={() =>handleChangeCard()} >Change Product</Button>) :(
                 <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
-              ) : (
+              )) : (
                 <CounterForGuest _id={_id} modalChangeAll={modalChangeAll} />
               )}
               <Heart
@@ -173,10 +192,14 @@ const MobileClickedCard = ({
             </div>
 
             <div className="mobile__card__buttons-secondary">
+              {isAdmin ? <Button white click={() => handleDeleteProductModal()}>
+              Delete Product
+              </Button> :
               <button onClick={modalChangeAddBasket}>
                 Buy right now
                 <Checkmark className="checkmark" />
               </button>
+            }
             </div>
           </div>
           <div className="mobile__card__description">
@@ -209,6 +232,11 @@ const MobileClickedCard = ({
           secondaryClick={() => contineShoping()}
         />
       )}
+      {deleteProductModal && <ModalDeleteProduct
+        firstClick={() => handleDeleteProductModal()}
+        secondaryClick={() => handleDeleteProduct()}
+        onclick={() =>handleDeleteProductModal()}
+      />}
     </section>
   );
 };

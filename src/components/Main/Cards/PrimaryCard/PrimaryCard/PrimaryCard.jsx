@@ -65,7 +65,7 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
           <div className="card__stars">
             {averageLikes === 0 ? (
               [...Array(5)].map((item, index) => (
-                <Icon className="star" key={index} />
+                <Icon className="default__star" key={index} />
               ))
             ) : (
               <PrimaryStarsRaiting averageLikes={averageLikes} />

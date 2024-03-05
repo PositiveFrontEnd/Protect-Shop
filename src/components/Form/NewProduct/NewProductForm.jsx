@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import React, { useEffect, useState } from "react";
+// import '../Registration/RegistrationF.scss'
 import './NewProductForm.scss'
 import validationSchema from "./ValidationProductForm"
 import Input from "../Inputs/Input";
@@ -49,13 +50,15 @@ console.log(productToChange)
         // validationSchema={validationSchema}
         
         >
-        {({ errors, touched }) => (
-          <div className="form__box-registr">
+      {({ errors, touched }) => (
+        <div className="create__product__container">
+
+          <div className="form__box-admin">
           <Form>
             <div className="new__prouct__form">
 
         
-            <div>
+            <div className="product__column">
               
                 <Input
                   className="mb-3"
@@ -143,7 +146,7 @@ console.log(productToChange)
                 ))}
               </div>
             </div>
-            <div>
+            <div  className="product__column">
 
               <Input
                 className="mb-3"
@@ -227,6 +230,7 @@ console.log(productToChange)
             </div>
             </Form>
           </div>
+        </div>
           
          )} 
       </Formik>

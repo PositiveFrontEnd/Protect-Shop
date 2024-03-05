@@ -21,6 +21,7 @@ const productsSlice = createSlice({
     youSee: [],
     previewProductInfo: {},
     previewProductInfo: {},
+    isLoading: false,
   },
   reducers: {
     actionProducts: (state, { payload }) => {

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { actionAddToImportant, actionAllLetters, actionLettersAll } from "../../../store/messageSlice"
 import LetterItemCard from "./LetterItemCard"
-import {  selectorLetterAll } from "../../../store/selectors"
+import { selectorLetterAll } from "../../../store/selectors"
+import './AdminLetters.scss'
 const AdminLettersPage = () => {
     const dispatch = useDispatch()
     const [sortLetters, setSortedLetters] = useState([])

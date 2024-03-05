@@ -3,20 +3,10 @@
 
   .primary__unfilled__stars {
     display: flex;
-    .star {
-      max-width: 20px !important;
-      height: 20px !important;
-      width: 100%;
-    }
   }
   .primary__filled__stars {
     position: absolute;
     top: 0;
     display: flex;
-    svg {
-      max-width: 20px !important;
-      height: 20px !important;
-      width: 100%;
-    }
   }
 }

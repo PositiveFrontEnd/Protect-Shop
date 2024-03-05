@@ -39,7 +39,7 @@ const ClickedCard = () => {
   };
 
   return (
-    <>
+    <section className="container">
       {isMobile ? (
         <MobileClickedCard
           currentPrice={currentPrice}
@@ -65,7 +65,7 @@ const ClickedCard = () => {
           delivery={delivery}
         />
       )}
-    </>
+    </section>
   );
 };
 

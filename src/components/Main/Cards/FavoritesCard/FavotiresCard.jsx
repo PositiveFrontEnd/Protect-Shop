@@ -12,13 +12,13 @@ const FavorutesCard = ({ price, url, name, click, id, modalChangeAll, handleNavi
     <div className="favorite__card__wrapper">
       <div className="favorite__card__image">
         <img src={url} alt="" onClick={handleNavigate} />
-        <Exit onClick={click} className="favorite__card__image-close" />
       </div>
       <span className="favorite__card__name">{name}</span>
       <span className="favorite__card__price">${price}</span>
       <div className="favorite__card__button">
         {token ? <CounterForUser _id={id} modalChangeAll={modalChangeAll} /> : <CounterForGuest _id={id} modalChangeAll={modalChangeAll} />}
       </div>
+      <Exit onClick={click} className="favorite__card__image-close" />
     </div>
   );
 };

@@ -68,7 +68,7 @@ const BasketGuest = () => {
         dispatch(actionGetOneProduct(item.id));
         dispatch(actionGetThreeProducts(item.name));
         navigate(
-            `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
+            `/catalogue/${item.categories}/${item.type}/${item._id}`
         );
     };
     const handleFavorite = (productId, event) => {

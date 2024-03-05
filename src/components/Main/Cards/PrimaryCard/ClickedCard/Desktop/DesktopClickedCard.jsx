@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./DesktopClickedCardStyle.scss";
-import Favorite from "../Images/favorite.svg?react";
-import Star from "../Images/star.svg?react";
-import Locker from "../Images/locker.svg?react";
+import Star from "../../../Images/star.svg?react";
 import Checkmark from "../Images/checkmark.svg?react";
 import ClickedCardDropDown from "../ClickedCardDropDown/ClickedCardDropDown";
 import Button from "../../../../../Button/Button";
 import {
   actionAddBasketOneProduct,
+  actionAddToBasketForGuest,
   actionDecreaseProduct,
 } from "../../../../../../store/basketSlice";
 import {
@@ -17,6 +16,7 @@ import {
   selectorCard,
   selectorProductComments,
   selectorThreeProducts,
+  selectorIsAdmin,
 } from "../../../../../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import ModalAddToBasket from "../../../../../Modal/ModalAddToBasket";
@@ -29,9 +29,10 @@ import CounterForGuest from "./CounterForGuest";
 import Heart from "../../../../Heart/Heart";
 import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
-import { actionGetOneProduct } from "../../../../../../store/productsSlice.js";
+import { actionChangeProduct, actionDeleteProduct, actionGetOneProduct, actionPreviewProductData } from "../../../../../../store/productsSlice.js";
 import Comments from "../Comments/Comments.jsx";
 import StarsRaiting from "../StarsRaiting.jsx";
+import ModalDeleteProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
 
 const DesktopClickedCard = ({
   currentPrice,
@@ -45,6 +46,8 @@ const DesktopClickedCard = ({
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentProduct = useSelector(selectorCard);
+  const isAdmin = useSelector(selectorIsAdmin)
+  console.log(isAdmin)
   const [startIndex, setIndex] = useState(0);
   const [activeSwitch, setActiveSwitch] = useState("info");
   const handleSwitchClick = (type) => {
@@ -73,13 +76,29 @@ const DesktopClickedCard = ({
     dispatch(actionAddBasketOneProduct({ product: [_id], token }));
   };
 
+  const handleAddToBasketForGuest = () => {
+    modalChangeAddBasket();
+    navigate("/cart/placing_an_order/contact_information");
+    dispatch(actionAddToBasketForGuest(_id))
+  }
   const contineShoping = () => {
     navigate("/catalogue");
     modalChangeAddBasket();
+    
   };
 
   const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
   const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
+
+  const [deleteProductModal, setDeleteProductModal] = useState(false)
+
+  const handleDeleteProductModal = () => { setDeleteProductModal(!deleteProductModal) }
+  const handleDeleteProduct = () => dispatch(actionDeleteProduct({ _id, token }))
+
+  const handleChangeCard = () => {
+    dispatch(actionPreviewProductData(currentProduct))
+    navigate('/account/changeproductgalery')
+  }
   return (
     <section>
       <div className="desktop__card">
@@ -138,7 +157,7 @@ const DesktopClickedCard = ({
             <div onClick={() => handleSwitchClick("comments")}>
               {averageLikes === 0 ? (
                 [...Array(5)].map((item, index) => (
-                  <Star className="star" key={index} />
+                  <Star className="default__star" key={index} />
                 ))
               ) : (
                 <StarsRaiting />
@@ -172,11 +191,15 @@ const DesktopClickedCard = ({
             ))}
           </div>
           <div className="desktop__card__buttons">
-            {token ? (
+            {token ? (isAdmin ? (<Button black click={() =>handleChangeCard()} >Change Product</Button>) :(
               <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
-            ) : (
+            )) : (
               <CounterForGuest _id={_id} modalChangeAll={modalChangeAll} />
             )}
+            {isAdmin ? <Button white click={() => handleDeleteProductModal()}>
+              Delete Product
+            </Button>
+              :
             <Button
               click={modalChangeAddBasket}
               black
@@ -185,13 +208,14 @@ const DesktopClickedCard = ({
               Buy right now
               <Checkmark className="Checkmark" />
             </Button>
+            }
           </div>
           <ClickedCardDropDown
             title={"Description"}
             myCustomParam={myCustomParam}
           />
           <ClickedCardDropDown title={"Guarantee"} />
-          <ClickedCardDropDown title={"Delivery"} myCustomParam={delivery} />
+          <ClickedCardDropDown title={"Delivery"} />
           <ClickedCardDropDown title={"Look in our Shops"} />
         </div>
         <div
@@ -212,10 +236,15 @@ const DesktopClickedCard = ({
           price={currentPrice}
           onclick={() => modalChangeAddBasket()}
           isOpen={() => modalChangeAddBasket()}
-          firstClick={() => addBasket()}
+          firstClick={() => token ? addBasket() : handleAddToBasketForGuest()}
           secondaryClick={() => contineShoping()}
         />
       )}
+      {deleteProductModal && <ModalDeleteProduct
+        firstClick={() => handleDeleteProductModal()}
+        secondaryClick={() => handleDeleteProduct()}
+        onclick={() =>handleDeleteProductModal()}
+      />}
     </section>
   );
 };
