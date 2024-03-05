@@ -1,14 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Provider } from "react-redux";
-import HomePage from "./HomePage";
+import { Provider } from 'react-redux';
+import AdminSearch from "./AdminSearch";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
-import thunk from "redux-thunk";
 import { ContextFunctions } from "../../context/context";
-describe("Тестування компонента  HomePage", () => {
+describe("Тестування компонента  AdminSearch", () => {
     test("Знімок", () => {
-        const mockStore = configureStore([thunk]);
+        const mockStore = configureStore();
         const initialState = {
             home: {
                 isAnimation: false,
@@ -45,7 +44,7 @@ describe("Тестування компонента  HomePage", () => {
                 infoForOrderGuest: [],
                 deliveryForOrderGuest: {},
                 order: {
-                    letterSubject: "Thank you for order!",
+                    letterSubject: "Thank you for order!"
                 },
                 promoCodePrice: "",
                 orderGuest: { letterSubject: "Thank you for order!" },
@@ -66,26 +65,25 @@ describe("Тестування компонента  HomePage", () => {
             },
             message: {
                 letters: [],
-            },
-        };
+            }
 
+        };
         const contextValues = {
             isModalAll: true,
             modalChangeAll: true,
         };
 
         const store = mockStore(initialState);
-
-        const homePage = render(
+        const adminSearch = render(
             <Provider store={store}>
                 <BrowserRouter>
                     <ContextFunctions.Provider value={contextValues}>
-                        <HomePage />
+                        <AdminSearch />
                     </ContextFunctions.Provider>
                 </BrowserRouter>
             </Provider>
         );
 
-        expect(homePage).toMatchSnapshot();
+        expect(adminSearch).toMatchSnapshot();
     });
 });

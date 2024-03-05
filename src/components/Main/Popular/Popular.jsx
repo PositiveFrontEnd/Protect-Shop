@@ -8,7 +8,7 @@ import { actionGetCatalogId } from '../../../store/catalog'
 import { actionFavoriteForAll } from "../../../store/favoriteSlice";
 import { selectorToken } from "../../../store/selectors";
 import { useNavigate } from "react-router";
-import { selectorGetAllOrders,selectorProductsForOrderGuest } from "../../../store/selectors";
+import { selectorGetAllOrders, selectorProductsForOrderGuest } from "../../../store/selectors";
 import { actionGetOllUserOrders } from "../../../store/orderSlice";
 import ModalPromoCode from "../../Modal/ModalPromoCode";
 import ModalAddedCart from "../../Modal/ModalAddedCart";
@@ -17,7 +17,7 @@ import { ContextFunctions } from "../../../context/context";
 const Popular = () => {
     const dispatch = useDispatch()
     const [popularProducts, setPopularProducts] = useState([]);
-    const { isModalAll, modalChangeAll} = useContext(ContextFunctions);
+    const { isModalAll, modalChangeAll } = useContext(ContextFunctions);
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -35,7 +35,7 @@ const Popular = () => {
         dispatch(actionGetOneProduct(item._id));
         dispatch(actionGetThreeProducts(item.name));
         navigate(
-            `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
+            `/catalogue/${item.categories}/${item.type}/${item._id}`
         );
     };
 
@@ -66,16 +66,16 @@ const Popular = () => {
 
     const allOrders = useSelector(selectorGetAllOrders)
     useEffect(() => {
-      if (token) {
-        dispatch(actionGetOllUserOrders(token))
-      }
+        if (token) {
+            dispatch(actionGetOllUserOrders(token))
+        }
     }, [dispatch, token])
-   
-    const [isModal, setIsModal]= useState(false)
-    const changeIsModal = ()=>{
+
+    const [isModal, setIsModal] = useState(false)
+    const changeIsModal = () => {
         setIsModal(!isModal)
     }
-  
+
 
     return (
         <>
@@ -92,14 +92,14 @@ const Popular = () => {
                     <Button click={token ? changeIsModal : handlerNewCustomer} className='special-offer__button' black>New here $20 off your first purchase</Button>
                     <Button click={token ? modalChangeAll : handlerNewCustomer} className='special-offer__button' black>Get a 10% discount for signing up</Button>
                 </div>
-                {  isModal &&  (
-  <ModalPromoCode secondaryClick={()=>  navigate("/account/history")} firstClick={()=> navigate("/catalogue")}  onclick={changeIsModal} isOpen={changeIsModal} discription={allOrders.length === 0 ? "YOUR PROMO CODE: SALE567": "oops... you already have an order"} />
-)}
-  {  isModalAll && (
-       <ModalPromoCode
-        discription="YOUR PROMO CODE: NEW1023"
-        onclick={modalChangeAll}
-    />)}
+                {isModal && (
+                    <ModalPromoCode secondaryClick={() => navigate("/account/history")} firstClick={() => navigate("/catalogue")} onclick={changeIsModal} isOpen={changeIsModal} discription={allOrders.length === 0 ? "YOUR PROMO CODE: SALE567" : "oops... you already have an order"} />
+                )}
+                {isModalAll && (
+                    <ModalPromoCode
+                        discription="YOUR PROMO CODE: NEW1023"
+                        onclick={modalChangeAll}
+                    />)}
             </div>
         </>
     )

@@ -4,16 +4,18 @@ import { Provider } from 'react-redux';
 import SearchPage from "./SearchPage";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
-
+import { ContextFunctions } from "../../context/context";
+import thunk from "redux-thunk";
 describe("Тестування компонента  SearchPage", () => {
     test("Знімок", () => {
-        const mockStore = configureStore();
+        const mockStore = configureStore([thunk]);
         const initialState = {
             home: {
                 isAnimation: false,
                 inputText: "some text",
                 filterHomePage: [],
             },
+
             user: {
                 token: "token",
                 registrationModal: false,
@@ -68,12 +70,18 @@ describe("Тестування компонента  SearchPage", () => {
             }
 
         };
+        const contextValues = {
+            isModalAll: true,
+            modalChangeAll: true,
+        };
 
         const store = mockStore(initialState);
         const searchPage = render(
             <Provider store={store}>
                 <BrowserRouter>
-                    <SearchPage />
+                    <ContextFunctions.Provider value={contextValues}>
+                        <SearchPage />
+                    </ContextFunctions.Provider>
                 </BrowserRouter>
             </Provider>
         );

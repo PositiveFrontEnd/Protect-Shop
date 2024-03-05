@@ -5,7 +5,7 @@ import Popular from "./Popular";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
-
+import { ContextFunctions } from "../../../context/context";
 describe("Тестування компонента  Popular", () => {
     test("Знімок", () => {
         const mockStore = configureStore([thunk]);
@@ -68,13 +68,19 @@ describe("Тестування компонента  Popular", () => {
                 letters: [],
             },
         };
+        const contextValues = {
+            isModalAll: true,
+            modalChangeAll: true,
+        };
 
         const store = mockStore(initialState);
 
         const popular = render(
             <Provider store={store}>
                 <BrowserRouter>
-                    <Popular />
+                    <ContextFunctions.Provider value={contextValues}>
+                        <Popular />
+                    </ContextFunctions.Provider>
                 </BrowserRouter>
             </Provider>
         );
