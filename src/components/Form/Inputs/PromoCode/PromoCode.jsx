@@ -25,9 +25,9 @@ const token = useSelector(selectorToken)
     let discountedPrice = 0;
     let discountPercentage = 0;
     
-    if (promoCode === 'sale567') {
+    if (promoCode === 'SALE567') {
       discountPercentage = 5;
-    } else if (promoCode === 'new1023') {
+    } else if (promoCode === 'NEW1023') {
       discountPercentage = 10;
     } else if (promoCode === 'protect24') {
       discountPercentage = 15;

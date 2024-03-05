@@ -15,6 +15,7 @@ import {
   selectorBaskets,
   selectorCard,
   selectorProductComments,
+  selectorThreeProducts,
 } from "../../../../../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import ModalAddToBasket from "../../../../../Modal/ModalAddToBasket";
@@ -29,6 +30,7 @@ import { actionGetOneProduct } from "../../../../../../store/productsSlice";
 import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
 import Comments from "../Comments/Comments.jsx";
+import StarsRaiting from "../StarsRaiting.jsx";
 const MobileClickedCard = ({
   currentPrice,
   name,
@@ -36,7 +38,6 @@ const MobileClickedCard = ({
   myCustomParam,
   _id,
   handleFavorite,
-  colors,
   likes,
   color,
 }) => {
@@ -68,21 +69,29 @@ const MobileClickedCard = ({
     navigate("/cart/placing_an_order/contact_information");
     dispatch(actionAddBasketOneProduct({ product: [_id], token }));
   };
+  const colors = useSelector(selectorThreeProducts);
   const commentsLength = useSelector(selectorProductComments).length;
   const contineShoping = () => {
     navigate("/catalogue");
     modalChangeAddBasket();
   };
+
+  const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
+  const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
   return (
     <section>
       <div className="mobile__card">
         <p className="mobile__card__title">{name}</p>
         <div className="mobile__card__images">
           <div className="mobile__card__images-main">
-            <img className="main" src={imageUrls[`${startIndex}`]} alt="" />
+            <img
+              className="main"
+              src={currentProduct.imageUrls[`${startIndex}`]}
+              alt=""
+            />
           </div>
           <div className="mobile__card__images-additional">
-            {imageUrls.map((item, index) => (
+            {currentProduct.imageUrls.map((item, index) => (
               <img key={index} onClick={() => setIndex(index)} src={item} />
             ))}
           </div>
@@ -117,12 +126,16 @@ const MobileClickedCard = ({
             onClick={() => handleSwitchClick("comments")}
           >
             <div className="mobile__card__stars">
-              {[...Array(5)].map((item, index) => (
-                <Star className="star" key={index} />
-              ))}
+              {averageLikes === 0 ? (
+                [...Array(5)].map((item, index) => (
+                  <Star className="star" key={index} />
+                ))
+              ) : (
+                <StarsRaiting />
+              )}
             </div>
             <div className="mobile__card__comments">
-              <span>{likes.length - 1} feedbacks</span>
+              <span>{commentsLength} feedbacks</span>
             </div>
           </div>
           <p className="mobile__card__price">$ {currentPrice}</p>

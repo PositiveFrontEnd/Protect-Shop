@@ -4,11 +4,20 @@ import MobileClickedCard from "./Mobile/MobileClickedCard";
 import DesktopClickedCard from "./Desktop/DesktopClickedCard";
 import { actionFavoriteForAll } from "../../../../../store/favoriteSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectorToken } from "../../../../../store/selectors";
+import { selectorCard, selectorToken } from "../../../../../store/selectors";
 
-const ClickedCard = ({ cards, colors }) => {
-  const { currentPrice, name, imageUrls, myCustomParam, _id, likes, color } =
-    cards;
+const ClickedCard = () => {
+  const currentProduct = useSelector(selectorCard);
+  const {
+    name,
+    currentPrice,
+    imageUrls,
+    myCustomParam,
+    likes,
+    _id,
+    color,
+    delivery,
+  } = currentProduct;
   const token = useSelector(selectorToken);
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(
@@ -28,7 +37,8 @@ const ClickedCard = ({ cards, colors }) => {
     event.stopPropagation();
     dispatch(actionFavoriteForAll({ productId, token }));
   };
-   return (
+
+  return (
     <>
       {isMobile ? (
         <MobileClickedCard
@@ -36,23 +46,23 @@ const ClickedCard = ({ cards, colors }) => {
           name={name}
           imageUrls={imageUrls}
           myCustomParam={myCustomParam}
-          colors={colors}
           handleFavorite={(event) => handleFavorite(_id, event)}
           _id={_id}
           likes={likes}
           color={color}
+          delivery={delivery}
         />
-      )  : (
+      ) : (
         <DesktopClickedCard
           currentPrice={currentPrice}
           name={name}
           imageUrls={imageUrls}
           myCustomParam={myCustomParam}
-          colors={colors}
           handleFavorite={(event) => handleFavorite(_id, event)}
           _id={_id}
           likes={likes}
           color={color}
+          delivery={delivery}
         />
       )}
     </>

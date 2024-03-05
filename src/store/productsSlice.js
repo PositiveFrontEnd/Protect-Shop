@@ -11,7 +11,7 @@ const productsSlice = createSlice({
     products: [],
     productsByCategory: [],
     productsByType: [],
-    oneProduct: JSON.parse(localStorage.getItem("product") || "{}"),
+    oneProduct: {},
     ThreeProducts: JSON.parse(localStorage.getItem("Threeproducts") || "[]"),
     ThreeColors: [],
     filters: [],
@@ -45,7 +45,6 @@ const productsSlice = createSlice({
     },
     actionOneProduct: (state, { payload }) => {
       state.oneProduct = payload;
-      localStorage.setItem("product", JSON.stringify(state.oneProduct));
     },
     actionThreeProducts: (state, { payload }) => {
       state.ThreeProducts = payload;
@@ -69,7 +68,9 @@ const productsSlice = createSlice({
     actionPreviewProductData: (state, { payload }) => {
       state.previewProductInfo = payload;
     },
-    
+    actionLoading: (state, { payload }) => {
+      state.isLoading = payload;
+    },
   },
 });
 
@@ -87,6 +88,7 @@ export const {
   actionPreviewProductData,
   actionYouSee,
   previewProductInfo,
+  actionLoading,
 } = productsSlice.actions;
 
 export const actionGetProducts = () => async (dispatch) => {
@@ -105,18 +107,18 @@ export const actionGetProducts = () => async (dispatch) => {
 };
 export const actionGetOneProduct = (id) => async (dispatch) => {
   try {
-    dispatch(actionIsAnimation(true));
+    dispatch(actionLoading(true));
     const response = await sendRequest(`${API_URL}/products/${id}`);
     if (response) {
       dispatch(actionYouSee(response));
       dispatch(actionOneProduct(response));
-      dispatch(actionPreviewProductData(response))
+      dispatch(actionPreviewProductData(response));
       return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
   } finally {
-    dispatch(actionIsAnimation(false));
+    dispatch(actionLoading(false));
   }
 };
 

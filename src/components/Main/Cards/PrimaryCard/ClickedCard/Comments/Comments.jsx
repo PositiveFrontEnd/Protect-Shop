@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./CommentsStyles.scss";
 import Button from "../../../../../Button/Button";
 import {
-  selectorProductComment,
   selectorProductComments,
   selectorRegistrationData,
+  selectorToken,
 } from "../../../../../../store/selectors";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Comment from "./Comment.jsx";
 import ModalComments from "./CommentForm.jsx";
-import { actionGetProductComments } from "../../../../../../store/commentsSlice.js";
 
 const Comments = ({ name, color, id }) => {
   const currentProductComments = useSelector(selectorProductComments);
@@ -18,7 +17,6 @@ const Comments = ({ name, color, id }) => {
     setShowModal(!showModal);
   };
   const isAuthorized = useSelector(selectorRegistrationData);
-
   return (
     <>
       <div className="comments__wrapper">

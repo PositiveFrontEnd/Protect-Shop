@@ -1,13 +1,8 @@
 import React from "react";
 import "./CardList.scss";
-import { useEffect } from "react";
 import Card from "../../../../../components/Main/Cards/PrimaryCard/PrimaryCard/PrimaryCard";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  actionGetOneProduct,
-  actionGetProducts,
-  actionGetThreeProducts,
-} from "../../../../../store/productsSlice";
+import { actionGetThreeProducts } from "../../../../../store/productsSlice";
 import {
   selectorFiltersProducts,
   selectorLoadFilter,
@@ -26,12 +21,8 @@ const CardList = () => {
   const token = useSelector(selectorToken);
 
   const handleProduct = (item) => {
-    dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(
-      `/catalogue/${item.categories}/${item.type}/${item._id}`
-    );
-
+    navigate(`/catalogue/${item.categories}/${item.type}/${item._id}`);
   };
   const handleFavorite = (productId, event) => {
     event.stopPropagation();

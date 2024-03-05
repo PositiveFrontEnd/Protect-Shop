@@ -1,28 +1,17 @@
 import React, { useEffect, useState } from "react";
-import FavoriteButton from "../../Images/favorite.svg?react";
 import Icon from "../../Images/star.svg?react";
 import "./PrimaryCardStyle.scss";
 import Heart from "../../../Heart/Heart";
 import { useDispatch } from "react-redux";
 import { actionGetThreeColors } from "../../../../../store/productsSlice";
 import Color from "../ClickedCard/color";
+import PrimaryStarsRaiting from "./PrimaryRaiting/PrimaryRaiting";
+
 const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
   const [newCard, setNewCard] = useState(card);
-  const {
-    brand,
-    currentPrice,
-    name,
-    previousPrice,
-    size,
-    status,
-    imageUrls,
-    likes,
-  } = newCard;
+  const { brand, currentPrice, name, previousPrice, size, status, imageUrls } =
+    newCard;
   const [colors, setColors] = useState([]);
-  const [selectedColor, setSelectedColor] = useState(newCard._id);
-  const handleColorClick = (colorId) => {
-    setSelectedColor(colorId);
-  };
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchData = async () => {
@@ -34,8 +23,7 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
       }
     };
     fetchData();
-
-  }, [dispatch, name]);
+  }, [name]);
   const truncateString = (str, maxLength) => {
     if (str.length > maxLength) {
       return str.substring(0, maxLength - 3) + "...";
@@ -43,12 +31,15 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
     return str;
   };
   const truncatedName = truncateString(name, 30);
-
+  const truncatedBrand = truncateString(brand, 15);
+  const likesSum = newCard.likes.reduce((acc, value) => acc + value, 0);
+  const averageLikes = likesSum / Math.max(newCard.likes.length - 1, 1);
   return (
     <div className="primary__card">
       <Heart
-        handleFavorite={(event) =>{ handleFavorite(newCard._id, event)}}
-
+        handleFavorite={(event) => {
+          handleFavorite(newCard._id, event);
+        }}
         className="card__favorites"
         id={newCard._id}
       />
@@ -72,11 +63,14 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
       <div className="card__description">
         <div className="card__feedbacks">
           <div className="card__stars">
-            {[...Array(5)].map((item, index) => (
-              <Icon className="star" key={index} />
-            ))}
+            {averageLikes === 0 ? (
+              [...Array(5)].map((item, index) => (
+                <Icon className="star" key={index} />
+              ))
+            ) : (
+              <PrimaryStarsRaiting averageLikes={averageLikes} />
+            )}
           </div>
-          <p className="card__comments">{likes.length - 1} feedbacks</p>
         </div>
         <div className="card__name">
           <p
@@ -85,11 +79,12 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
               name.length < 30 ? "card__name-major" : "card__name-major lower"
             }
           >
-            {/* {window.innerWidth <= 768 ?  : name} */}
             {truncatedName}
           </p>
 
-          <p className="card__name-minor">{brand}</p>
+          <p className="card__name-minor">
+            {window.innerWidth > 768 ? brand : truncatedBrand}
+          </p>
         </div>
         <div className="card__price">
           {previousPrice === 0 ? (
@@ -108,15 +103,13 @@ const PrimaryCard = ({ card, handleProduct, handleFavorite, id }) => {
                 onClick={() => {
                   {
                     setNewCard(item);
-                    handleColorClick(item._id);
                   }
                 }}
                 className={
-                  selectedColor === item._id
+                  newCard._id === item._id
                     ? "card__colors-color active"
                     : " card__colors-color "
                 }
-
               />
             ))}
           </div>

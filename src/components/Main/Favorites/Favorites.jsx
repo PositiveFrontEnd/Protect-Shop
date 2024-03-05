@@ -76,9 +76,7 @@ const Favorites = () => {
   const handleNavigate = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(
-      `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
-    );
+    navigate(`/catalogue/${item.categories}/${item.type}/${item._id}`);
   };
   const { isModalAll, modalChangeAll } = useContext(ContextFunctions);
   const favorite = token ? favU : favG;
@@ -86,9 +84,7 @@ const Favorites = () => {
   const favorites = favorite.map((item, index) => (
     <FavorutesCard
       modalChangeAll={modalChangeAll}
-      handleNavigate={() =>
-        handleNavigate(item)
-      }
+      handleNavigate={() => handleNavigate(item)}
       id={item._id}
       key={index}
       url={item.imageUrls[0]}

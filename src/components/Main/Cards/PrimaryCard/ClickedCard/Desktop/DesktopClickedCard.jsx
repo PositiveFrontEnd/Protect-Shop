@@ -16,6 +16,7 @@ import {
   selectorGuestBasket,
   selectorCard,
   selectorProductComments,
+  selectorThreeProducts,
 } from "../../../../../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import ModalAddToBasket from "../../../../../Modal/ModalAddToBasket";
@@ -30,17 +31,16 @@ import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
 import { actionGetOneProduct } from "../../../../../../store/productsSlice.js";
 import Comments from "../Comments/Comments.jsx";
+import StarsRaiting from "../StarsRaiting.jsx";
 
 const DesktopClickedCard = ({
   currentPrice,
   name,
-  imageUrls,
   myCustomParam,
   _id,
-  colors,
   handleFavorite,
-  likes,
   color,
+  delivery,
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ const DesktopClickedCard = ({
   const handleSwitchClick = (type) => {
     setActiveSwitch(type);
   };
-
+  const colors = useSelector(selectorThreeProducts);
   const commentsLength = useSelector(selectorProductComments).length;
   const token = useSelector(selectorToken);
 
@@ -77,31 +77,40 @@ const DesktopClickedCard = ({
     navigate("/catalogue");
     modalChangeAddBasket();
   };
+
+  const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
+  const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
   return (
     <section>
       <div className="desktop__card">
         <div className="desktop__card__images">
           <div className="desktop__images-additional">
-            {imageUrls.map((item, index) => (
+            {currentProduct.imageUrls.map((item, index) => (
               <img key={index} onClick={() => setIndex(index)} src={item} />
             ))}
           </div>
           <div className="desktop__images-main">
-            <img className="main" src={imageUrls[`${startIndex}`]} alt="" />
+            <img
+              className="main"
+              src={currentProduct.imageUrls[`${startIndex}`]}
+              alt=""
+            />
           </div>
         </div>
         <div className="desktop__card__toggler">
           <p
-            className={`desktop__card__switch ${activeSwitch === "info" ? "active" : ""
-              }`}
+            className={`desktop__card__switch ${
+              activeSwitch === "info" ? "active" : ""
+            }`}
             onClick={() => handleSwitchClick("info")}
             type="info"
           >
             info
           </p>
           <p
-            className={`desktop__card__switch ${activeSwitch === "comments" ? "active" : ""
-              }`}
+            className={`desktop__card__switch ${
+              activeSwitch === "comments" ? "active" : ""
+            }`}
             onClick={() => handleSwitchClick("comments")}
             type="comments"
           >
@@ -127,15 +136,19 @@ const DesktopClickedCard = ({
           </div>
           <div className="desktop__card__feedbacks">
             <div onClick={() => handleSwitchClick("comments")}>
-              {[...Array(5)].map((item, index) => (
-                <Star className="star" key={index} />
-              ))}
+              {averageLikes === 0 ? (
+                [...Array(5)].map((item, index) => (
+                  <Star className="star" key={index} />
+                ))
+              ) : (
+                <StarsRaiting />
+              )}
             </div>
             <p
               className="desktop__card__comments"
               onClick={() => handleSwitchClick("comments")}
             >
-              {likes.length - 1} feedbacks
+              {commentsLength} feedbacks
             </p>
           </div>
           <p className="desktop__card__price">$ {currentPrice}</p>
@@ -178,7 +191,7 @@ const DesktopClickedCard = ({
             myCustomParam={myCustomParam}
           />
           <ClickedCardDropDown title={"Guarantee"} />
-          <ClickedCardDropDown title={"Delivery"} />
+          <ClickedCardDropDown title={"Delivery"} myCustomParam={delivery} />
           <ClickedCardDropDown title={"Look in our Shops"} />
         </div>
         <div
@@ -188,7 +201,9 @@ const DesktopClickedCard = ({
               : "card__comments"
           }
         >
-          {activeSwitch == "comments" && <Comments id={_id} name={name} color={color} />}
+          {activeSwitch == "comments" && (
+            <Comments id={_id} name={name} color={color} />
+          )}
         </div>
       </div>
       {isModalAll && <ModalAddToBasket isOpen={() => modalChangeAll()} />}

@@ -11,21 +11,18 @@ import ModalClose from "../../../../../Modal/ModalComponents/ModalClose.jsx";
 import ModalBody from "../../../../../Modal/ModalComponents/ModalBody.jsx";
 import Rating from "./StarRating.jsx";
 import { useDispatch, useSelector } from "react-redux";
-
+import { actionChangeProduct } from "../../../../../../store/productsSlice.js";
 import {
+  selectorCard,
   selectorToken,
-  selectorProductComments,
 } from "../../../../../../store/selectors.js";
-import {
-  actionCreateComment,
-  actionGetProductComments,
-} from "../../../../../../store/commentsSlice.js";
-import { Link } from "react-router-dom";
+import { actionCreateComment } from "../../../../../../store/commentsSlice.js";
 const ModalComments = ({ setShowModal, id }) => {
   const modalRef = useRef(null);
   const dispatch = useDispatch();
   const token = useSelector(selectorToken);
   const [rating, setRating] = useState(null);
+  const product = useSelector(selectorCard);
   const handleRatingChange = (newRating) => {
     setRating(newRating);
   };
@@ -52,6 +49,13 @@ const ModalComments = ({ setShowModal, id }) => {
       },
     };
     dispatch(actionCreateComment(data));
+    const dataChange = {
+      id: id,
+      product: { ...product, likes: [...product.likes, rating] },
+      token: token,
+    };
+
+    dispatch(actionChangeProduct(dataChange));
   };
 
   return (
@@ -78,6 +82,7 @@ const ModalComments = ({ setShowModal, id }) => {
                   <Form>
                     <Rating onRatingChange={handleRatingChange} />
                     <Input
+                      label=""
                       className="mb-3"
                       name="text"
                       as="textarea"

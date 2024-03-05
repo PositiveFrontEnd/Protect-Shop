@@ -10,7 +10,7 @@ import {
   actionLoadingTwelveProductsByType,
 } from "../../../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -23,14 +23,12 @@ const AlsoBuy = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = useSelector(selectorToken);
-  const [categories, setCategories] = useState()
-
+  const [additional, setAdditional] = useState();
+  const { type, categories } = useParams();
   const handleProduct = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(
-      `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
-    );
+    navigate(`/catalogue/${categories}/${type}/${item._id}`);
   };
   const handleFavorite = (productId, event) => {
     event.stopPropagation();
@@ -39,18 +37,19 @@ const AlsoBuy = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const data = await dispatch(actionLoadingTwelveProductsByType(`categories=${product.categories}&type=${product.type}`));
-        setCategories(data)
+        const data = await dispatch(
+          actionLoadingTwelveProductsByType(
+            `categories=${categories}&type=${type}`
+          )
+        );
+        setAdditional(data);
       } catch (error) {
         console.error("Помилка під час виконання запиту:", error);
       }
+    };
 
-    }
-
-    fetch()
-
+    fetch();
   }, [product._id]);
-
 
   return (
     <div className="swiper__also">
@@ -77,15 +76,16 @@ const AlsoBuy = () => {
           },
         }}
       >
-        {categories && categories.map((item) => (
-          <SwiperSlide key={item._id} className="one_slide">
-            <Card
-              card={item}
-              handleProduct={handleProduct}
-              handleFavorite={handleFavorite}
-            />
-          </SwiperSlide>
-        ))}
+        {additional &&
+          additional.map((item) => (
+            <SwiperSlide key={item._id} className="one_slide">
+              <Card
+                card={item}
+                handleProduct={handleProduct}
+                handleFavorite={handleFavorite}
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

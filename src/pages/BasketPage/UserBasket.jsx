@@ -9,7 +9,10 @@ import {
 } from "../../store/basketSlice";
 import { selectorBaskets, selectorToken } from "../../store/selectors";
 import ShopingCard from "../../components/Main/Cards/ShopingCard/ShopingCard";
-import { actionGetOneProduct, actionGetThreeProducts } from "../../store/productsSlice";
+import {
+  actionGetOneProduct,
+  actionGetThreeProducts,
+} from "../../store/productsSlice";
 import { useNavigate } from "react-router-dom";
 import { actionFavoriteForAll } from "../../store/favoriteSlice";
 const UserBasket = () => {
@@ -36,14 +39,12 @@ const UserBasket = () => {
   const handleNavigate = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
-    navigate(
-      `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
-    );
+    navigate(`/catalogue/${item.categories}/${item.type}/${item._id}`);
   };
   const handleFavorite = (productId, event) => {
-    event.stopPropagation()
-    dispatch(actionFavoriteForAll({ productId, token }))
-  }
+    event.stopPropagation();
+    dispatch(actionFavoriteForAll({ productId, token }));
+  };
 
   return (
     <>

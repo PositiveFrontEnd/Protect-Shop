@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 
   img {
     cursor: pointer;
@@ -11,6 +12,7 @@
 
   @media (width>=768px) {
     flex-direction: row;
+    gap: 20px;
   }
 
   .shopping__card__image {
@@ -18,8 +20,8 @@
     margin-bottom: 24px;
 
     @media (width>=768px) {
-      max-width: 173px;
-      margin-right: 80px;
+      max-width: 130px;
+      margin-right: 5px;
     }
 
     img {
@@ -38,6 +40,9 @@
     .shopping__card__info-price {
       color: var(--black);
       font-size: 14px;
+      @media (width>=768px) {
+        font-size: 12px;
+      }
     }
 
     .shopping__card__info-input {
