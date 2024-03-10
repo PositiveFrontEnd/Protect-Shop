@@ -12,8 +12,9 @@ describe("Тестування компонента  HomePage", () => {
         const initialState = {
             home: {
                 isAnimation: false,
-                inputText: "some text",
+                inputText: "",
                 filterHomePage: [],
+                marker: null,
             },
             user: {
                 token: "token",
@@ -66,6 +67,12 @@ describe("Тестування компонента  HomePage", () => {
             },
             message: {
                 letters: [],
+                letterAll: [],
+                importantLetters: []
+            },
+            shopComments: {
+                createShopComment: [],
+                getShopComments: [],
             },
         };
 

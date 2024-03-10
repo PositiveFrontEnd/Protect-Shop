@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import {
-  selectorCard,
-  selectorProductsBycategory,
-  selectorToken,
+  selectorToken
 } from "../../../store/selectors";
 import {
   actionGetOneProduct,
@@ -19,7 +17,6 @@ import { Pagination, Navigation } from "swiper";
 import Card from "../Cards/PrimaryCard/PrimaryCard/PrimaryCard.jsx";
 
 const AlsoLike = () => {
-  const product = useSelector(selectorCard);
   const token = useSelector(selectorToken);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -47,7 +44,7 @@ const AlsoLike = () => {
     };
 
     fetch();
-  }, [product.categories]);
+  }, [categories]);
   return (
     <div className="swiper__also">
       <div className="container">

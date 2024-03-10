@@ -52,6 +52,7 @@
           border-radius: 12px;
 
           &:focus {
+            background-color: var(--white-dark);
             color: var(--black);
           }
         }
@@ -224,5 +225,56 @@
     position: absolute;
     top: 34px;
     right: 110px;
+  }
+}
+
+.css-b62m3t-container {
+  width: 328px;
+  &.--is-focused{
+    box-shadow: #8a8a8a !important;
+    background-color: var(--white-dark) !important;
+  }
+  .css-13cymwt-control,
+  .css-t3ipsp-control {
+    height: 40px !important;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    color: var(--fild-type-color);
+    font-size: 14px;
+    border-style: none !important;
+    border-radius: 12px !important;
+    background-color: var(--white-dark) !important;
+    .css-hlgwow,
+    .css-1wy0on6 {
+      position: relative;
+      bottom: 13px !important;
+    }
+    .css-1wy0on6 {
+      margin-right: 5px !important;
+      .css-1u9des2-indicatorSeparator{
+        width: 0px !important;
+      }
+      .css-1xc3v61-indicatorContainer{
+        color: rgb(0 0 0 / 68%) !important;
+      }
+    }
+    .css-art2ul-ValueContainer2,
+    .css-4xgw5l-IndicatorsContainer2 {
+      bottom: 13px !important;
+    }
+    .css-4xgw5l-IndicatorsContainer2 {
+      position: relative;
+    }
+  }
+  .css-t3ipsp-control {
+    box-shadow: #8a8a8a !important;
+  }
+  .css-t3ipsp-control:hover {
+    border-color: #8a8a8a !important;
+  }
+  @media (width>=1024px) {
+    width: 445px;
   }
 }

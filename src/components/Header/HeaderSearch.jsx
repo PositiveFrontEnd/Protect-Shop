@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { actionInputText } from "src/store/homeSlice";
 import { actionSearchProducts } from "src/store/productsSlice";
-import { selectInputText } from "src/store/selectors";
+import { selectorInputText } from "src/store/selectors";
 
 const HeaderSearch = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const inputText = useSelector(selectInputText);
+    const inputText = useSelector(selectorInputText);
     const handleInputChange = (event) => {
         dispatch(actionInputText(event.target.value));
     };

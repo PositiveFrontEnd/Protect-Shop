@@ -2,28 +2,21 @@ import React from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./ProfilePageStyle.scss";
 import { actionIsAdmin, actionToken } from '../../store/userSlice';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useContext } from 'react';
 import { ContextFunctions } from '../../context/context';
 import ModalLogOut from './../../components/Modal/ModalLogOut';
 import { actionFavorite } from "../../store/favoriteSlice";
-import { selectorIsAdmin } from "../../store/selectors";
-import AdminProfile from "./AdminProfile/AdminProfile";
-
 
 const ProfilePage = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAdmin = useSelector(selectorIsAdmin)
-  // console.log(isAdmin)
 
-  const crumbs = location.pathname.split("/").filter((crumb) => crumb !== "");
-  const lastCrumb = crumbs[crumbs.length - 1];
-    const handleLogout = () => {
-      dispatch(actionToken(''))
-      dispatch(actionIsAdmin(false))
-      dispatch(actionFavorite([]))
+  const handleLogout = () => {
+    dispatch(actionToken(''))
+    dispatch(actionIsAdmin(false))
+    dispatch(actionFavorite([]))
     navigate('/catalogue');
   }
 
@@ -32,7 +25,7 @@ const ProfilePage = () => {
   }
 
 
-  const {modalChangeAll, isModalAll} = useContext(ContextFunctions)
+  const { modalChangeAll, isModalAll } = useContext(ContextFunctions)
 
   return (
     <>
@@ -40,7 +33,7 @@ const ProfilePage = () => {
         <h2>{location.pathname.split("/").filter((crumb) => crumb !== "").pop()}</h2>
         <div className="my__profile__box">
           <nav className="my__profile__links">
-          <NavLink
+            <NavLink
               className={`profile__link ${isNavLinkActive("/information") ? "active" : ""}`}
               to="information"
             >
@@ -72,7 +65,7 @@ const ProfilePage = () => {
           </nav>
           <Outlet />
         </div>
-        </section>
+      </section>
     </>
   );
 };

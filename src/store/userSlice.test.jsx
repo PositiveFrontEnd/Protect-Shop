@@ -12,13 +12,14 @@ import userSlice, {
 describe("test userReducers", () => {
     test(" action", () => {
         expect(userSlice(undefined, { type: undefined })).toEqual({
-            token: null,
+            token: JSON.parse(localStorage.getItem("token") || null),
             registrationModal: false,
             authorizationStatus: null,
             registrationStatus: "",
-            registrationData: {},
+            registrationData: JSON.parse(localStorage.getItem("userdata") || "{}"),
+            background: "",
             correctData: "",
-            isAdmin: false,
+            isAdmin: JSON.parse(localStorage.getItem("isAdmin") || false),
         });
     });
 

@@ -7,10 +7,11 @@ import SelectInput from "../Inputs/Select";
 import validationSchema from "../Inputs/Validation";
 import Button from "../../Button/Button";
 import {
-  selectorRegistrationData,
+  selectorBackground,
   selectorRegistrationStatus,
 } from "../../../store/selectors";
 import {
+  actionBackground,
   actionModalAfterRegistration,
   actionRegistration,
   actionRegistrationStatus,
@@ -26,7 +27,6 @@ const RegistrationForm = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const formData = useSelector(selectorRegistrationData);
   const registrationModal = useSelector(selectorRegistrationModal);
   const handleCloseModal = () => {
     dispatch(actionModalAfterRegistration(registrationModal));
@@ -35,6 +35,13 @@ const RegistrationForm = () => {
   const registrationStatus = useSelector(selectorRegistrationStatus);
 
   const [isShowPassword, setIsShowPassword] = useState(false);
+
+  useEffect(() => {
+    dispatch(actionBackground())
+
+  }, [])
+
+  const background = useSelector(selectorBackground)
 
   useEffect(() => {
     if (location.pathname === "/account/registration") {
@@ -50,17 +57,16 @@ const RegistrationForm = () => {
       <Formik
         initialValues={{
           firstName: "",
-          lastName: "", 
+          lastName: "",
           email: "",
           telephone: "",
           password: "",
           gender: "",
           checkbox: false,
 
-    
+
         }}
         onSubmit={(values) => {
-          console.log(values);
           dispatch(
             actionUserRegistrationData({
               ...values,
@@ -71,10 +77,12 @@ const RegistrationForm = () => {
           );
           dispatch(
             actionRegistration({
-              ...values,
-              login: values.firstName,
-              isAdmin: false,
-              avatarUrl: "",
+              customer: {
+                ...values,
+                login: values.firstName,
+                isAdmin: false,
+                avatarUrl: "",
+              }, background: background
             })
           );
         }}

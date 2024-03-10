@@ -24,13 +24,13 @@ const LatterChangeStatusPage = () => {
         const fetchData = async () => {
             try {
                 const responce = await dispatch(actionGetOneLetter(id))
-                const newLetter = {...currentLetter, status: "read"}
+                const newLetter = { ...currentLetter, status: "read" }
                 if (responce.status !== 'read') {
                     const data = dispatch(actionUpdateLetter({ id, letter: newLetter }))
                     setLetter(data)
                 }
                 setLetter(responce)
-                
+
             }
             catch {
                 console.log("error")
@@ -41,19 +41,19 @@ const LatterChangeStatusPage = () => {
     }, [dispatch, id])
 
     const handleChangeImportant = () => {
-            const isAdded = important && important.some((item) => item === id)
-            if (isAdded) {
-                const updatedIds = important.filter((item) => item !== id).map(item => item);
-                dispatch(actionAddToImportant(updatedIds))
-            } else {
-                const updatedIds = [...important.map(item => item), id];
-                dispatch(actionAddToImportant(updatedIds))
-            }
-        const newLetter = {...currentLetter, important: !currentLetter.important}
+        const isAdded = important && important.some((item) => item === id)
+        if (isAdded) {
+            const updatedIds = important.filter((item) => item !== id).map(item => item);
+            dispatch(actionAddToImportant(updatedIds))
+        } else {
+            const updatedIds = [...important.map(item => item), id];
+            dispatch(actionAddToImportant(updatedIds))
+        }
+        const newLetter = { ...currentLetter, important: !currentLetter.important }
         dispatch(actionUpdateLetter({ id, letter: newLetter }))
         setLetter(newLetter)
-        }
-    
+    }
+
     const handleDeleteModal = () => modalChangeAll(!isModalAll)
     const handleDeleteLetter = () => {
         dispatch(actionDeleteLetter(id))
@@ -66,21 +66,21 @@ const LatterChangeStatusPage = () => {
         <>
             <div className="letter__change">
                 <div className="letter__cont">
-                    <h4  className="order__title">Letter</h4>
+                    <h4 className="order__title">Letter</h4>
                     <div className="letter__change__menu">
                         <div onClick={() => handleChangeImportant()}>
-                            {important && important.includes(id) ? <BlackStar/> : <Star/>}
+                            {important && important.includes(id) ? <BlackStar /> : <Star />}
                         </div>
                     </div>
                 </div>
                 <div className="change__letter__wrapper">
                     <div className="letter">
                         <span> </span>
-                        <p className="letter__key">Name: <span className="letter__value">{ currentLetter.name}</span></p>
-                        <p className="letter__key">Phone: <span className="letter__value">{ currentLetter.email}</span></p>
-                        <p className="letter__key">Email: <span className="letter__value">{ currentLetter.phone}</span></p>
+                        <p className="letter__key">Name: <span className="letter__value">{currentLetter.name}</span></p>
+                        <p className="letter__key">Phone: <span className="letter__value">{currentLetter.email}</span></p>
+                        <p className="letter__key">Email: <span className="letter__value">{currentLetter.phone}</span></p>
                         <p className="letter__key">Question: <span className="letter__value">{currentLetter.question}</span></p>
-                        <p className="letter__key">Letter: <span className="letter__value">{ currentLetter.letter}</span></p>
+                        <p className="letter__key">Letter: <span className="letter__value">{currentLetter.letter}</span></p>
                     </div>
 
                 </div>
@@ -89,11 +89,11 @@ const LatterChangeStatusPage = () => {
             </div>
             {isModalAll &&
                 <ModalDeleteLetter
-                firstClick={() => modalChangeAll(!isModalAll)}
-                secondaryClick={() =>handleDeleteLetter()}
-                onclick={() => modalChangeAll(!isModalAll)}
-                isOpen={() => modalChangeAll(!isModalAll)}
-            />}
+                    firstClick={() => modalChangeAll(!isModalAll)}
+                    secondaryClick={() => handleDeleteLetter()}
+                    onclick={() => modalChangeAll(!isModalAll)}
+                    isOpen={() => modalChangeAll(!isModalAll)}
+                />}
         </>
     )
 }

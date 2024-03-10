@@ -190,7 +190,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
                       Gender
                     </span>
                     <select
-                      class="select__input select__input-modal"
+                      class="select__input select__input-modal select__post"
                       name="gender"
                     >
                       <option
@@ -447,7 +447,7 @@ exports[`Тестування компонента  RegastrationPage > Знім�
                     Gender
                   </span>
                   <select
-                    class="select__input select__input-modal"
+                    class="select__input select__input-modal select__post"
                     name="gender"
                   >
                     <option

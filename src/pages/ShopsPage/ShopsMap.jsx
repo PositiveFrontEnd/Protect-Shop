@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {GoogleMap, Marker, useJsApiLoader} from "@react-google-maps/api";
+import React, { useState } from 'react';
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import location from '../../../public/Images/location.png'
-import {API_MAP} from "src/components/Helpers/Api/Api";
+import { API_MAP } from "src/components/Helpers/Api/Api";
 import PropTypes from "prop-types";
 
-const ShopsMap = ({center, markers, zoom}) => {
-    const {isLoaded} = useJsApiLoader({
+const ShopsMap = ({ center, markers, zoom }) => {
+    const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: API_MAP
     });
@@ -30,17 +30,17 @@ const ShopsMap = ({center, markers, zoom}) => {
                     zoom={zoom}
                     options={mapOptions}
                 >{markers.map((marker, index) => (
-                    <Marker position={{lat: marker.lat, lng: marker.lng}}
-                            key={index}
-                            options={{
-                                animation: window.google.maps.Animation.DROP,
-                                animationDuration: 2000
-                            }}
-                            onClick={() => handleMarker(marker)}
-                            icon={{
-                                url: location,
-                                scaledSize: new window.google.maps.Size(40, 40),
-                            }}
+                    <Marker position={{ lat: marker.lat, lng: marker.lng }}
+                        key={index}
+                        options={{
+                            animation: window.google.maps.Animation.DROP,
+                            animationDuration: 2000
+                        }}
+                        onClick={() => handleMarker(marker)}
+                        icon={{
+                            url: location,
+                            scaledSize: new window.google.maps.Size(40, 40),
+                        }}
                     />
                 ))}
                     {selectedMarker && (
@@ -54,7 +54,7 @@ const ShopsMap = ({center, markers, zoom}) => {
 
 ShopsMap.propTypes = {
     center: PropTypes.object,
-    markers:PropTypes.array,
-    zoom:PropTypes.number
+    markers: PropTypes.array,
+    zoom: PropTypes.number
 }
 export default ShopsMap;

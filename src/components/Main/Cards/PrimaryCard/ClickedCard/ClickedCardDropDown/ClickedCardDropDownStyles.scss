@@ -14,8 +14,54 @@
 .drop__action {
   padding: 16px;
   background-color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
   p {
     font-size: 16px;
+  }
+  .drop__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .drop__image__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .drop__wrapper {
+    margin-left: 10px;
+  }
+  .drop__text {
+    font-size: 16px;
+  }
+  .drop__image {
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+    top: 19px;
+  }
+  .drop__svg {
+    width: 50px;
+    left: 20px;
+    top: 25px;
+  }
+  .drop__shops {
+    p {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      font-size: 16px;
+
+      @media (width<768px) {
+        font-size: 20px;
+      }
+    }
+    span:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -18,7 +18,7 @@ export const selectorAuthorizationStatus = (state) =>
   state.user.authorizationStatus;
 export const selectorRegistrationStatus = (state) =>
   state.user.registrationStatus;
-export const selectInputText = (state) => state.home.inputText;
+export const selectorInputText = (state) => state.home.inputText;
 export const selectorSearchProducts = (state) => state.products.searchProducts;
 export const selectorFavoriteForCustomer = (state) =>
   state.favorite.favoriteForCustomer;
@@ -54,3 +54,9 @@ export const selectorLetterToUpdate = (state) => state.message.letterToUpdate;
 export const selectorImportantLetters = (state) =>
   state.message.importantLetters;
 export const selectorLoading = (state) => state.products.isLoading;
+export const selectorAdressNovaPost = (state) => state.novaPost.addressData;
+export const selectorShopComment = (state) =>
+  state.shopComments.createShopComment;
+export const selectorShopComments = (state) =>
+  state.shopComments.getShopComments;
+export const selectorBackground = (state) => state.user.background;

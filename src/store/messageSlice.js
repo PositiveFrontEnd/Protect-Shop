@@ -10,37 +10,30 @@ const messageSlice = createSlice({
   initialState: {
     letters: [],
     letterAll: [],
-    importantLetters:[]
-    
+    importantLetters: [],
   },
   reducers: {
     actionAddLetter: (state, { payload }) => {
       state.letters = [...state.letters, payload];
     },
     actionLettersAll: (state, { payload }) => {
-      state.letterAll = payload
+      state.letterAll = payload;
     },
     actionAddToImportant: (state, { payload }) => {
-      // const isAdded = state.importantLetters.some((item) => item === payload)
-      // if (isAdded) {
-      //   state.importantLetters = state.importantLetters.filter((item) => item === payload)
-      // } else if (!isAdded) {
-        state.importantLetters = payload
-      // }
-    }
+      state.importantLetters = payload;
+    },
   },
 });
 export const {
   actionAddLetter,
   actionAddToImportantState,
   actionLettersAll,
-  actionAddToImportant
+  actionAddToImportant,
 } = messageSlice.actions;
 
 export const actionNewLetter = (data) => async (dispatch) => {
-  console.log(data);
-  data.status = "new"
-  data.important = false
+  data.status = "new";
+  data.important = false;
   try {
     dispatch(actionIsAnimation(true));
     const newLetter = {
@@ -53,9 +46,8 @@ export const actionNewLetter = (data) => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/letters`, "POST", newLetter);
 
     if (response) {
-      console.log("catalog", response);
       dispatch(actionAddLetter(response));
-      dispatch(actionAllLetters())
+      dispatch(actionAllLetters());
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -70,8 +62,7 @@ export const actionGetOneLetter = (id) => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/letters/${id}`, "GET");
 
     if (response) {
-      console.log(response);
-      return response
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -87,8 +78,8 @@ export const actionAllLetters = (id) => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/letters`, "GET");
 
     if (response) {
-      dispatch(actionLettersAll(response))
-      return response
+      dispatch(actionLettersAll(response));
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -103,7 +94,7 @@ export const actionDeleteLetter = (id) => async (dispatch) => {
 
     const response = await sendRequest(`${API_URL}/letters/${id}`, "DELETE");
     if (response.status === 200) {
-      console.log("delete letter", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -130,7 +121,7 @@ export const actionUpdateLetter = (data) => async (dispatch) => {
     );
 
     if (response) {
-      console.log(response)
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -138,6 +129,5 @@ export const actionUpdateLetter = (data) => async (dispatch) => {
     dispatch(actionIsAnimation(false));
   }
 };
-
 
 export default messageSlice.reducer;

@@ -12,8 +12,9 @@ describe("Тестування компонента  HeaderTop", () => {
         const initialState = {
             home: {
                 isAnimation: false,
-                inputText: "some text",
+                inputText: "",
                 filterHomePage: [],
+                marker: null,
             },
             user: {
                 token: "token",
@@ -66,6 +67,12 @@ describe("Тестування компонента  HeaderTop", () => {
             },
             message: {
                 letters: [],
+                letterAll: [],
+                importantLetters: []
+            },
+            shopComments: {
+                createShopComment: [],
+                getShopComments: [],
             },
         };
 

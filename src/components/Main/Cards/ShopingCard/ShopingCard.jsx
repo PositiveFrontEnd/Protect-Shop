@@ -20,7 +20,7 @@ const ShopingCard = ({ img, title, price, deletCard, cartQuantity, clickMin, cli
         <div className="schopping__card__counter">
           <button onClick={clickMin} type="button" className="schopping__card__counter-min">-</button>
           <span>{cartQuantity}</span>
-          <button className="schopping__card__counter-min" type="button"  onClick={clickPlus}>+</button>
+          <button className="schopping__card__counter-min" type="button" onClick={clickPlus}>+</button>
         </div>
         <div className="shopping__card__info-icon-order__page">
           <div onClick={deletCard} className="shopping__card__info-icon ">

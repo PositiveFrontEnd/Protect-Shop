@@ -5,13 +5,25 @@ import sendRequest from "../components/Helpers/SendRequest/sendRequest";
 import { actionIsAnimation } from "./homeSlice";
 const shopCommentsSlice = createSlice({
   name: "shopComments",
-  initialState: {},
-  reducers: {},
+  initialState: {
+    createShopComment: [],
+    getShopComments: [],
+  },
+  reducers: {
+    actionShopComment: (state, action) => {
+      state.createShopComment = action.payload;
+    },
+    getShopComments: (state, action) => {
+      state.getShopComments = action.payload;
+    },
+  },
 });
 
-export const {} = shopCommentsSlice.actions;
+export const { actionShopComment, getShopComments } = shopCommentsSlice.actions;
 
 export const actionCreateShopComment = (data) => async (dispatch) => {
+  data.status = "likes";
+  data.status = "dislike";
   try {
     dispatch(actionIsAnimation(true));
     const { newComment, token } = data;
@@ -29,7 +41,7 @@ export const actionCreateShopComment = (data) => async (dispatch) => {
       comment
     );
     if (response) {
-      console.log("wish create", response);
+      dispatch(actionShopComment(response));
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -56,7 +68,7 @@ export const actionUpdateShopComment = (data) => async (dispatch) => {
       comment
     );
     if (response) {
-      console.log("wish create", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -80,7 +92,7 @@ export const actionDeleteShopComment = (data) => async (dispatch) => {
       deleteComment
     );
     if (response.status === 200) {
-      console.log("comment delete", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -95,7 +107,7 @@ export const actionGetAllShopComments = () => async (dispatch) => {
 
     const response = await sendRequest(`${API_URL}/shop-comments`, "GET");
     if (response) {
-      console.log(response);
+      dispatch(getShopComments(response));
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);

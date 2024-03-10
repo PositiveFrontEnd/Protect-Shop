@@ -1,21 +1,15 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Account.scss'
 import AuthorizationSvg from './AccountSvg/Vector.svg?react'
 import RegistrSvg from './AccountSvg/Union.svg?react'
 import HeroSlider from '../../components/Main/Hero/HeroSlider/HeroSlider';
 import { selectorToken } from '../../store/selectors';
-import { useDispatch, useSelector } from 'react-redux';
-import { actionToken } from '../../store/userSlice';
+import { useSelector } from 'react-redux';
 import ProfilePage from '../ProfilePage/ProfilePage';
 
 const AccountPage = () => {
   const token = useSelector(selectorToken)
-  const dispatch = useDispatch()
-  const location = useLocation()
-  const handleLogout = () => {
-    dispatch(actionToken(null))
-  }
 
   return (
     <>

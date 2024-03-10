@@ -12,10 +12,10 @@ describe("Тестування компонента  SearchPage", () => {
         const initialState = {
             home: {
                 isAnimation: false,
-                inputText: "some text",
+                inputText: "",
                 filterHomePage: [],
+                marker: null,
             },
-
             user: {
                 token: "token",
                 registrationModal: false,
@@ -46,7 +46,7 @@ describe("Тестування компонента  SearchPage", () => {
                 infoForOrderGuest: [],
                 deliveryForOrderGuest: {},
                 order: {
-                    letterSubject: "Thank you for order!"
+                    letterSubject: "Thank you for order!",
                 },
                 promoCodePrice: "",
                 orderGuest: { letterSubject: "Thank you for order!" },
@@ -67,7 +67,13 @@ describe("Тестування компонента  SearchPage", () => {
             },
             message: {
                 letters: [],
-            }
+                letterAll: [],
+                importantLetters: []
+            },
+            shopComments: {
+                createShopComment: [],
+                getShopComments: [],
+            },
 
         };
         const contextValues = {

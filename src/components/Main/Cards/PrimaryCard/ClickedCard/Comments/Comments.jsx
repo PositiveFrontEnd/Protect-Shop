@@ -3,8 +3,7 @@ import "./CommentsStyles.scss";
 import Button from "../../../../../Button/Button";
 import {
   selectorProductComments,
-  selectorRegistrationData,
-  selectorToken,
+  selectorRegistrationData
 } from "../../../../../../store/selectors";
 import { useSelector } from "react-redux";
 import Comment from "./Comment.jsx";
@@ -62,6 +61,7 @@ const Comments = ({ name, color, id }) => {
               status={isAuthorized.isAdmin}
               id={item._id}
               commentAdmin={item.commentAdmin}
+              avatar={item.customer.avatarUrl}
             />
           ))}
         </div>

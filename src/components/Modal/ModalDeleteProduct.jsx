@@ -5,7 +5,6 @@ import ModalHeader from "./ModalComponents/ModalHeader";
 import ModalClose from "./ModalComponents/ModalClose";
 import ModalBody from "./ModalComponents/ModalBody";
 import ModalFooter from "./ModalComponents/ModalFooter";
-// import SvgLogOut from "./ModalSvg/svgLogOut.svg?react";
 import PropTypes from 'prop-types'
 
 const ModalDeleteProduct = ({ isOpen, onclick, firstClick, secondaryClick }) => {

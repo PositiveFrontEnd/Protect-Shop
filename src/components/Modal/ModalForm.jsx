@@ -4,7 +4,6 @@ import ModalWrapper from "./ModalComponents/ModalWrapper";
 import ModalHeader from "./ModalComponents/ModalHeader";
 import ModalClose from "./ModalComponents/ModalClose";
 import ModalBody from "./ModalComponents/ModalBody";
-import ModalFooter from "./ModalComponents/ModalFooter";
 import SvgForm from "./ModalSvg/svgForm.svg?react";
 import PropTypes from 'prop-types'
 import ModalFormCallMeOut from "../Form/ModalForm/ModalFormCallMeOut";
@@ -23,7 +22,7 @@ const ModalForm = ({ isOpen, onclick }) => {
                     </ModalHeader>
                     <ModalBody>
                         <p className="modal__body-title title__CallOut">If you still have questions, leave your contacts and our manager will call you</p>
-                        <ModalFormCallMeOut isOpen={isOpen}/>
+                        <ModalFormCallMeOut isOpen={isOpen} />
                     </ModalBody>
                 </Modal>
             </ModalWrapper>

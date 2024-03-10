@@ -45,8 +45,6 @@ const Favorites = () => {
         const response = await dispatch(actionGetFavorite(token));
         if (response && response.products) {
           setFavorite(response.products);
-        } else {
-          console.log("Favorites не обрано");
         }
       } catch {
         console.error("error");

@@ -22,7 +22,7 @@ describe("test productsSlice", () => {
             productsByCategory: [],
             productsByType: [],
             oneProduct: {},
-            ThreeProducts: [],
+            ThreeProducts: JSON.parse(localStorage.getItem("Threeproducts") || "[]"),
             ThreeColors: [],
             filters: [],
             twelveProducts: [],
@@ -30,6 +30,8 @@ describe("test productsSlice", () => {
             searchProducts: [],
             youSee: [],
             previewProductInfo: {},
+            previewProductInfo: {},
+            isLoading: false,
         });
     });
 

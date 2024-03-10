@@ -1,8 +1,5 @@
 import React from "react";
-
 import { createContext, useState } from "react";
-import { useSelector } from "react-redux";
-import { selectorBaskets } from './../store/selectors';
 
 export const ContextFunctions = createContext()
 
@@ -13,7 +10,7 @@ const ContextProvider = ({ children }) => {
 		setIsModal(!isModal)
 	}
 
-    const [isModalAll, useIsModalAll] = useState(false)
+	const [isModalAll, useIsModalAll] = useState(false)
 
 	function modalChangeAll() {
 		useIsModalAll(!isModalAll)
@@ -25,7 +22,7 @@ const ContextProvider = ({ children }) => {
 	}
 
 	return (
-		<ContextFunctions.Provider value={{ modalChange, isModal,isModalAll,modalChangeAll,modalChangeAddBasket,isModalAddBasket  }} >
+		<ContextFunctions.Provider value={{ modalChange, isModal, isModalAll, modalChangeAll, modalChangeAddBasket, isModalAddBasket }} >
 			{children}
 		</ContextFunctions.Provider>
 	)

@@ -15,19 +15,22 @@ const basketSlice = createSlice({
       state.basket = payload;
     },
     actionAddToBasketForGuest: (state, { payload }) => {
-      const isAdded = state.guestBasket.hasOwnProperty(payload)
+      const isAdded = state.guestBasket.hasOwnProperty(payload);
       if (isAdded) {
         state.guestBasket[payload].counter += 1;
-      localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
-      } else {
-        state.guestBasket = { ...state.guestBasket, [payload]: { payload, counter: 1 } }
-      localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
-      }
-    }, 
-    actionPlusBasketForGuest: (state, { payload }) => {
-        state.guestBasket[payload].counter += 1;
         localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
-    }, 
+      } else {
+        state.guestBasket = {
+          ...state.guestBasket,
+          [payload]: { payload, counter: 1 },
+        };
+        localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
+      }
+    },
+    actionPlusBasketForGuest: (state, { payload }) => {
+      state.guestBasket[payload].counter += 1;
+      localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
+    },
     actionMinusBasketForGuest: (state, { payload }) => {
       if (state.guestBasket[payload].counter > 0) {
         state.guestBasket[payload].counter -= 1;
@@ -36,32 +39,30 @@ const basketSlice = createSlice({
         }
         localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
       }
-    }, 
+    },
     actionPriseForGuest: (state, { payload }) => {
-      state.priceGuest = payload
+      state.priceGuest = payload;
     },
     actionDeleteGuestBasket: (state) => {
-        state.guestBasket = {}
-        localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
-  
+      state.guestBasket = {};
+      localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
     },
 
     actionDeleteOneForGuest: (state, { payload }) => {
       const { [payload]: removedItem, ...newBought } = state.guestBasket;
       state.guestBasket = newBought;
       localStorage.setItem("guestBasket", JSON.stringify(state.guestBasket));
-
-    }
+    },
   },
 });
 export const {
   actionAddBaskets,
   actionAddToBasketForGuest,
   actionDeleteOneForGuest,
-  actionPlusBasketForGuest, 
+  actionPlusBasketForGuest,
   actionMinusBasketForGuest,
   actionPriseForGuest,
-  actionDeleteGuestBasket
+  actionDeleteGuestBasket,
 } = basketSlice.actions;
 
 export const actionGetBasket = (token) => async (dispatch) => {
@@ -79,7 +80,7 @@ export const actionGetBasket = (token) => async (dispatch) => {
 
     if (response) {
       dispatch(actionAddBaskets(response));
-      // console.log("get basket", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -104,7 +105,6 @@ export const actionCreateBasket = (data) => async (dispatch) => {
 
     if (response) {
       dispatch(actionAddBaskets(response));
-      console.log("basket create", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -128,7 +128,6 @@ export const actionAddBasketOneProduct = (data) => (dispatch) => {
       .then((response) => {
         if (response) {
           dispatch(actionAddBaskets(response));
-          console.log("basket update", response);
         }
 
         dispatch(actionIsAnimation(false));
@@ -161,7 +160,6 @@ export const actionChangeBasket = (data) => async (dispatch) => {
 
     if (response) {
       dispatch(actionAddBaskets(response));
-      console.log("basket update", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -188,7 +186,6 @@ export const actionDeleteBasketOneProduct = (data) => async (dispatch) => {
     if (response.status === 200) {
       const responseData = await response.json();
       dispatch(actionAddBaskets(responseData));
-      console.log("basket one product delete", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -214,7 +211,6 @@ export const actionDeleteBasket = (token) => async (dispatch) => {
     if (response.status === 200) {
       const responseData = await response.json();
       dispatch(actionAddBaskets(responseData));
-      console.log("basket  delete", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -240,7 +236,6 @@ export const actionDecreaseProduct = (data) => async (dispatch) => {
     if (response.status === 200) {
       const responseData = await response.json();
       dispatch(actionAddBaskets(responseData));
-      console.log("basket decrease", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);

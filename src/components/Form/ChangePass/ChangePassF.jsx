@@ -20,8 +20,8 @@ function ChangePassF() {
     if (location.pathname === '/account/password') {
       dispatch(actionCorrectData(''));
     }
-  
-}, [dispatch, location.pathname])
+
+  }, [dispatch, location.pathname])
   return (
     <Formik
       initialValues={{
@@ -31,32 +31,31 @@ function ChangePassF() {
       onSubmit={(values) => {
         const data = { token: token, password: values }
         dispatch(actionChangePassword(data))
-        console.log(values)
       }}
       validationSchema={validationChangePassword}
     >
       {({ errors, touched }) => (
         <div className="form__box form__change__info">
           <Form>
-           <div className="change__pass__box">
-           <Input
-              className="mb-3"
-              label="Password"
-              name="password"
-              placeholder="Password"
-              error={errors.password}
-              touched={touched.password}
-            />
-            <Input
-              className="mb-3"
-              label="Confirm Password"
-              name="newPassword"
-              placeholder="Confirm Password"
-              error={errors.newPassword}
-              touched={touched.newPassword}
-            />
-           </div>
-          {correctData === 'ok' && <p>Password successfully changed</p>}
+            <div className="change__pass__box">
+              <Input
+                className="mb-3"
+                label="Password"
+                name="password"
+                placeholder="Password"
+                error={errors.password}
+                touched={touched.password}
+              />
+              <Input
+                className="mb-3"
+                label="Confirm Password"
+                name="newPassword"
+                placeholder="Confirm Password"
+                error={errors.newPassword}
+                touched={touched.newPassword}
+              />
+            </div>
+            {correctData === 'ok' && <p>Password successfully changed</p>}
             <Button
               children="Save"
               black

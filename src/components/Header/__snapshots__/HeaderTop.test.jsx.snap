@@ -199,7 +199,7 @@ exports[`Тестування компонента  HeaderTop > Знімок 1`]
         </a>
         <a
           class="header__link"
-          href="/shops"
+          href="/shops/kharkiv"
         >
           shops
         </a>
@@ -407,7 +407,7 @@ exports[`Тестування компонента  HeaderTop > Знімок 1`]
       </a>
       <a
         class="header__link"
-        href="/shops"
+        href="/shops/kharkiv"
       >
         shops
       </a>

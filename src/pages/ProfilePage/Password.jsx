@@ -4,7 +4,7 @@ import ChangePassF from '../../components/Form/ChangePass/ChangePassF'
 const Password = () => {
   return (
     <>
-    <ChangePassF />
+      <ChangePassF />
     </>
   )
 }

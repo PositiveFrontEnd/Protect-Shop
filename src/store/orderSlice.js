@@ -7,7 +7,7 @@ import { actionIsAnimation } from "./homeSlice";
 const orderSlice = createSlice({
   name: "order",
   initialState: {
-    orderState:[],
+    orderState: [],
     productsForOrderGuest: JSON.parse(
       localStorage.getItem("productsForOrderGuest") || "{}"
     ),
@@ -19,15 +19,11 @@ const orderSlice = createSlice({
     ),
     order: {
       letterSubject: "Thank you for order!",
-      // letterHtml: "Thank you for order!",
-
     },
-    promoCodePrice:"",
+    promoCodePrice: "",
 
     orderGuest: {
       letterSubject: "Thank you for order!",
-      // letterHtml: "Thank you for order!",
-
     },
   },
   reducers: {
@@ -46,21 +42,20 @@ const orderSlice = createSlice({
       );
     },
 
-  actionUpDateForm: (state, { payload }) => {
-    state.order = { ...state.order, ...payload };
-  },
-  actionPromocodePrice:(state,{payload})=>{
-    state.promoCodePrice = payload
-  },
-  actionClearPromoCode: (state) => {
-    state.promoCodePrice = ""
-  },
-  actionAddOrder: (state, { payload }) => {
-    state.orderState = payload;
-  },
-  actionUpDateFormGuest: (state, { payload }) => {
-    state.orderGuest = { ...state.orderGuest, ...payload };
-   
+    actionUpDateForm: (state, { payload }) => {
+      state.order = { ...state.order, ...payload };
+    },
+    actionPromocodePrice: (state, { payload }) => {
+      state.promoCodePrice = payload;
+    },
+    actionClearPromoCode: (state) => {
+      state.promoCodePrice = "";
+    },
+    actionAddOrder: (state, { payload }) => {
+      state.orderState = payload;
+    },
+    actionUpDateFormGuest: (state, { payload }) => {
+      state.orderGuest = payload;
     },
   },
 });
@@ -82,6 +77,8 @@ export const actionCreateNewOrderLoggerCustomer =
     try {
       dispatch(actionIsAnimation(true));
       const { order, token } = data;
+      order.status = "not shipped";
+
       const newOrder = {
         headers: {
           "Content-Type": "application/json",
@@ -92,13 +89,12 @@ export const actionCreateNewOrderLoggerCustomer =
       const response = await sendRequest(`${API_URL}/orders`, "POST", newOrder);
 
       if (response) {
-        dispatch(actionAddOrder(response))
-        console.log("get orders",response)
+        dispatch(actionAddOrder(response));
       }
     } catch (error) {
       console.error("Сталася помилка під час виконання функції:", error);
     } finally {
-      dispatch(actionUpDateForm({promoCode: 0 }))
+      dispatch(actionUpDateForm({ promoCode: 0 }));
       dispatch(actionIsAnimation(false));
     }
   };
@@ -107,7 +103,7 @@ export const actionCreateNewOrderNotLoggerCustomer =
   (order) => async (dispatch) => {
     try {
       dispatch(actionIsAnimation(true));
-      console.log(order);
+      order.status = "not shipped";
       const newOrder = {
         headers: {
           "Content-Type": "application/json",
@@ -117,12 +113,12 @@ export const actionCreateNewOrderNotLoggerCustomer =
       const response = await sendRequest(`${API_URL}/orders`, "POST", newOrder);
 
       if (response) {
-        console.log(response)
+        return response;
       }
     } catch (error) {
       console.error("Сталася помилка під час виконання функції:", error);
     } finally {
-      dispatch(actionUpDateFormGuest({promoCode: 0 }))
+      dispatch(actionUpDateFormGuest({ promoCode: 0 }));
       dispatch(actionIsAnimation(false));
     }
   };
@@ -141,7 +137,7 @@ export const actionDeleteOrder = (data) => async (dispatch) => {
       deleteOrder
     );
     if (response.status === 200) {
-      console.log("delete order", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -167,8 +163,7 @@ export const actionGetOllUserOrders = (token) => async (dispatch) => {
     );
 
     if (response) {
-      dispatch(actionAddOrder(response))
-      console.log(response);
+      dispatch(actionAddOrder(response));
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -193,8 +188,7 @@ export const actionSearchByOrderNo = (data) => async (dispatch) => {
     );
 
     if (response) {
-      console.log(response);
-      return response
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -208,7 +202,7 @@ export const actionGetAllOrders = () => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/orders`, "GET");
 
     if (response) {
-      return response
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -220,13 +214,13 @@ export const actionUpdateOrder = (data) => async (dispatch) => {
   try {
     dispatch(actionIsAnimation(true));
     const { order, token, id, datahtml, subscriberMail } = data;
-    
-    order.email = subscriberMail
-    order.letterSubject = "Your order was changed"
+
+    order.email = subscriberMail;
+    order.letterSubject = "Your order was changed";
     order.letterHtml = `<h3>Hello ${datahtml.firstName}</h3>
     <p>Order status #${datahtml.orderNo} has been changed to "${order.status}"</p>
     <p>Your PROTECT team</p>
-    `
+    `;
 
     const newOrder = {
       headers: {
@@ -242,13 +236,11 @@ export const actionUpdateOrder = (data) => async (dispatch) => {
     );
 
     if (response) {
-      console.log(response);
+      return response;
     }
   } catch (error) {
-    const { order, token, id, subscriberMail} = data;
-    console.log(order)
-console.log(subscriberMail)
-    
+    const { order, token, id, subscriberMail } = data;
+
     console.error("Сталася помилка під час виконання функції:", error);
   } finally {
     dispatch(actionIsAnimation(false));

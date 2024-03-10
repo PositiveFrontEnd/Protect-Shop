@@ -1,16 +1,9 @@
-import React
-    // , {useEffect, useState}
-    from "react";
+import React from "react";
 import "./ShopsPage.scss";
-import {NavLink, Outlet} from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "../../components/Button/Button.scss";
 import "../../../src/components/Helpers/Base/Base.scss";
 const ShopsPage = () => {
-    // const [activeRoute, setActiveRoute] = useState('kharkiv');
-    // useEffect(() => {
-    //     // Оновлюємо активний роут при завантаженні сторінки
-    //     setActiveRoute('kharkiv');
-    // }, []);
     return (
         <>
             <div>
@@ -18,8 +11,6 @@ const ShopsPage = () => {
             </div>
             <nav className="shops__nav">
                 <NavLink
-                    // isActive = {()=>activeRoute==='kharkiv'}
-                    // onClick={()=>setActiveRoute('kharkiv')}
                     className="button-white button__submitFilter-white"
                     to="kharkiv">
                     kharkiv
@@ -39,7 +30,7 @@ const ShopsPage = () => {
                     dnipro
                 </NavLink>
             </nav>
-            <Outlet/>
+            <Outlet />
         </>
     );
 };

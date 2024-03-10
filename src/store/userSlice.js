@@ -8,13 +8,11 @@ const userSlice = createSlice({
   name: "user",
   initialState: {
     token: JSON.parse(localStorage.getItem("token") || null),
-    // token: '',
     registrationModal: false,
     authorizationStatus: null,
     registrationStatus: "",
     registrationData: JSON.parse(localStorage.getItem("userdata") || "{}"),
-    // registrationData:  "{}",
-
+    background: "",
     correctData: "",
     isAdmin: JSON.parse(localStorage.getItem("isAdmin") || false),
   },
@@ -45,7 +43,18 @@ const userSlice = createSlice({
     actionIsAdmin: (state, { payload }) => {
       state.isAdmin = payload;
       localStorage.setItem("isAdmin", JSON.stringify(state.isAdmin));
-
+    },
+    actionBackground: (state) => {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      const r = parseInt(color.slice(1, 3), 16);
+      const g = parseInt(color.slice(3, 5), 16);
+      const b = parseInt(color.slice(5, 7), 16);
+      const rgbaColor = `rgba(${r}, ${g}, ${b}, 0.3)`;
+      state.background = rgbaColor;
     },
   },
 });
@@ -57,6 +66,7 @@ export const {
   actionRegistrationStatus,
   actionCorrectData,
   actionIsAdmin,
+  actionBackground,
 } = userSlice.actions;
 
 export const actionCorrectLogin = (data) => async (dispatch) => {
@@ -84,19 +94,18 @@ export const actionCorrectLogin = (data) => async (dispatch) => {
 
       await dispatch(actionUserRegistrationData(data));
       dispatch(actionIsAdmin(data.isAdmin));
-    } else {
-      // console.log("переводжу на регістрацію");
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
-    // console.log(error.message)
     dispatch(actionErrorStatus(error.message));
   } finally {
     dispatch(actionIsAnimation(false));
   }
 };
 
-export const actionRegistration = (customer) => async (dispatch, getState) => {
+export const actionRegistration = (data) => async (dispatch, getState) => {
+  const { customer, background } = data;
+  customer.background = background;
   try {
     dispatch(actionIsAnimation(true));
     const newCustomer = {
@@ -112,7 +121,6 @@ export const actionRegistration = (customer) => async (dispatch, getState) => {
     );
     if (response) {
       const state = getState();
-      console.log("Успішна відповідь:", response);
       const registrationData = state.user.registrationData;
       dispatch(
         actionCorrectLogin({
@@ -124,7 +132,7 @@ export const actionRegistration = (customer) => async (dispatch, getState) => {
       dispatch(actionRegistrationStatus("ok"));
     }
   } catch (error) {
-    // console.error("Сталася помилка під час виконання функції:", error);
+    console.error("Сталася помилка під час виконання функції:", error);
     dispatch(actionRegistrationStatus("error"));
   } finally {
     dispatch(actionIsAnimation(false));
@@ -146,7 +154,6 @@ export const actionCustomersInfo = (token) => async (dispatch) => {
       newCustomer
     );
     if (response) {
-      // console.log("Успішна відповідь:", response);
       return response;
     }
   } catch (error) {
@@ -173,7 +180,6 @@ export const actionUpdateCustomer = (data) => async (dispatch) => {
       newCustomer
     );
     if (response) {
-      // console.log("Успішна відповідь:", response);
       dispatch(actionCorrectData("ok"));
     }
   } catch (error) {
@@ -200,7 +206,6 @@ export const actionChangePassword = (data) => async (dispatch) => {
       newPassword
     );
     if (response) {
-      // console.log("Успішна відповідь:", response);
       dispatch(actionCorrectData("ok"));
     }
   } catch (error) {

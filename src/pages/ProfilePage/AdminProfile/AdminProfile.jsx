@@ -54,8 +54,8 @@ const AdminProfile = () => {
                 Create new Product
               </NavLink>
               <NavLink
-                className={`order ${isNavLinkActive("/changeproductgalery") ? "active" : ""}`}
-                to="changeproductgalery"
+                className={`order ${isNavLinkActive("/changeproductgalery-") ? "active" : ""}`}
+                to="changeproductgalery-"
               >
                 Change product from catalogue
               </NavLink>

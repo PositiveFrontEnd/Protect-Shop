@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { actionAddToImportant, actionAllLetters, actionLettersAll } from "../../../store/messageSlice"
+import { actionAllLetters } from "../../../store/messageSlice"
 import LetterItemCard from "./LetterItemCard"
 import { selectorLetterAll } from "../../../store/selectors"
 import './AdminLetters.scss'
@@ -16,20 +16,20 @@ const AdminLettersPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-              const response = await dispatch(actionAllLetters())
-              setAllLetters(response)
+                const response = await dispatch(actionAllLetters())
+                setAllLetters(response)
             }
             catch {
-              console.log("error")
+                console.log("error")
             }
-          }
-          fetchData()
-        }, [dispatch])
+        }
+        fetchData()
+    }, [dispatch])
 
     useEffect(() => {
-        letters.length > 0 && setSortedLetters( letters.slice().sort((a, b) => new Date(b.date) - new Date(a.date)))
+        letters.length > 0 && setSortedLetters(letters.slice().sort((a, b) => new Date(b.date) - new Date(a.date)))
     }, [letters])
-    
+
     useEffect(() => {
         if (sortLetters.length > 0 && (location.pathname === "/account/letters" || location.pathname === "/account")) {
             handleTabs("inbox");
@@ -44,7 +44,7 @@ const AdminLettersPage = () => {
         const filteredData = sortLetters.filter((item) => item.important === true)
         data === "inbox" ? setNewData(sortLetters) : setNewData(filteredData)
     }
-    
+
 
 
     return (
@@ -63,7 +63,7 @@ const AdminLettersPage = () => {
                     <p className="phone">Phone</p>
                 </div>
                 {
-                    
+
                     newData.length > 0 ? newData.map((item, index) => (
                         <div key={index}>
                             <LetterItemCard
@@ -74,12 +74,12 @@ const AdminLettersPage = () => {
                                 question={item.question}
                                 status={item.status}
                                 id={item._id}
-                                />
+                            />
 
                         </div>
                     )) : <p className="noletters">Letter list is empty</p>
                 }
-                </section>
+            </section>
         </>
     )
 }

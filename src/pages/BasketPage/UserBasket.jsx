@@ -20,7 +20,6 @@ const UserBasket = () => {
   const token = useSelector(selectorToken);
   const basketProduct = useSelector(selectorBaskets);
   const navigate = useNavigate();
-  console.log(basketProduct);
   useEffect(() => {
     dispatch(actionGetBasket(token));
   }, []);

@@ -12,7 +12,7 @@ const Comment = ({
   likes,
   status,
   id,
-  commentAdmin,
+  commentAdmin
 }) => {
   const [isInput, setIsInput] = useState(false);
   const [commentValue, setCommentValue] = useState("");
@@ -54,7 +54,7 @@ const Comment = ({
         {[...Array(likes)].map((item, index) => (
           <Star
             key={index}
-            className={likes > 1 ? "active__star" : " default__star"}
+            className={likes > 1 ? "active__star" : " stat__Star inactive"}
           />
         ))}
       </div>

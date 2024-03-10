@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "./MobileFeedbacks.scss";
-import feedback1 from "/Images/feedback1.jpg";
-import feedback2 from "/Images/feedback2.jpg";
-import feedback3 from "/Images/feedback3.jpg";
-import Icon from "../images/star.svg?react";
 import Button from "../../../Button/Button";
+import { useNavigate } from "react-router";
+import MobileFeedbackCard from "./mobileCard.jsx";
+const MobileFeedbacks = ({ comments }) => {
+  const navigate = useNavigate();
+  const [randomComments, setRandomComments] = useState([]);
+  useEffect(() => {
+    const shuffleArray = (array) => {
+      const newArray = [...array];
+      let currentIndex = newArray.length,
+        temporaryValue,
+        randomIndex;
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = newArray[currentIndex];
+        newArray[currentIndex] = newArray[randomIndex];
+        newArray[randomIndex] = temporaryValue;
+      }
+      return newArray;
+    };
 
-const MobileFeedbacks = () => {
+    const shuffledComments = shuffleArray(comments);
+
+    const selectedComments = shuffledComments.slice(0, 3);
+    setRandomComments(selectedComments);
+  }, [comments]);
   return (
     <div className="mobile__feedbacks__wrapper">
       <h2 className="feedbacks__title">feedbacks</h2>
@@ -19,64 +39,25 @@ const MobileFeedbacks = () => {
           centeredSlides={true}
           initialSlide={1}
         >
-          <SwiperSlide className="feedbacks__card">
-            <div className="card__image">
-              <img src={feedback1} alt="" />
-            </div>
-            <div className="card__stars">
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-            </div>
-
-            <p className="card__name">Olena</p>
-            <p className="card__description">
-              Small bags are my favorite in this season. They are perfect for
-              parties and weekends when you don't have to wear many things
-            </p>
-          </SwiperSlide>
-
-          <SwiperSlide className="feedbacks__card">
-            <div className="card__image">
-              <img src={feedback2} alt="" />
-            </div>
-            <div className="card__stars">
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-            </div>
-            <p className="card__name">Semen</p>
-            <p className="card__description">
-              Backpack is the best for me. These bags are suitable for many
-              styles, from classics to modern minimalism.
-            </p>
-          </SwiperSlide>
-
-          <SwiperSlide className="feedbacks__card">
-            <div className="card__image">
-              <img src={feedback3} alt="" />
-            </div>
-            <div className="card__stars">
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-              <Icon className="star" />
-            </div>
-            <p className="card__name">Anna</p>
-            <p className="card__description">
-              Handbags with large fasteners and chains it’s for me. Such bags
-              can be worn both on the shoulder and at the fingertips.
-            </p>
-          </SwiperSlide>
+          {randomComments.map((item, index) => (
+            <SwiperSlide key={index} className="feedbacks__card">
+              <MobileFeedbackCard
+                key={index}
+                name={item.customer?.firstName || 'Unknown User'}
+                avatar={item.customer?.avatarUrl}
+                likes={item.likes}
+                comment={item.advantages}
+                background={item.customer?.background || ''}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="mobile__feedbacks__button">
-        <Button white> See More</Button>
+        <Button click={() => navigate("/feedbacks")} white>
+          {" "}
+          See More
+        </Button>
       </div>
     </div>
   );

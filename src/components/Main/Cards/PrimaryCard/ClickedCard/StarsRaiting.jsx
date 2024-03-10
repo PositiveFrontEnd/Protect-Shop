@@ -16,7 +16,7 @@ const StarsRaiting = () => {
         ))}
       </div>
       <div className="filled__stars">
-        {[...Array(averageLikes)].map((item, index) => (
+        {[...Array(Math.round(averageLikes))].map((item, index) => (
           <Star className="active__star" key={index} />
         ))}
       </div>

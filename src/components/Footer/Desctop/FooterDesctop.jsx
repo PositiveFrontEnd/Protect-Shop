@@ -27,19 +27,12 @@ const FooterDesctop = () => {
                     <div>
                         <FooterItemDesctop className='footer__item' title='Information'>
                             <li><Link to="/shops" className="link">Contacts</Link></li>
-                            <li><Link className="link">Payment & Delivery</Link></li>
-                            <li><Link className="link">Returns</Link></li>
-                            <li><Link className="link">Guarantee</Link></li>
-                            <li><Link className="link">Discount</Link></li>
-                            <li><Link className="link">Special proposal</Link></li>
                         </FooterItemDesctop>
                     </div>
                     <div>
                         <FooterItemDesctop className='footer__item' title='About us'>
                             <li><Link to="/about-us" className="link">About brand</Link></li>
-                            <li><Link className="link">Our values</Link></li>
-                            <li><Link className="link">Partnerships</Link></li>
-                            <li><Link to="/blog"  className="link">Blog</Link></li>
+                            <li><Link to="/blog" className="link">Blog</Link></li>
                             <li><Link to="/shops" className="link">Shops</Link></li>
                         </FooterItemDesctop>
                     </div>

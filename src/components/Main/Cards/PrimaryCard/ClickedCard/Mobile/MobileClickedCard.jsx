@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import "./MobileClickedCardStyle.scss";
 import "../Desktop/DesktopClickedCardStyle.scss";
 import Star from "../../../Images/star.svg?react";
-import Favorite from "../Images/favorite.svg?react";
-import Locker from "../Images/locker.svg?react";
 import Checkmark from "../Images/checkmark.svg?react";
 import ClickedCardDropDown from "../ClickedCardDropDown/ClickedCardDropDown";
 import {
-  actionAddBasketOneProduct,
-  actionDecreaseProduct,
+  actionAddBasketOneProduct
 } from "../../../../../../store/basketSlice";
 import {
   selectorToken,
-  selectorBaskets,
   selectorCard,
   selectorProductComments,
   selectorThreeProducts,
@@ -27,27 +23,33 @@ import { useEffect } from "react";
 import CounterForUser from "../Desktop/CounterForUser";
 import CounterForGuest from "../Desktop/CounterForGuest";
 import Heart from "../../../../Heart/Heart";
-import { actionDeleteProduct, actionGetOneProduct, actionPreviewProductData } from "../../../../../../store/productsSlice";
+import {
+  actionDeleteProduct,
+  actionGetOneProduct,
+  actionPreviewProductData,
+} from "../../../../../../store/productsSlice";
 import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
 import Comments from "../Comments/Comments.jsx";
 import StarsRaiting from "../StarsRaiting.jsx";
 import Button from "../../../../../Button/Button.jsx";
 import ModalDeleteProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
+import ClickedCardDropDownGuarantees from "../ClickedCardDropDown/Guarantee/Guarantees.jsx";
+import ClickedCardDropDownDelivery from "../ClickedCardDropDown/Delivery/Delivery.jsx";
+import ClickedCardDropDownShops from "../ClickedCardDropDown/Shops/ShopsDrop.jsx";
 const MobileClickedCard = ({
   currentPrice,
   name,
-  imageUrls,
   myCustomParam,
   _id,
   handleFavorite,
-  likes,
   color,
+  delivery,
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentProduct = useSelector(selectorCard);
-  const isAdmin = useSelector(selectorIsAdmin)
+  const isAdmin = useSelector(selectorIsAdmin);
   const [startIndex, setIndex] = useState(0);
   const [activeSwitch, setActiveSwitch] = useState("info");
   const handleSwitchClick = (type) => {
@@ -55,7 +57,6 @@ const MobileClickedCard = ({
   };
   const token = useSelector(selectorToken);
 
-  //modal thanks
   const { isModalAll, modalChangeAll, modalChangeAddBasket, isModalAddBasket } =
     useContext(ContextFunctions);
   useEffect(() => {
@@ -67,7 +68,7 @@ const MobileClickedCard = ({
       return () => clearTimeout(timeoutId);
     }
   }, [isModalAll, modalChangeAll]);
-  //modal add to order
+
   const addBasket = async () => {
     modalChangeAddBasket();
     navigate("/cart/placing_an_order/contact_information");
@@ -83,17 +84,17 @@ const MobileClickedCard = ({
   const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
   const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
 
+  const [deleteProductModal, setDeleteProductModal] = useState(false);
 
-  const [deleteProductModal, setDeleteProductModal] = useState(false)
-
-const handleChangeCard = () => {
-    dispatch(actionPreviewProductData(currentProduct))
-    navigate('/account/changeproductgalery')
-  }
- const handleDeleteProductModal = () => { setDeleteProductModal(!deleteProductModal) }
-  const handleDeleteProduct = () => dispatch(actionDeleteProduct({ _id, token }))
-
-
+  const handleChangeCard = () => {
+    dispatch(actionPreviewProductData(currentProduct));
+    navigate("/account/changeproductgalery-");
+  };
+  const handleDeleteProductModal = () => {
+    setDeleteProductModal(!deleteProductModal);
+  };
+  const handleDeleteProduct = () =>
+    dispatch(actionDeleteProduct({ _id, token }));
 
   return (
     <section>
@@ -115,18 +116,16 @@ const handleChangeCard = () => {
         </div>
         <div className="mobile__card__toggler">
           <p
-            className={`mobile__card__switch ${
-              activeSwitch === "info" ? "active" : ""
-            }`}
+            className={`mobile__card__switch ${activeSwitch === "info" ? "active" : ""
+              }`}
             onClick={() => handleSwitchClick("info")}
             type="info"
           >
             info
           </p>
           <p
-            className={`mobile__card__switch ${
-              activeSwitch === "comments" ? "active" : ""
-            }`}
+            className={`mobile__card__switch ${activeSwitch === "comments" ? "active" : ""
+              }`}
             onClick={() => handleSwitchClick("comments")}
             type="comments"
           >
@@ -179,9 +178,15 @@ const handleChangeCard = () => {
           </div>
           <div className="mobile__card__buttons">
             <div className="mobile__card__buttons-primary">
-              {token ? (isAdmin ? (<Button black click={() =>handleChangeCard()} >Change Product</Button>) :(
-                <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
-              )) : (
+              {token ? (
+                isAdmin ? (
+                  <Button black click={() => handleChangeCard()}>
+                    Change Product
+                  </Button>
+                ) : (
+                  <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
+                )
+              ) : (
                 <CounterForGuest _id={_id} modalChangeAll={modalChangeAll} />
               )}
               <Heart
@@ -192,24 +197,29 @@ const handleChangeCard = () => {
             </div>
 
             <div className="mobile__card__buttons-secondary">
-              {isAdmin ? <Button white click={() => handleDeleteProductModal()}>
-              Delete Product
-              </Button> :
-              <button onClick={modalChangeAddBasket}>
-                Buy right now
-                <Checkmark className="checkmark" />
-              </button>
-            }
+              {isAdmin ? (
+                <Button white click={() => handleDeleteProductModal()}>
+                  Delete Product
+                </Button>
+              ) : (
+                <button onClick={modalChangeAddBasket}>
+                  Buy right now
+                  <Checkmark className="checkmark" />
+                </button>
+              )}
             </div>
           </div>
-          <div className="mobile__card__description">
+          <div className="mobile__card__drop">
             <ClickedCardDropDown
               title={"Description"}
               myCustomParam={myCustomParam}
             />
-            <ClickedCardDropDown title={"Guarantee"} />
-            <ClickedCardDropDown title={"Delivery"} />
-            <ClickedCardDropDown title={"Look in our Shops"} />
+            <ClickedCardDropDownGuarantees title={"Guarantee"} />
+            <ClickedCardDropDownDelivery
+              title={"Delivery"}
+              delivery={delivery}
+            />
+            <ClickedCardDropDownShops title={"Look in our Shops"} />
           </div>
         </div>
         <div
@@ -232,11 +242,13 @@ const handleChangeCard = () => {
           secondaryClick={() => contineShoping()}
         />
       )}
-      {deleteProductModal && <ModalDeleteProduct
-        firstClick={() => handleDeleteProductModal()}
-        secondaryClick={() => handleDeleteProduct()}
-        onclick={() =>handleDeleteProductModal()}
-      />}
+      {deleteProductModal && (
+        <ModalDeleteProduct
+          firstClick={() => handleDeleteProductModal()}
+          secondaryClick={() => handleDeleteProduct()}
+          onclick={() => handleDeleteProductModal()}
+        />
+      )}
     </section>
   );
 };

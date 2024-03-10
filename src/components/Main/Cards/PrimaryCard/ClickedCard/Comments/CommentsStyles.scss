@@ -45,6 +45,10 @@
       width: 100%;
       padding: 10px 10px;
       border-radius: 10px;
+      .avatar {
+        width: 80px;
+        height: 60px;
+      }
       .stat__Star {
         width: 20px;
         height: 20px;
@@ -56,26 +60,26 @@
         display: flex;
         justify-content: space-between;
         font-size: 16px;
-        .main__button__answer{
+        .main__button__answer {
           color: rgb(186, 183, 183);
         }
       }
 
-      .item__input{
+      .item__input {
         border: 1px solid rgb(172, 168, 168);
         height: 28px;
-       width: 100%;
-       border-radius: 13px;
-       margin-top: 10px;
-       padding: 6px;
+        width: 100%;
+        border-radius: 13px;
+        margin-top: 10px;
+        padding: 6px;
       }
 
-      .item__answerAdmin{
+      .item__answerAdmin {
         margin-top: 15px;
         border: 1px solid rgb(186, 184, 184);
         padding: 10px;
         border-radius: 10px;
-        .answerAdmin__user__name{
+        .answerAdmin__user__name {
           color: rgb(181, 177, 177);
         }
       }

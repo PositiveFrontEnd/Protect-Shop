@@ -11,13 +11,13 @@ import Popular from "src/components/Main/Popular/Popular";
 const SearchPage = () => {
     return (
         <div>
-            <HeaderSearch/>
-            <Hero/>
-            <OurProducts/>
-            <Popular/>
-            <Feedbacks/>
-            <Blog/>
-            <Instagram/>
+            <HeaderSearch />
+            <Hero />
+            <OurProducts />
+            <Popular />
+            <Feedbacks />
+            <Blog />
+            <Instagram />
         </div>
     );
 };

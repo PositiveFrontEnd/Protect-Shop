@@ -10,7 +10,7 @@ import { actionLoadFilter } from '../../../../store/catalog'
 import { useSearchParams } from 'react-router-dom'
 
 const FilterForm = ({ price }) => {
-    const { values, handleChange, handleSubmit, resetForm, setFieldValue, initialValues } = useFormikContext();
+    const { values, handleChange, handleSubmit, resetForm, setFieldValue } = useFormikContext();
     const [searchParams, setSearchParams] = useSearchParams();
     const dispatch = useDispatch()
     const scrollToTop = () => {
@@ -52,8 +52,6 @@ const FilterForm = ({ price }) => {
         dispatch(actionLoadFilter(false))
         setSearchParams('')
     }
-
-
 
     return (
         <Form>

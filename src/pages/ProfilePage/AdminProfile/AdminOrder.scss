@@ -4,6 +4,23 @@
     padding-top: 30px;
     padding-right: 30px;
     position: relative;
+    .sort-open {
+        position: relative;
+        cursor: pointer;
+    }
+    .sort__dropdown {
+        position: absolute;
+        top: 78px;
+        right: 30px;
+        label {
+
+            cursor: pointer;
+        }
+    }
+}
+.order__container {
+    width: 100%;
+
 }
 .orders__list {
     display: grid;
@@ -57,22 +74,22 @@
     text-align: center;
 }
 
+.order__products {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "img quantity name color__order itemNo price";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 1px solid var(--inactive);
+    align-items: center;
+    justify-items: center;
+    min-height: 50px;
+    text-align: center;
 .cange__order__wrapper {
     .products_wrap {
         border: 1px solid var(--inactive);
     }
 
-    .order__products {
-        display: grid;
-        width: 100%;
-        grid-template-areas:
-            "img quantity name color__order itemNo price";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        border: 1px solid var(--inactive);
-        align-items: center;
-        justify-items: center;
-        min-height: 50px;
-        text-align: center;
     }
 
     .img {

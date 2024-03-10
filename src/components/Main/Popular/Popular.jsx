@@ -8,10 +8,9 @@ import { actionGetCatalogId } from '../../../store/catalog'
 import { actionFavoriteForAll } from "../../../store/favoriteSlice";
 import { selectorToken } from "../../../store/selectors";
 import { useNavigate } from "react-router";
-import { selectorGetAllOrders, selectorProductsForOrderGuest } from "../../../store/selectors";
+import { selectorGetAllOrders } from "../../../store/selectors";
 import { actionGetOllUserOrders } from "../../../store/orderSlice";
 import ModalPromoCode from "../../Modal/ModalPromoCode";
-import ModalAddedCart from "../../Modal/ModalAddedCart";
 import { useContext } from "react";
 import { ContextFunctions } from "../../../context/context";
 const Popular = () => {

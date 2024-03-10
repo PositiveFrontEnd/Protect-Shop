@@ -53,7 +53,7 @@ exports[`Тестування компонента  DropdownTop > Знімок 1
               name="search"
               placeholder="SEARCH"
               type="text"
-              value="some text"
+              value=""
             />
           </form>
         </div>
@@ -80,7 +80,7 @@ exports[`Тестування компонента  DropdownTop > Знімок 1
           </a>
           <a
             class="dropdown__list"
-            href="/shops"
+            href="/shops/kharkiv"
           >
             shops
           </a>
@@ -251,7 +251,7 @@ exports[`Тестування компонента  DropdownTop > Знімок 1
             name="search"
             placeholder="SEARCH"
             type="text"
-            value="some text"
+            value=""
           />
         </form>
       </div>
@@ -278,7 +278,7 @@ exports[`Тестування компонента  DropdownTop > Знімок 1
         </a>
         <a
           class="dropdown__list"
-          href="/shops"
+          href="/shops/kharkiv"
         >
           shops
         </a>

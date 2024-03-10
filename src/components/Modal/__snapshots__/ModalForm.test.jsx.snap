@@ -138,7 +138,7 @@ exports[`Тестування компонента  ModalForm > Знімок 1`]
                         class="select__label__text"
                       />
                       <select
-                        class="select__input select__input-modal"
+                        class="select__input select__input-modal select__post"
                         name="question"
                       >
                         <option
@@ -330,7 +330,7 @@ exports[`Тестування компонента  ModalForm > Знімок 1`]
                       class="select__label__text"
                     />
                     <select
-                      class="select__input select__input-modal"
+                      class="select__input select__input-modal select__post"
                       name="question"
                     >
                       <option

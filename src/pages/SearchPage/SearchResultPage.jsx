@@ -8,7 +8,7 @@ import {
 } from "../../store/productsSlice";
 import Button from "src/components/Button/Button";
 import {
-    selectInputText,
+    selectorInputText,
     selectorSearchProducts,
     selectorThreeProducts,
     selectorToken
@@ -23,7 +23,7 @@ import ScrollUp from "src/components/Footer/Svg/scrollUp.svg?react";
 
 const SearchResultPage = () => {
 
-    const inputText = useSelector(selectInputText);
+    const inputText = useSelector(selectorInputText);
     const token = useSelector(selectorToken);
     const dispatch = useDispatch();
     const handleInputChange = (event) => {

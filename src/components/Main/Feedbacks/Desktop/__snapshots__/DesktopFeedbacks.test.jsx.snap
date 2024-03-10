@@ -23,125 +23,19 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
               class="feedbacks__card"
             >
               <div
-                class="feedbacks__image"
+                class="no__avatar__wrapper"
               >
-                <img
-                  alt=""
-                  src="/Images/feedback1.jpg"
-                />
+                <p
+                  class="avatar__letter"
+                >
+                  U
+                </p>
               </div>
               <div
                 class="feedbacks__stars"
               >
                 <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
+                  class=" star inactive"
                   fill="none"
                   height="20"
                   viewBox="0 0 12 12"
@@ -172,137 +66,29 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
               <p
                 class="feedbacks__card__name"
               >
-                olena
+                Unknown User
               </p>
               <p
                 class="feedbacks__card__description"
-              >
-                Small bags are my favorite in this season. They are perfect for parties and weekends when you don't have to wear many things.
-              </p>
+              />
             </div>
             <div
               class="feedbacks__card"
             >
               <div
-                class="feedbacks__image"
+                class="no__avatar__wrapper"
               >
-                <img
-                  alt=""
-                  src="/Images/feedback2.jpg"
-                />
+                <p
+                  class="avatar__letter"
+                >
+                  U
+                </p>
               </div>
               <div
                 class="feedbacks__stars"
               >
                 <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
+                  class=" star inactive"
                   fill="none"
                   height="20"
                   viewBox="0 0 12 12"
@@ -333,137 +119,29 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
               <p
                 class="feedbacks__card__name"
               >
-                semen
+                Unknown User
               </p>
               <p
                 class="feedbacks__card__description"
-              >
-                Backpack is the best for me. These bags are suitable for many styles, from classics to modern minimalism.
-              </p>
+              />
             </div>
             <div
               class="feedbacks__card"
             >
               <div
-                class="feedbacks__image"
+                class="no__avatar__wrapper"
               >
-                <img
-                  alt=""
-                  src="/Images/feedback3.jpg"
-                />
+                <p
+                  class="avatar__letter"
+                >
+                  U
+                </p>
               </div>
               <div
                 class="feedbacks__stars"
               >
                 <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 12 12"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_1704_1143)"
-                  >
-                    <path
-                      d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                      fill="#FDE82A"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_1704_1143"
-                    >
-                      <rect
-                        fill="white"
-                        height="12"
-                        width="12"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
-                <svg
+                  class=" star inactive"
                   fill="none"
                   height="20"
                   viewBox="0 0 12 12"
@@ -494,13 +172,11 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
               <p
                 class="feedbacks__card__name"
               >
-                anna
+                Unknown User
               </p>
               <p
                 class="feedbacks__card__description"
-              >
-                Handbags with large fasteners and chains it’s for me. Such bags can be worn both on the shoulder and at the fingertips.
-              </p>
+              />
             </div>
           </div>
           <div
@@ -536,125 +212,19 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
             class="feedbacks__card"
           >
             <div
-              class="feedbacks__image"
+              class="no__avatar__wrapper"
             >
-              <img
-                alt=""
-                src="/Images/feedback1.jpg"
-              />
+              <p
+                class="avatar__letter"
+              >
+                U
+              </p>
             </div>
             <div
               class="feedbacks__stars"
             >
               <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
+                class=" star inactive"
                 fill="none"
                 height="20"
                 viewBox="0 0 12 12"
@@ -685,137 +255,29 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
             <p
               class="feedbacks__card__name"
             >
-              olena
+              Unknown User
             </p>
             <p
               class="feedbacks__card__description"
-            >
-              Small bags are my favorite in this season. They are perfect for parties and weekends when you don't have to wear many things.
-            </p>
+            />
           </div>
           <div
             class="feedbacks__card"
           >
             <div
-              class="feedbacks__image"
+              class="no__avatar__wrapper"
             >
-              <img
-                alt=""
-                src="/Images/feedback2.jpg"
-              />
+              <p
+                class="avatar__letter"
+              >
+                U
+              </p>
             </div>
             <div
               class="feedbacks__stars"
             >
               <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
+                class=" star inactive"
                 fill="none"
                 height="20"
                 viewBox="0 0 12 12"
@@ -846,137 +308,29 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
             <p
               class="feedbacks__card__name"
             >
-              semen
+              Unknown User
             </p>
             <p
               class="feedbacks__card__description"
-            >
-              Backpack is the best for me. These bags are suitable for many styles, from classics to modern minimalism.
-            </p>
+            />
           </div>
           <div
             class="feedbacks__card"
           >
             <div
-              class="feedbacks__image"
+              class="no__avatar__wrapper"
             >
-              <img
-                alt=""
-                src="/Images/feedback3.jpg"
-              />
+              <p
+                class="avatar__letter"
+              >
+                U
+              </p>
             </div>
             <div
               class="feedbacks__stars"
             >
               <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
-                fill="none"
-                height="20"
-                viewBox="0 0 12 12"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_1704_1143)"
-                >
-                  <path
-                    d="M6.20634 0.5L7.55342 4.6459H11.9127L8.38597 7.2082L9.73305 11.3541L6.20634 8.7918L2.67963 11.3541L4.02671 7.2082L0.5 4.6459H4.85925L6.20634 0.5Z"
-                    fill="#FDE82A"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_1704_1143"
-                  >
-                    <rect
-                      fill="white"
-                      height="12"
-                      width="12"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-              <svg
+                class=" star inactive"
                 fill="none"
                 height="20"
                 viewBox="0 0 12 12"
@@ -1007,13 +361,11 @@ exports[`Тестування компонента  DesktopFeedbacks > Знім�
             <p
               class="feedbacks__card__name"
             >
-              anna
+              Unknown User
             </p>
             <p
               class="feedbacks__card__description"
-            >
-              Handbags with large fasteners and chains it’s for me. Such bags can be worn both on the shoulder and at the fingertips.
-            </p>
+            />
           </div>
         </div>
         <div

@@ -2,14 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  .favorite__card__image-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+  max-width: 320px;
+  gap: 10px;
+  padding-bottom: 20px;
 
-  @media (width>430px) {
+  @media (width>768px) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -18,8 +15,7 @@
 
   .favorite__card__image {
     position: relative;
-    max-width: 160px;
-    margin-bottom: 12px;
+    max-width: 320px;
 
     img {
       cursor: pointer;
@@ -27,7 +23,6 @@
 
     @media (width>430px) {
       position: static;
-      max-width: 100px;
     }
 
     @media (width>768px) {
@@ -62,12 +57,9 @@
 
   .favorite__card__name,
   .favorite__card__price {
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase;
-
-    @media (width>430px) {
-      font-size: 10px;
-    }
+    text-align: center;
 
     @media (width>768px) {
       font-size: 14px;
@@ -75,23 +67,17 @@
   }
 
   .favorite__card__button {
-    margin-top: 12px;
     margin-right: 20px;
-    font-size: 12px;
-
-    @media (width>430px) {
-      width: 20%;
-      margin-bottom: 10px;
-      font-size: 10px;
-    }
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
     @media (width>768px) {
-      font-size: 14px;
+      font-size: 12px;
+      width: 20%;
     }
   }
-}
-.desktop__card__buttons-first{
-  padding-right: 7px;
 }
 
 .desktop__card__counter {

@@ -11,8 +11,9 @@ describe("Тестування компонента  RegastrationPage", () => {
         const initialState = {
             home: {
                 isAnimation: false,
-                inputText: "some text",
+                inputText: "",
                 filterHomePage: [],
+                marker: null,
             },
             user: {
                 token: "token",
@@ -44,7 +45,7 @@ describe("Тестування компонента  RegastrationPage", () => {
                 infoForOrderGuest: [],
                 deliveryForOrderGuest: {},
                 order: {
-                    letterSubject: "Thank you for order!"
+                    letterSubject: "Thank you for order!",
                 },
                 promoCodePrice: "",
                 orderGuest: { letterSubject: "Thank you for order!" },
@@ -65,7 +66,13 @@ describe("Тестування компонента  RegastrationPage", () => {
             },
             message: {
                 letters: [],
-            }
+                letterAll: [],
+                importantLetters: []
+            },
+            shopComments: {
+                createShopComment: [],
+                getShopComments: [],
+            },
 
         };
 

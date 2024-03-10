@@ -9,7 +9,7 @@ import SvgAddedCart from "./ModalSvg/svgAddedCart.svg?react"
 import PropTypes from 'prop-types'
 import "./Modal.scss"
 
-const ModalAddedCart = ({ price, onclick, isOpen,secondaryClick,firstClick }) => {
+const ModalAddedCart = ({ price, onclick, isOpen, secondaryClick, firstClick }) => {
   return (
     <ModalWrapper isOpen={isOpen}>
       <Modal>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./NotPage.scss";
 import Button from "../../components/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NotPage = () => {
   const navigate = useNavigate();

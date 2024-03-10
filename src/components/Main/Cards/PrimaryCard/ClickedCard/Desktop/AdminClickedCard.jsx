@@ -1,41 +1,22 @@
 import React, { useState } from "react";
 import "./DesktopClickedCardStyle.scss";
-import Favorite from "../Images/favorite.svg?react";
 import Star from "../../../Images/star.svg?react";
-import Locker from "../Images/locker.svg?react";
-import Checkmark from "../Images/checkmark.svg?react";
 import ClickedCardDropDown from "../ClickedCardDropDown/ClickedCardDropDown";
 import Button from "../../../../../Button/Button";
+
 import {
-  actionAddBasketOneProduct,
-  actionDecreaseProduct,
-} from "../../../../../../store/basketSlice";
-import {
-  selectorToken,
-  selectorBaskets,
-  selectorGuestBasket,
-  selectorCard,
-  selectorIsAdmin,
+  selectorToken
 } from "../../../../../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
-import ModalAddToBasket from "../../../../../Modal/ModalAddToBasket";
-import ModalAddedCart from "../../../../../Modal/ModalAddedCart";
 import { useContext } from "react";
 import { ContextFunctions } from "../../../../../../context/context";
-import { useEffect } from "react";
-import CounterForUser from "./CounterForUser";
-import CounterForGuest from "./CounterForGuest";
 import Heart from "../../../../Heart/Heart";
-import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
 import {
   actionDeleteProduct,
-  actionGetOneProduct,
 } from "../../../../../../store/productsSlice.js";
 import ModalProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
-import DeleteCross from "./Delete.svg?react";
-import ModalDeleteProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
-
+import cross from '/Images/cross.png'
 const AdminClickedCard = ({
   currentPrice,
   name,
@@ -47,15 +28,14 @@ const AdminClickedCard = ({
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAdmin = useSelector(selectorIsAdmin);
   const token = useSelector(selectorToken);
   const [startIndex, setIndex] = useState(0);
-  // const location
+
   const { isModalAll, modalChangeAll, modalChangeAddBasket, isModalAddBasket } =
     useContext(ContextFunctions);
-  // console.log(navigate("/account/changeproductform"))
+
   const handleChangeCard = () => {
-    navigate(-1);
+    navigate("/account/changeproductgalery-");
   };
   const id = _id;
   const handleDeleteProductModal = () => {
@@ -88,8 +68,7 @@ const AdminClickedCard = ({
               id={_id}
             />
             <img
-              onClick={modalChangeAddBasket}
-              src="../../../../../../../public/Images/cross.png"
+              src={cross}
               height="30px"
               title="delete product"
               className="cross__icon"

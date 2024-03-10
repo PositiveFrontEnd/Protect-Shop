@@ -7,7 +7,6 @@ import { selectorGuestBasket, selectorToken } from '../../store/selectors';
 import { actionGetOneProduct, actionGetThreeProducts } from './../../store/productsSlice';
 import { useNavigate } from 'react-router-dom';
 import { actionFavoriteForAll } from '../../store/favoriteSlice';
-import { actionProductsOrderForGuest } from '../../store/orderSlice';
 
 const BasketGuest = () => {
     const navigate = useNavigate()
@@ -23,10 +22,8 @@ const BasketGuest = () => {
                 const cart = [];
                 for (const key of Object.keys(guestBasket)) {
                     const item = guestBasket[key];
-                    console.log(item.payload);
                     if (item.payload) {
                         const data = await dispatch(actionGetOneProduct(item.payload));
-                        console.log(data);
                         cart.push({
                             id: key,
                             img: data.imageUrls[0],
@@ -38,8 +35,6 @@ const BasketGuest = () => {
                             data: data,
                             color: data.color
                         });
-                        // const test = { product: data, cartQuantity: item.counter };
-                        // dispatch(actionProductsOrderForGuest(test));
                     }
                 }
                 setBasket(cart);
@@ -62,7 +57,9 @@ const BasketGuest = () => {
     };
     const deletCard = (id) => dispatch(actionDeleteOneForGuest(id))
     const totalPrice = basket.reduce((acc, currentItem) => acc + currentItem.cartQuantity * currentItem.price, 0)
-    dispatch(actionPriseForGuest(totalPrice))
+    useEffect(() => {
+        dispatch(actionPriseForGuest(totalPrice))
+    }, [dispatch, totalPrice]);
 
     const handleNavigate = (item) => {
         dispatch(actionGetOneProduct(item.id));

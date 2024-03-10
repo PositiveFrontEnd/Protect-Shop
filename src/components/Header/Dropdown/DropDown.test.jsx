@@ -11,8 +11,9 @@ describe("Тестування компонента  DropdownTop", () => {
         const initialState = {
             home: {
                 isAnimation: false,
-                inputText: "some text",
+                inputText: "",
                 filterHomePage: [],
+                marker: null,
             },
             user: {
                 token: "token",
@@ -65,6 +66,12 @@ describe("Тестування компонента  DropdownTop", () => {
             },
             message: {
                 letters: [],
+                letterAll: [],
+                importantLetters: []
+            },
+            shopComments: {
+                createShopComment: [],
+                getShopComments: [],
             },
         };
         const data = {

@@ -4,13 +4,11 @@ import validationAuthorization from "./ValidationAuthorization";
 import Input from "../Inputs/Input";
 import Button from "../../Button/Button";
 import "../../../pages/AuthorizationPage/AuthorizationPage.scss";
-import { actionCorrectLogin, actionErrorStatus, actionIsAdmin } from "../../../store/userSlice";
+import { actionCorrectLogin, actionErrorStatus } from "../../../store/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectorRegistrationData, selectorToken } from "../../../store/selectors";
+import { selectorToken } from "../../../store/selectors";
 import { useLocation, useNavigate } from "react-router-dom";
 import { selectorAuthorizationStatus } from './../../../store/selectors';
-import CloseEye from './svg/closeEye.svg?react'
-import OpenEye from './svg/openEye.svg?react'
 import { Link } from "react-router-dom";
 import InputPass from "../Inputs/InputPass";
 
@@ -23,13 +21,14 @@ const AuthorizationForm = () => {
 
   useEffect(() => {
     if (token) {
-        navigate("/account"); 
+      navigate("/account");
+
     } else {
-      navigate("/account/authorization"); 
+      navigate("/account/authorization");
     }
   }, [token]);
 
-  
+
   const location = useLocation()
   useEffect(() => {
     if (location.pathname === '/account/authorization') {
@@ -39,16 +38,9 @@ const AuthorizationForm = () => {
     }
   }, [dispatch, location.pathname])
   const [isShowPassword, setIsShowPassword] = useState(false)
-  
-  // const userData = useSelector(selectorRegistrationData)
-  // const isAdmin = userData.isAdmin
-  // useEffect(() => {
-  //   if (token) {
-  //     dispatch(actionIsAdmin(isAdmin))
-  //   } else dispatch(actionIsAdmin(false))
-    
-  // }, [token, dispatch, isAdmin])
-  // console.log(isAdmin)
+  const handleMoveBasket = () => {
+
+  }
 
   return (
 
@@ -59,6 +51,7 @@ const AuthorizationForm = () => {
       }}
       onSubmit={async (values) => {
         await dispatch(actionCorrectLogin(values))
+        handleMoveBasket()
       }}
       validationSchema={validationAuthorization}
     >
@@ -83,7 +76,7 @@ const AuthorizationForm = () => {
                 touched={touched.password}
                 type={isShowPassword ? 'password' : 'string'}
               />
-  
+
             </div>
             {
               authorizationStatus === '400' &&

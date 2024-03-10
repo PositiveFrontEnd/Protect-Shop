@@ -4,37 +4,18 @@ import AuthorizationForm from "../../components/Form/Authorization/Authorization
 import AuthotizationImg from "/Images/autorizationF.jpg";
 import "./AuthorizationPage.scss";
 import "../RegistrationPage/RegastrationPage.scss";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { selectorIsAdmin, selectorToken } from "../../store/selectors";
-// import {actionAuthorizationStatus} from '../../store/userSlice'
+import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const AuthorizationPage = () => {
   const title = "Enter";
   const dispatch = useDispatch()
   const location = useLocation()
-  // const token = useSelector(selectorToken)
-  // const isAdmin = useSelector(selectorIsAdmin);
-  // const navigate = useNavigate()
 
   useEffect(() => {
     if (location.pathname === '/account/authorization') {
-      // dispatch(actionAuthorizationStatus('ok'))
-
     }
   }, [dispatch, location.pathname])
-
-  // useEffect(() => {
-  //   if (token) {
-  //     if (isAdmin) {
-  //       navigate("/account/letters"); 
-  //     } else {
-  //       navigate("/account/information"); 
-  //     }
-  //   } else {
-  //     navigate("/account/authorization"); 
-  //   }
-  // }, [token, isAdmin]);
 
   return (
     <>

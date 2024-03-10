@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
 import Input from "../Inputs/Input";
 import SelectInput from "../Inputs/Select";
 import validationModal from "./validationModalFormCallMeOut";
 import Button from "../../Button/Button";
 import "./ModalFormCall.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { actionNewLetter } from "../../../store/messageSlice";
 import PropTypes from "prop-types";
-import { selectorAddLetter } from "../../../store/selectors";
 
-const ModalFormCallMeOut = () => {
+const ModalFormCallMeOut = ({ isOpen }) => {
   const dispatch = useDispatch();
-
   return (
     <Formik
       initialValues={{
@@ -24,6 +22,7 @@ const ModalFormCallMeOut = () => {
       }}
       onSubmit={(values) => {
         dispatch(actionNewLetter(values));
+        isOpen();
       }}
       validationSchema={validationModal}
     >

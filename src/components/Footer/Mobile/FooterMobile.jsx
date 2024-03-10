@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, useLocation} from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from 'react-router-dom'
 import FooterItem from "./FooterItemMobile";
 import Insta from "../Svg/Socialnet/insta.svg?react"
 import YouTube from "../Svg/Socialnet/youtube.svg?react"
@@ -22,7 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     selectorBaskets,
     selectorFavoriteForCustomer,
-    selectorGuestBasket, selectorGuestFavorite, selectorIsAdmin,
+    selectorGuestBasket, selectorGuestFavorite, selectorIsAdmin, selectorLetterAll,
     selectorToken
 } from "../../../store/selectors";
 import { actionGetBasket } from "src/store/basketSlice";
@@ -32,17 +32,21 @@ const savedBasketProduct = JSON.parse(localStorage.getItem('basketProduct')) || 
 const FooterMobile = () => {
     const dispatch = useDispatch();
     const location = useLocation();
-    const renderDiv = location.pathname !== '/account'
+    const renderDiv = location.pathname !== '/account';
     const token = useSelector(selectorToken);
     const isAdmin = useSelector(selectorIsAdmin);
     const basketProduct = useSelector(selectorBaskets);
     const basketGuest = useSelector(selectorGuestBasket);
     const basketGuestCount = Object.keys(basketGuest).length;
-    const favoriteForCustomer = useSelector(selectorFavoriteForCustomer)
-    const guestFavorite = useSelector(selectorGuestFavorite)
+    const favoriteForCustomer = useSelector(selectorFavoriteForCustomer);
+    const guestFavorite = useSelector(selectorGuestFavorite);
+    const lettersFirstLoad = useSelector(selectorLetterAll);
+    const newLetters = lettersFirstLoad.filter(item => item.status === 'new').length;
 
     useEffect(() => {
-        if (token) { dispatch(actionGetBasket(token)) }
+        if (token) {
+            dispatch(actionGetBasket(token))
+        }
     }, [token]);
 
     useEffect(() => {
@@ -57,7 +61,7 @@ const FooterMobile = () => {
         };
     }, []);
     const toggleVisibility = () => {
-        if (window.pageYOffset > 300) {
+        if (window.pageYOffset > 400) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -74,7 +78,7 @@ const FooterMobile = () => {
             <div
                 className={`scroll__to__top ${isVisible ? 'visible' : ''}`}
                 onClick={scrollToTop}>
-                <ScrollUp/>
+                <ScrollUp />
             </div>
             <div className='footer__menu-mobile'>
                 {renderDiv && (
@@ -82,28 +86,23 @@ const FooterMobile = () => {
                         <div className="container">
                             <FooterItem title='Information'>
                                 <li className="footer__item"><Link to="/shops" className="link">Contacts</Link></li>
-                                <li className="footer__item"><Link className="link">Payment & Delivery</Link></li>
-                                <li className="footer__item"><Link className="link">Returns</Link></li>
-                                <li className="footer__item"><Link className="link">Guarantee</Link></li>
-                                <li className="footer__item"><Link className="link">Discount</Link></li>
-                                <li className="footer__item"><Link className="link">Special proposal</Link></li>
                             </FooterItem>
                             <FooterItem title='About us'>
                                 <li className="footer__item"><Link to="/about-us" className="link">About brand</Link>
                                 </li>
-                                <li className="footer__item"><Link className="link">Our values</Link></li>
-                                <li className="footer__item"><Link className="link">Partnerships</Link></li>
                                 <li className="footer__item"><Link to="/blog" className="link">Blog</Link></li>
                                 <li className="footer__item"><Link to="/shops" className="link">Shops</Link></li>
                             </FooterItem>
                             <FooterItem className='footer__direction__rows' title='Follow us'>
-                                <li className="footer__item"><a href="https://www.instagram.com/modivo_ua/" target="_blank"
+                                <li className="footer__item"><a href="https://www.instagram.com/modivo_ua/"
+                                    target="_blank"
                                     rel="noopener noreferrer"> <Insta /> </a></li>
                                 <li className="footer__item"><a
                                     href="https://www.youtube.com/channel/UCYGPXwVkOgTUbpmV9uSYH8Q" target="_blank"
                                     rel="noopener    noreferrer"><YouTube /></a></li>
                                 <li className="footer__item"><a href="https://www.tiktok.com/@modivo?lang=en"
-                                    target="_blank" rel="noopener noreferrer"><TikTok /></a></li>
+                                    target="_blank" rel="noopener noreferrer"><TikTok /></a>
+                                </li>
                                 <li className="footer__item"><a href="https://www.facebook.com/modivoua" target="_blank"
                                     rel="noopener noreferrer"><Facebook /></a></li>
                                 <li className="footer__item"><a href="https://x.com/modivo_sa" target="_blank"
@@ -130,17 +129,10 @@ const FooterMobile = () => {
                         </Link>
                     </div>
                     <div className='footer__bottom__menu__item'>
-                        {isAdmin ? (
-                            <Link to="/account">
-                                <Mail/>
-                                <p className="bottom__menu__name">Account</p>
-                            </Link>
-                        ) : (
-                            <Link to="/account">
-                                <Account />
-                                <p className="bottom__menu__name">Account</p>
-                            </Link>
-                        )}
+                        <Link to="/account">
+                            <Account />
+                            <p className="bottom__menu__name">Account</p>
+                        </Link>
                     </div>
                     <div className="footer__bottom__menu__item">
                         <Link to="/favorites">
@@ -155,14 +147,22 @@ const FooterMobile = () => {
                         </Link>
                     </div>
                     <div className='footer__bottom__menu__item'>
-                        <Link to={isAdmin ? "#" : "/cart"}>
-                            <><Cart/>{(token && basketProduct.products && basketProduct.products.length !== 0) ? (
-                                <span className='product__amount-footer'>{basketProduct.products.length}</span>) : (
-                                (!token && basketGuest && basketGuestCount !== 0) ?
-                                    <span className='product__amount-footer'>{basketGuestCount}</span> :
-                                    <span></span>)}</>
-                            <p className="bottom__menu__name">Cart</p>
-                        </Link>
+                        {isAdmin ? (
+                            <Link to="/account/letters">
+                                <Mail />
+                                <span className='product__amount-footer'>{newLetters}</span>
+                                <p className="bottom__menu__name">Letters</p>
+                            </Link>
+                        ) : (
+                            <Link to="/cart">
+                                <><Cart />{(token && basketProduct.products && basketProduct.products.length !== 0) ? (
+                                    <span className='product__amount-footer'>{basketProduct.products.length}</span>) : (
+                                    (!token && basketGuest && basketGuestCount !== 0) ?
+                                        <span className='product__amount-footer'>{basketGuestCount}</span> :
+                                        <span></span>)}</>
+                                <p className="bottom__menu__name">Cart</p>
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>

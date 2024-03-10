@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { actionGetOllUserOrders, actionSearchByOrderNo, actionUpdateOrder } from "../../../store/orderSlice";
+import { actionSearchByOrderNo, actionUpdateOrder } from "../../../store/orderSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectorToken } from "../../../store/selectors";
-import "./AdminProfile.scss"
 import ArrowUp from "./arrowUp.svg?react"
 import ArrowDown from "./arrowDown.svg?react"
 
@@ -14,12 +13,12 @@ const OrderChangePage = () => {
     const token = useSelector(selectorToken)
     const crumbs = location.pathname.split("/").filter((crumb) => crumb !== "");
     const orderNo = crumbs[crumbs.length - 1];
-    
+
     const [data, setData] = useState()
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const responce = await dispatch(actionSearchByOrderNo({token, orderNo}))
+                const responce = await dispatch(actionSearchByOrderNo({ token, orderNo }))
                 setData(responce)
             }
             catch {
@@ -35,11 +34,11 @@ const OrderChangePage = () => {
             setSelectedStatus(data.status);
         }
     }, [data]);
-    
+
     const handleStatusChange = (e) => {
-        setSelectedStatus(e.target.value); 
+        setSelectedStatus(e.target.value);
         const datahtml = data
-        const newData = {token: token, datahtml, id: data._id, subscriberMail: data.email, order: {totalSum: data.totalSum, 'status': e.target.value }}
+        const newData = { token: token, datahtml, id: data._id, subscriberMail: data.email, order: { totalSum: data.totalSum, 'status': e.target.value } }
         dispatch(actionUpdateOrder(newData));
         setIsOpenSort(!isOpenSort)
 
@@ -50,10 +49,10 @@ const OrderChangePage = () => {
     const actionSort = () => {
         setIsOpenSort(!isOpenSort)
     };
-    
+
     const handleOutside = (event) => {
         event.stopPropagation()
-        if (!event.target.closest('.order__cont')){
+        if (!event.target.closest('.order__cont')) {
             setIsOpenSort(false)
         }
     }
@@ -62,12 +61,12 @@ const OrderChangePage = () => {
     };
 
     return (
-        <section onClick={(event) => { handleOutside(event)}}>
+        <section onClick={(event) => { handleOutside(event) }}>
             <div className="container order__change">
                 <div>
                     <div onClick={stopClick} className="order__cont sort__dropdown__order" >
                         <button className={isOpenSort ? 'sort-open' : 'sort'}
-                                onClick={actionSort}>{selectedStatus}
+                            onClick={actionSort}>{selectedStatus}
                             {
                                 isOpenSort ? <ArrowUp /> : <ArrowDown />
                             }
@@ -76,29 +75,29 @@ const OrderChangePage = () => {
                         {isOpenSort && (
                             <div className='sort__dropdown' >
                                 <label><input type='radio'
-                                            value='not shipped'
+                                    value='not shipped'
                                     onChange={handleStatusChange}
                                 />
                                     Not shipped</label>
                                 <label><input type='radio'
-                                            value='ready'
+                                    value='ready'
                                     onChange={handleStatusChange}
                                 />
                                     Ready</label>
                                 <label><input type='radio'
-                                            value='delivered'
+                                    value='delivered'
                                     onChange={handleStatusChange}
                                 />
                                     Delivered</label>
                             </div>
-                            )}
+                        )}
                     </div>
-                    
+
 
 
                 </div>
                 <h3 className="order__title-general">ORDER # {data && data.orderNo}</h3>
-                <h4  className="order__title">Products</h4>
+                <h4 className="order__title">Products</h4>
                 <div className="cange__order__wrapper">
                     <div className="products_wrap">
                         <div className="order__products">
@@ -114,36 +113,36 @@ const OrderChangePage = () => {
                                 <img className="img" src={item.product.imageUrls[0]} />
                                 <p className="quantity">{item.cartQuantity}</p>
                                 <p className="name">{item.product.name}</p>
-                                <p className="color__order">{item.product.color }</p>
+                                <p className="color__order">{item.product.color}</p>
                                 <p className="itemNo">{item.product.itemNo}</p>
                                 <p className="price">${item.product.currentPrice}</p>
                             </div>
-                        ) )}
+                        ))}
 
                     </div>
                     <p className="total__price">Total price: ${data && data.totalSum}</p>
                 </div>
-                    <h4 className="order__title">Customer Data</h4>
+                <h4 className="order__title">Customer Data</h4>
                 <div className="customer__data">
                     <div className="data__item">
                         <p>Name:</p>
-                        <p>{data && data.customerId.firstName} {data && data.customerId.lastName}</p>
+                        <p>{data && data.firstName} {data && data.lastName}</p>
                     </div>
                     <div className="data__item">
-                        <p>Customer No:</p>
-                        <p>{data && data.customerId.customerNo}</p>
+                        <p>Order No:</p>
+                        <p>{data && data.orderNo}</p>
                     </div>
                     <div className="data__item">
                         <p>Telephone:</p>
-                        <p>{data && data.customerId.telephone}</p>
+                        <p>{data && data.mobile}</p>
                     </div>
                     <div className="data__item">
                         <p>Email:</p>
-                        <p>{data && data.customerId.email}</p>
+                        <p>{data && data.email}</p>
                     </div>
                 </div>
-                    <h4 className="order__title">Delivery and Payment Info</h4>
-                 <div className="customer__data">
+                <h4 className="order__title">Delivery and Payment Info</h4>
+                <div className="customer__data">
                     <div className="data__item">
                         <p>Payment Info:</p>
                         <p>{data && data.paymentInfo}</p>

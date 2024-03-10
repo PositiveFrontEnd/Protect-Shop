@@ -28,7 +28,7 @@ exports[`Тестування компонента  HeaderMenu > Знімок 1`
         </a>
         <a
           class="header__link"
-          href="/shops"
+          href="/shops/kharkiv"
         >
           shops
         </a>
@@ -65,7 +65,7 @@ exports[`Тестування компонента  HeaderMenu > Знімок 1`
       </a>
       <a
         class="header__link"
-        href="/shops"
+        href="/shops/kharkiv"
       >
         shops
       </a>

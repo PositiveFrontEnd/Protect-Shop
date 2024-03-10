@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import SearchResultPage from "./SearchResultPage";
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "redux-mock-store";
-
+import thunk from "redux-thunk";
 describe("Тестування компонента  SearchResultPage", () => {
     test("Знімок", () => {
-        const mockStore = configureStore();
+        const mockStore = configureStore([thunk]);
         const initialState = {
             home: {
                 isAnimation: false,
@@ -65,7 +65,9 @@ describe("Тестування компонента  SearchResultPage", () => {
             },
             message: {
                 letters: [],
-            }
+                letterAll: [],
+                importantLetters: []
+            },
 
         };
 

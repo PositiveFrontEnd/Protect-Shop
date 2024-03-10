@@ -7,12 +7,9 @@ import Button from "../../../../../Button/Button";
 import {
   actionAddBasketOneProduct,
   actionAddToBasketForGuest,
-  actionDecreaseProduct,
 } from "../../../../../../store/basketSlice";
 import {
   selectorToken,
-  selectorBaskets,
-  selectorGuestBasket,
   selectorCard,
   selectorProductComments,
   selectorThreeProducts,
@@ -29,10 +26,17 @@ import CounterForGuest from "./CounterForGuest";
 import Heart from "../../../../Heart/Heart";
 import Color from "../color.jsx";
 import { useNavigate } from "react-router-dom";
-import { actionChangeProduct, actionDeleteProduct, actionGetOneProduct, actionPreviewProductData } from "../../../../../../store/productsSlice.js";
+import {
+  actionDeleteProduct,
+  actionGetOneProduct,
+  actionPreviewProductData,
+} from "../../../../../../store/productsSlice.js";
 import Comments from "../Comments/Comments.jsx";
 import StarsRaiting from "../StarsRaiting.jsx";
 import ModalDeleteProduct from "../../../../../Modal/ModalDeleteProduct.jsx";
+import ClickedCardDropDownDelivery from "../ClickedCardDropDown/Delivery/Delivery.jsx";
+import ClickedCardDropDownGuarantees from "../ClickedCardDropDown/Guarantee/Guarantees.jsx";
+import ClickedCardDropDownShops from "../ClickedCardDropDown/Shops/ShopsDrop.jsx";
 
 const DesktopClickedCard = ({
   currentPrice,
@@ -46,8 +50,7 @@ const DesktopClickedCard = ({
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentProduct = useSelector(selectorCard);
-  const isAdmin = useSelector(selectorIsAdmin)
-  console.log(isAdmin)
+  const isAdmin = useSelector(selectorIsAdmin);
   const [startIndex, setIndex] = useState(0);
   const [activeSwitch, setActiveSwitch] = useState("info");
   const handleSwitchClick = (type) => {
@@ -57,7 +60,6 @@ const DesktopClickedCard = ({
   const commentsLength = useSelector(selectorProductComments).length;
   const token = useSelector(selectorToken);
 
-  //modal thanks
   const { isModalAll, modalChangeAll, modalChangeAddBasket, isModalAddBasket } =
     useContext(ContextFunctions);
   useEffect(() => {
@@ -69,7 +71,7 @@ const DesktopClickedCard = ({
       return () => clearTimeout(timeoutId);
     }
   }, [isModalAll, modalChangeAll]);
-  //modal add to order
+
   const addBasket = async () => {
     modalChangeAddBasket();
     navigate("/cart/placing_an_order/contact_information");
@@ -79,26 +81,28 @@ const DesktopClickedCard = ({
   const handleAddToBasketForGuest = () => {
     modalChangeAddBasket();
     navigate("/cart/placing_an_order/contact_information");
-    dispatch(actionAddToBasketForGuest(_id))
-  }
+    dispatch(actionAddToBasketForGuest(_id));
+  };
   const contineShoping = () => {
     navigate("/catalogue");
     modalChangeAddBasket();
-    
   };
 
   const likesSum = currentProduct.likes.reduce((acc, value) => acc + value, 0);
   const averageLikes = likesSum / Math.max(currentProduct.likes.length - 1, 1);
 
-  const [deleteProductModal, setDeleteProductModal] = useState(false)
+  const [deleteProductModal, setDeleteProductModal] = useState(false);
 
-  const handleDeleteProductModal = () => { setDeleteProductModal(!deleteProductModal) }
-  const handleDeleteProduct = () => dispatch(actionDeleteProduct({ _id, token }))
+  const handleDeleteProductModal = () => {
+    setDeleteProductModal(!deleteProductModal);
+  };
+  const handleDeleteProduct = () =>
+    dispatch(actionDeleteProduct({ id: _id, token: token }));
 
   const handleChangeCard = () => {
-    dispatch(actionPreviewProductData(currentProduct))
-    navigate('/account/changeproductgalery')
-  }
+    dispatch(actionPreviewProductData(currentProduct));
+    navigate("/account/changeproductgalery-");
+  };
   return (
     <section>
       <div className="desktop__card">
@@ -118,18 +122,16 @@ const DesktopClickedCard = ({
         </div>
         <div className="desktop__card__toggler">
           <p
-            className={`desktop__card__switch ${
-              activeSwitch === "info" ? "active" : ""
-            }`}
+            className={`desktop__card__switch ${activeSwitch === "info" ? "active" : ""
+              }`}
             onClick={() => handleSwitchClick("info")}
             type="info"
           >
             info
           </p>
           <p
-            className={`desktop__card__switch ${
-              activeSwitch === "comments" ? "active" : ""
-            }`}
+            className={`desktop__card__switch ${activeSwitch === "comments" ? "active" : ""
+              }`}
             onClick={() => handleSwitchClick("comments")}
             type="comments"
           >
@@ -191,32 +193,39 @@ const DesktopClickedCard = ({
             ))}
           </div>
           <div className="desktop__card__buttons">
-            {token ? (isAdmin ? (<Button black click={() =>handleChangeCard()} >Change Product</Button>) :(
-              <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
-            )) : (
+            {token ? (
+              isAdmin ? (
+                <Button black click={() => handleChangeCard()}>
+                  Change Product
+                </Button>
+              ) : (
+                <CounterForUser _id={_id} modalChangeAll={modalChangeAll} />
+              )
+            ) : (
               <CounterForGuest _id={_id} modalChangeAll={modalChangeAll} />
             )}
-            {isAdmin ? <Button white click={() => handleDeleteProductModal()}>
-              Delete Product
-            </Button>
-              :
-            <Button
-              click={modalChangeAddBasket}
-              black
-              className="desktop__card__buttons-second"
-            >
-              Buy right now
-              <Checkmark className="Checkmark" />
-            </Button>
-            }
+            {isAdmin ? (
+              <Button white click={() => handleDeleteProductModal()}>
+                Delete Product
+              </Button>
+            ) : (
+              <Button
+                click={modalChangeAddBasket}
+                black
+                className="desktop__card__buttons-second"
+              >
+                Buy right now
+                <Checkmark className="Checkmark" />
+              </Button>
+            )}
           </div>
           <ClickedCardDropDown
             title={"Description"}
             myCustomParam={myCustomParam}
           />
-          <ClickedCardDropDown title={"Guarantee"} />
-          <ClickedCardDropDown title={"Delivery"} />
-          <ClickedCardDropDown title={"Look in our Shops"} />
+          <ClickedCardDropDownGuarantees title={"Guarantee"} />
+          <ClickedCardDropDownDelivery title={"Delivery"} delivery={delivery} />
+          <ClickedCardDropDownShops title={"Look in our Shops"} />
         </div>
         <div
           className={
@@ -236,15 +245,17 @@ const DesktopClickedCard = ({
           price={currentPrice}
           onclick={() => modalChangeAddBasket()}
           isOpen={() => modalChangeAddBasket()}
-          firstClick={() => token ? addBasket() : handleAddToBasketForGuest()}
+          firstClick={() => (token ? addBasket() : handleAddToBasketForGuest())}
           secondaryClick={() => contineShoping()}
         />
       )}
-      {deleteProductModal && <ModalDeleteProduct
-        firstClick={() => handleDeleteProductModal()}
-        secondaryClick={() => handleDeleteProduct()}
-        onclick={() =>handleDeleteProductModal()}
-      />}
+      {deleteProductModal && (
+        <ModalDeleteProduct
+          firstClick={() => handleDeleteProductModal()}
+          secondaryClick={() => handleDeleteProduct()}
+          onclick={() => handleDeleteProductModal()}
+        />
+      )}
     </section>
   );
 };

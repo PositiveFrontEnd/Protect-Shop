@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {
-  selectorCard,
-  selectorProductsByType,
   selectorToken,
 } from "../../../store/selectors";
 import {
@@ -10,7 +8,7 @@ import {
   actionLoadingTwelveProductsByType,
 } from "../../../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -19,12 +17,11 @@ import Card from "../Cards/PrimaryCard/PrimaryCard/PrimaryCard.jsx";
 import { actionFavoriteForAll } from "../../../store/favoriteSlice.js";
 
 const AlsoBuy = () => {
-  const product = useSelector(selectorCard);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = useSelector(selectorToken);
   const [additional, setAdditional] = useState();
-
+  const { categories, type } = useParams();
   const handleProduct = (item) => {
     dispatch(actionGetOneProduct(item._id));
     dispatch(actionGetThreeProducts(item.name));
@@ -39,7 +36,7 @@ const AlsoBuy = () => {
       try {
         const data = await dispatch(
           actionLoadingTwelveProductsByType(
-            `categories=${product.categories}&type=${product.type}`
+            `categories=${categories}&type=${type}`
           )
         );
         setAdditional(data);
@@ -49,7 +46,7 @@ const AlsoBuy = () => {
     };
 
     fetch();
-  }, [product.categories]);
+  }, [type]);
 
   return (
     <div className="swiper__also">

@@ -4,7 +4,6 @@ import FilterForm from "./FilterForm";
 import "rc-slider/assets/index.css";
 import "./FilterDesktop.scss"
 import { useDispatch } from "react-redux";
-import { actionLoadingFilterProducts } from "../../../../store/productsSlice";
 import PropTypes from "prop-types";
 import { actionSortCatalogue } from "../../../../store/catalog";
 import { useSearchParams } from "react-router-dom";

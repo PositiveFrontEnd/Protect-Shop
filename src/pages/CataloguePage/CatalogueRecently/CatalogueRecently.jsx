@@ -1,6 +1,6 @@
 import React from "react";
 import "./CatalogueRecently.scss"
-import { selectorCard, selectorToken, selectorYouSee } from "../../../store/selectors"
+import { selectorToken, selectorYouSee } from "../../../store/selectors"
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../../pages/ProductCard/ProductCard.scss";
@@ -21,7 +21,7 @@ const CatalogueRecently = () => {
         dispatch(actionGetOneProduct(item._id));
         dispatch(actionGetThreeProducts(item.name));
         navigate(
-            `/catalogue/${item.categories}/${item.type}/${item._id}/${item.color}`
+            `/catalogue/${item.categories}/${item.type}/${item._id}`
         );
     };
     const handleFavorite = (productId, event) => {
@@ -41,7 +41,6 @@ const CatalogueRecently = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
                 navigation={true}
-                loop={true}
                 spaceBetween={5}
                 breakpoints={{
                     1024: {

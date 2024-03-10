@@ -1,15 +1,23 @@
 import React from "react";
 import "../Registration/RegistrationF.scss";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import validationContactInfo from "./ValidationContactInfoF";
 import Input from "../Inputs/Input";
 import Button from "../../Button/Button";
 import Check from "../../Button/ButtonSvg/check.svg?react";
 import "./ContactInfoStyles.scss";
 import BasketPage from "../../../pages/BasketPage/BasketPage";
-import { useDispatch, useSelector } from 'react-redux';
-import {actionInfoOrderForGuest, actionUpDateForm, actionUpDateFormGuest} from '../../../store/orderSlice.js'
-import { selectorRegistrationData, selectorToken ,selectorOrderFormData,selectorOrderFormDataGuest} from "../../../store/selectors.js";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  actionUpDateForm,
+  actionUpDateFormGuest,
+} from "../../../store/orderSlice.js";
+import {
+  selectorOrderFormData,
+  selectorOrderFormDataGuest,
+  selectorRegistrationData,
+  selectorToken,
+} from "../../../store/selectors.js";
 import { useNavigate } from "react-router-dom";
 
 function ContactInfoF() {
@@ -22,31 +30,31 @@ function ContactInfoF() {
   return (
     <Formik
       initialValues={{
-        firstName: "" || token ? form.firstName: formGuest.firstName ,
-        email: ""|| token ? form.email :formGuest.email,
-        lastName: "" ||token ? form.lastName :formGuest.lastName,
-        telephone: "" ||token ?  form.mobile : formGuest.mobile,
+        firstName: "" || token === "" ? formGuest.firstName : form.firstName,
+        email: "" || token === "" ? formGuest.email : form.email,
+        lastName: "" || token === "" ? formGuest.lastName : form.lastName,
+        telephone: "" || token === "" ? formGuest.mobile : form.mobile,
       }}
       onSubmit={(values) => {
-
         const updatedFormDataUser = {
           firstName: values.firstName,
           lastName: values.lastName,
           email: values.email,
           mobile: values.telephone,
-          customerId: user._id
-        }
+          customerId: user._id,
+        };
         const updatedFormDataGuest = {
           firstName: values.firstName,
           lastName: values.lastName,
           email: values.email,
           mobile: values.telephone,
-        }
-
-        token ? dispatch(actionUpDateForm(updatedFormDataUser)) : dispatch(actionUpDateFormGuest(updatedFormDataGuest))
-        navigate('/cart/placing_an_order/choice_of_delivery')
-      }
-      }
+          letterSubject: 'Thank you for order!'
+        };
+        token === ""
+          ? dispatch(actionUpDateFormGuest(updatedFormDataGuest))
+          : dispatch(actionUpDateForm(updatedFormDataUser));
+        navigate("/cart/placing_an_order/choice_of_delivery");
+      }}
       validationSchema={validationContactInfo}
     >
       {({ errors, touched }) => (

@@ -1,0 +1,34 @@
+.no__avatar__wrapper {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+
+  .avatar__letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+  }
+}
+
+.preview__avatar {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+
+  .avatar {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    // margin-bottom: 60px;
+    border-radius: 50%;
+    border: 7px solid var(--fild-type-color);
+  }
+}
+.avatar__mobile {
+  width: 100px;
+  height: 100px;
+}

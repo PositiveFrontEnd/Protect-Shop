@@ -9,6 +9,8 @@ import orderReducer from "./orderSlice.js";
 import messageReducer from "./messageSlice.js";
 import commentsReducer from "./commentsSlice";
 import shopCommentsReducer from "./shopCommentsSlice.js";
+import novaPostReducer from "./ukrAndNovaPostSlice.js";
+
 export default configureStore({
   reducer: {
     favorite: favoriteReducer,
@@ -21,5 +23,6 @@ export default configureStore({
     message: messageReducer,
     comments: commentsReducer,
     shopComments: shopCommentsReducer,
+    novaPost: novaPostReducer,
   },
 });

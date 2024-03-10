@@ -23,9 +23,9 @@
   .feedbacks__card {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     align-items: center;
     padding: 12px 8px;
+    gap: 12px;
     background-color: var(--feedback);
   }
 
@@ -39,13 +39,14 @@
   .card__stars {
     display: flex;
     gap: 12px;
+    height: 20px;
   }
-
   .star {
     max-width: 16px;
   }
 
   .card__name {
+    margin-top: 32px;
     font-size: 14px;
     text-transform: uppercase;
   }
@@ -65,4 +66,7 @@
     margin-top: 16px;
     text-align: center;
   }
+}
+.star.inactive {
+  display: none;
 }

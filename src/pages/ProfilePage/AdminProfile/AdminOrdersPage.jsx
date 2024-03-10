@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { actionGetAllOrders } from "../../../store/orderSlice"
 import OrderItemCard from "./OrderItemCard"
+import "./AdminOrder.scss"
 import { selectorToken } from "../../../store/selectors"
 import { useLocation, useNavigate } from "react-router-dom"
-import "./AdminOrder.scss"
+
 
 const AdminOrdersPage = () => {
     const dispatch = useDispatch()
@@ -47,7 +48,6 @@ const AdminOrdersPage = () => {
         const filteredData = sortedOrders.filter((item) => item.status === data)
         setNewData(filteredData)
     }
-    
     return (
         <>
             <section className="order__container">

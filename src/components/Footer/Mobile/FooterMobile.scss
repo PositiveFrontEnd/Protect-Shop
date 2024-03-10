@@ -47,7 +47,7 @@
   bottom: 0;
   width: 100%;
   background-color: white;
-  z-index: 100;
+  z-index: 40;
 
   .bottom__menu__name {
     color: black;
@@ -71,18 +71,17 @@
 
 .product__amount-footer {
   position: absolute;
-  //bottom: 12px;
 }
 
 .scroll__to__top {
   position: fixed;
-  bottom: 110px;
-  right: 20px;
+  bottom: 60px;
+  right: 0px;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 100;
+  z-index: 45;
 }
 
 .scroll__to__top.visible {

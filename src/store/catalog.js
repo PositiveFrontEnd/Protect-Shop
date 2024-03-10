@@ -21,7 +21,6 @@ const catalogSlice = createSlice({
 export const { actionSortCatalogue, actionLoadFilter } = catalogSlice.actions;
 
 export const actionAddNewCatalog = (data) => async (dispatch) => {
-  console.log(data);
   try {
     dispatch(actionIsAnimation(true));
     const { catalog, token } = data;
@@ -40,7 +39,6 @@ export const actionAddNewCatalog = (data) => async (dispatch) => {
     );
 
     if (response) {
-      console.log("catalog", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -56,7 +54,6 @@ export const actionGetCatalog = () => async (dispatch) => {
     const response = await sendRequest(`${API_URL}/catalog`);
 
     if (response) {
-      console.log("catalog", response);
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);

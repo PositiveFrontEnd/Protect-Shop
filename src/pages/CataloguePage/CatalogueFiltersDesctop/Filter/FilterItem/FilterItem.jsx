@@ -8,13 +8,11 @@ import ArrowDown from "../Svg/arrowDown.svg?react";
 import Input from "../Input/Input";
 import "./FilterItem.scss"
 import { useFormikContext } from "formik";
-import { useSearchParams } from "react-router-dom";
 
 const FilterItem = (
     { param,
         handleChange,
         name }) => {
-    const [searchParams, setSearchParams] = useSearchParams();
     const { values } = useFormikContext();
     const [isArrow, setIsArrow] = useState(false)
     const handleChangeArrow = () => {

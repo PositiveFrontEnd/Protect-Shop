@@ -1,10 +1,11 @@
 .form__change__info {
   margin-left: 28px;
-
+  
   .form__box-change__info {
     margin-left: 0;
-
+    
     .form__change__info__container {
+      padding-top: 20px;
       .form__change__info__box {
         display: flex;
         flex-direction: column;
@@ -27,9 +28,10 @@
   @media (width>=1024px) {
     .form__change__info__container {
       .form__change__info__box {
+        padding-top: 30px;
         display: flex;
         flex-direction: row;
-        align-items: space-around;
+
         justify-content: flex-start;
         width: 100%;
 
@@ -41,6 +43,8 @@
 
       .button__change__info__form {
         width: 44%;
+        margin: 0 auto;
+        margin-top: 40px;
       }
     }
   }

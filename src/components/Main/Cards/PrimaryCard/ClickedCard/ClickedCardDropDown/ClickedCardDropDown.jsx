@@ -6,7 +6,6 @@ import "./ClickedCardDropDownStyles.scss";
 
 const ClickedCardDropDown = ({ title, myCustomParam }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <button

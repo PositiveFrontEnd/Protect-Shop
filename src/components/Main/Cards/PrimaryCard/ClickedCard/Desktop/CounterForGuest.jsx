@@ -1,16 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./DesktopClickedCardStyle.scss";
 import Locker from "../Images/locker.svg?react";
 import "../Mobile/MobileClickedCardStyle.scss";
 import Button from "../../../../../Button/Button";
 import { selectorGuestBasket } from "../../../../../../store/selectors";
-import { useDispatch,useSelector } from "react-redux";
-import { actionDeleteOneForGuest, actionAddToBasketForGuest, actionPlusBasketForGuest, actionMinusBasketForGuest } from "../../../../../../store/basketSlice";
-import { actionGetOneProduct } from "../../../../../../store/productsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { actionAddToBasketForGuest, actionPlusBasketForGuest, actionMinusBasketForGuest } from "../../../../../../store/basketSlice";
 
-
-
-const CounterForGuest = ({_id, modalChangeAll}) => {
+const CounterForGuest = ({ _id, modalChangeAll }) => {
     const guestBasket = useSelector(selectorGuestBasket);
     const dispatch = useDispatch()
 
@@ -23,26 +20,26 @@ const CounterForGuest = ({_id, modalChangeAll}) => {
     const productCartQuantity = guestBasket && guestBasket[_id] ? guestBasket[_id].counter : 0;
 
     const clickPlus = () => {
-       dispatch(actionPlusBasketForGuest(_id))
+        dispatch(actionPlusBasketForGuest(_id))
     };
     const clickMin = () => {
-       dispatch(actionMinusBasketForGuest(_id))
+        dispatch(actionMinusBasketForGuest(_id))
 
     }
 
     return (
-         <>
+        <>
             {productInBasket ? (
-            <div className="desktop__card__counter" >
-                <button className="desktop__card__counter-min" onClick={() => clickMin()}>-</button>
-                <span>{productCartQuantity}</span>
-                <button className="desktop__card__counter-min"  onClick={() => clickPlus()}>+</button>
-            </div>
+                <div className="desktop__card__counter" >
+                    <button className="desktop__card__counter-min" onClick={() => clickMin()}>-</button>
+                    <span>{productCartQuantity}</span>
+                    <button className="desktop__card__counter-min" onClick={() => clickPlus()}>+</button>
+                </div>
             ) : (
-            <Button click={() => addBasket()} white className="desktop__card__buttons-first">
-                Add to cart
-                <Locker className="Locker" />
-            </Button>
+                <Button click={() => addBasket()} white className="desktop__card__buttons-first">
+                    Add to cart
+                    <Locker className="Locker" />
+                </Button>
             )}
         </>
     )

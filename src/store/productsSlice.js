@@ -4,7 +4,7 @@ import { API_URL } from "../components/Helpers/Api/Api";
 import sendRequest from "../components/Helpers/SendRequest/sendRequest";
 import { actionIsAnimation } from "./homeSlice";
 import { actionLoadFilter } from "./catalog";
-import { element } from "prop-types";
+
 const productsSlice = createSlice({
   name: "products",
   initialState: {
@@ -221,7 +221,7 @@ export const actionCreateNewProduct = (data) => async (dispatch) => {
       newProduct
     );
     if (response) {
-      console.log(response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -248,7 +248,7 @@ export const actionChangeProduct = (data) => async (dispatch) => {
     );
 
     if (response) {
-      console.log(response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -358,7 +358,7 @@ export const actionDeleteProduct = (data) => async (dispatch) => {
       deleteProduct
     );
     if (response.status === 200) {
-      console.log("delete product", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);

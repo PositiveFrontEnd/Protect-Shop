@@ -1,7 +1,7 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {selectorToken} from "../../store/selectors";
-import {useSelector} from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import { selectorToken } from "../../store/selectors";
+import { useSelector } from "react-redux";
 
 const Breadcrumbs = () => {
 

@@ -75,46 +75,6 @@ exports[`Тестування компонента  FooterDesctop > Знімок
                     Contacts
                   </a>
                 </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Payment & Delivery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Returns
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Guarantee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Discount
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Special proposal
-                  </a>
-                </li>
               </ul>
             </div>
             <div>
@@ -136,22 +96,6 @@ exports[`Тестування компонента  FooterDesctop > Знімок
                     href="/about-us"
                   >
                     About brand
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Our values
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="link"
-                    href="/"
-                  >
-                    Partnerships
                   </a>
                 </li>
                 <li>
@@ -452,46 +396,6 @@ exports[`Тестування компонента  FooterDesctop > Знімок
                   Contacts
                 </a>
               </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Payment & Delivery
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Returns
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Guarantee
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Discount
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Special proposal
-                </a>
-              </li>
             </ul>
           </div>
           <div>
@@ -513,22 +417,6 @@ exports[`Тестування компонента  FooterDesctop > Знімок
                   href="/about-us"
                 >
                   About brand
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Our values
-                </a>
-              </li>
-              <li>
-                <a
-                  class="link"
-                  href="/"
-                >
-                  Partnerships
                 </a>
               </li>
               <li>

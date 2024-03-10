@@ -13,14 +13,23 @@ describe("test orderSlice", () => {
     test(" action", () => {
         expect(orderSlice(undefined, { type: undefined })).toEqual({
             orderState: [],
-            productsForOrderGuest: {},
-            infoForOrderGuest: [],
-            deliveryForOrderGuest: {},
+            productsForOrderGuest: JSON.parse(
+                localStorage.getItem("productsForOrderGuest") || "{}"
+            ),
+            infoForOrderGuest: JSON.parse(
+                localStorage.getItem("productsForOrderGuest") || "[]"
+            ),
+            deliveryForOrderGuest: JSON.parse(
+                localStorage.getItem("deliveryForOrderGuest") || "{}"
+            ),
             order: {
-                letterSubject: "Thank you for order!"
+                letterSubject: "Thank you for order!",
             },
             promoCodePrice: "",
-            orderGuest: { letterSubject: "Thank you for order!" },
+
+            orderGuest: {
+                letterSubject: "Thank you for order!",
+            },
         });
     });
 
@@ -129,7 +138,7 @@ describe("test orderSlice", () => {
     test("actionUpDateFormGuest", () => {
         const initialState = {
             orderGuest: {
-                letterSubject: "Thank you for order!",
+
             },
         };
 
@@ -146,6 +155,7 @@ describe("test orderSlice", () => {
             status: "not shipped",
             email: "saribeg@gmail.com",
             mobile: "+380630000000",
+            letterSubject: "Thank you for order!",
             letterHtml:
                 "<h1>Your order is placed. OrderNo is 023689452.</h1><p>{Other details about order in your HTML}</p>"
         };

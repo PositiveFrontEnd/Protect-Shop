@@ -16,7 +16,7 @@ const SelectInput = (props) => {
         <span className="select__label__text">{label}</span>
         <Field
           as="select"
-          className={cn("select__input select__input-modal", {
+          className={cn("select__input select__input-modal select__post", {
             "input-error": error && touched,
             "input-ok": !error && touched,
           })}

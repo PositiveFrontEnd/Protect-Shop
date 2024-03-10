@@ -63,7 +63,7 @@ export const actionUpdateComment = (data) => async (dispatch) => {
       comment
     );
     if (response) {
-      console.log("wish create", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -87,7 +87,7 @@ export const actionDeleteComment = (data) => async (dispatch) => {
       deleteComment
     );
     if (response.status === 200) {
-      console.log("comment delete", response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -102,7 +102,7 @@ export const actionGetAllComments = () => async (dispatch) => {
 
     const response = await sendRequest(`${API_URL}/comments`, "GET");
     if (response) {
-      console.log(response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
@@ -120,7 +120,7 @@ export const actionGetUserComments = (customerId) => async (dispatch) => {
       "GET"
     );
     if (response) {
-      console.log(response);
+      return response;
     }
   } catch (error) {
     console.error("Сталася помилка під час виконання функції:", error);
